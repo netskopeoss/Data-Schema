@@ -15,7 +15,6 @@ https://docs.netskope.com/en/netskope-help/data-security/transaction-events/
 
 Metadata of each field will be composite of the below details :-
 
-```
 **parameter_name**: Field name. Rest api calls returns pre-defined set of fields per event type. 
 
 **type**: Field value data type. String, Integer, Float, Dictionery, Boolean, LongInt and List etc.
@@ -38,5 +37,3 @@ Boolean:  False
 List/Array:  []
 
 **position**: For transaction events, data is in w3c log format. Position column represents the order the particular field appears in the Response.
-
-```
