@@ -15,17 +15,18 @@ https://docs.netskope.com/en/netskope-help/data-security/transaction-events/
 
 Metadata of each field will be composite of the below details :-
 
-**parameter_name**: Field name. Rest api calls returns pre-defined set of fields per event type. 
+```
+parameter_name: Field name. Rest api calls returns pre-defined set of fields per event type. 
 
-**type**: Field value data type. String, Integer, Float, Dictionery, Boolean, LongInt and List etc.
+type: Field value data type. String, Integer, Float, Dictionery, Boolean, LongInt and List etc.
 
-**description**: Fields description for better understanding of the API response to the end users.
+description: Fields description for better understanding of the API response to the end users.
 
-**example**: Provides sample values per field names. 
+example: Provides sample values per field names. 
 
-**event_types**: Respective field names are available in the listed event types.
+event_types: Respective field names are available in the listed event types.
 
-**default_value**: If values are not present, default values are returned which are defined per data types. 
+default_value: If values are not present, default values are returned which are defined per data types. 
                Transaction Event follows w3c log format. If a field is empty, the value is string -
 
 String:  ""
@@ -36,4 +37,5 @@ Dictionery/Map:  {}
 Boolean:  False
 List/Array:  []
 
-**position**: For transaction events, data is in w3c log format. Position column represents the order the particular field appears in the Response.
+position: For transaction events, data is in w3c log format. Position column represents the order the particular field appears in the Response.
+```
