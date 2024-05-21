@@ -702,7 +702,7 @@
       "alert",
       "network"
     ],
-    "default_value": 0
+    "default_value": ""
   },
   {
     "parameter_name": "channel",
