@@ -4384,6 +4384,19 @@
     "default_value": ""
   },
   {
+    "parameter_name": "tss_fail_reason",
+    "type": "String",
+    "description": "TSS is the malware detection engine for Netskope Threat Protection. This field indicates the reason why tss scan was failed to run.",
+    "example": [
+      "TSS scan file-size limit exceeded",
+      "TSS scan timed out"
+    ],
+    "event_types": [
+      "application"
+    ],
+    "default_value": ""
+  },
+  {
     "parameter_name": "tss_mode",
     "type": "String",
     "description": "Malware scanning mode, specifies whether it's Real-time Protection or API Data Protection.",
@@ -4394,6 +4407,19 @@
     ],
     "event_types": [
       "alert",
+      "application"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "tss_scan_failed",
+    "type": "String",
+    "description": "TSS is the malware detection engine for Netskope Threat Protection. This field indicates if tss scan was failed to run.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
       "application"
     ],
     "default_value": ""
