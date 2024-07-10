@@ -2204,7 +2204,8 @@
       "I needed a test account to test the enrollment process."
     ],
     "event_types": [
-      "alert"
+      "alert",
+      "application"
     ],
     "default_value": ""
   },
@@ -2217,7 +2218,8 @@
       "falsePositive"
     ],
     "event_types": [
-      "alert"
+      "alert",
+      "application"
     ],
     "default_value": ""
   },
@@ -3918,7 +3920,7 @@
   {
     "parameter_name": "src_time",
     "type": "String",
-    "description": "Source timestamp.",
+    "description": "Source timestamp is the time at which the event is created.",
     "example": [
       "Mon Dec 11 22:53:00 2023",
       "Mon Jan 11 22:53:00 2024",
@@ -3935,7 +3937,7 @@
   {
     "parameter_name": "src_timezone",
     "type": "String",
-    "description": "Source timezone. Shows the long format timezone designation.",
+    "description": "Source timezone for the location at which the event is created. Shows the long format timezone designation.",
     "example": [
       "America/Lima",
       "America/La_Paz",
@@ -3952,7 +3954,7 @@
   {
     "parameter_name": "src_zipcode",
     "type": "String",
-    "description": "Source zip code as determined by the Maxmind or IP2Location Geo Database.",
+    "description": "Source zip code for the location at which the event is created as determined by the Maxmind or IP2Location Geo Database.",
     "example": [
       "2099",
       "6000",
@@ -3978,7 +3980,7 @@
   {
     "parameter_name": "srcip",
     "type": "String",
-    "description": "IP address of source/user.",
+    "description": "IP address of source/user where event is created.",
     "example": [
       "13.248.193.251",
       "20.190.181.4",
@@ -3996,7 +3998,7 @@
   {
     "parameter_name": "srcport",
     "type": "Integer",
-    "description": "Source Port used by NPA applications.",
+    "description": "Port used by the source/user where event is created. It is used by NPA applications.",
     "example": [
       49384,
       53902,
