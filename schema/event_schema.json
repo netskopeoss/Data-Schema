@@ -114,7 +114,8 @@
     "event_types": [
       "application",
       "alert",
-      "network"
+      "network",
+      "page"
     ],
     "default_value": ""
   },
@@ -1799,6 +1800,20 @@
     "default_value": ""
   },
   {
+    "parameter_name": "forward_to_proxy_xau",
+    "type": "String",
+    "description": "'Forward to Proxy' is a feature to dynamically configure chain proxy endpoints, so that, traffic can be chained to another proxy based on a policy hit. This allows to re-direct traffic to appropriate destinations for services that have an explicit proxy endpoint (such as browser isolation, structured encryption etc.). 'x_authenticated_user' is one of fields defined for 'Forward to Proxy' profile - When set, XAU header is attached and sent to the chain proxy service",
+    "example": [
+      "ara.margossian@democompany.com",
+      "test.user_1@democompany.com",
+      "test.user_2@democompany.com"
+    ],
+    "event_types": [
+      "page"
+    ],
+    "default_value": ""
+  },
+  {
     "parameter_name": "forward_to_proxy_profile",
     "type": "String",
     "description": "'Forward to Proxy' is a feature to dynamically configure chain proxy endpoints, so that, traffic can be chained to another proxy based on a policy hit. This allows  to re-direct traffic to appropriate destinations for services that have an explicit proxy endpoint (such as browser isolation, structured encryption etc.). forward_to_proxy_profile will be set if a forward to proxy policy is matched.  The value will be a string that is the name of the profile selected in the policy.",
@@ -3214,7 +3229,8 @@
     "example": [
       "HTTPS/2",
       "HTTP/2",
-      "TCP"
+      "TCP",
+      "HTTP/1.1"
     ],
     "event_types": [
       "page",
@@ -3274,6 +3290,34 @@
     ],
     "event_types": [
       "network"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "rbi_template_id",
+    "type": "String",
+    "description": "RBI stands for Remote Browser Isolation. Netskope RBI is focused on the threat protection use case. It delivers Targeted RBI, isolation of users web browsing of uncategorized and potentially security risky web pages to provide an additional layer of threat protection. This field holds information about template_id created by webUI while configuring RBI template.",
+    "example": [
+      "default",
+      "hello-rbi-2022-abcd-foo",
+      "test-rbi-custom-id"
+    ],
+    "event_types": [
+      "page"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "rbi_template_name",
+    "type": "String",
+    "description": "RBI stands for Remote Browser Isolation. Netskope RBI is focused on the threat protection use case. It delivers Targeted RBI, isolation of users web browsing of uncategorized and potentially security risky web pages to provide an additional layer of threat protection. This field holds information about the name used by user while configuring RBI template.",
+    "example": [
+      "Default RBI Template",
+      "Test Julien Isorce 202",
+      "Test Julien Isorce 207"
+    ],
+    "event_types": [
+      "page"
     ],
     "default_value": ""
   },
