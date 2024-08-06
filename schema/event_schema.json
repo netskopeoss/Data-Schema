@@ -114,7 +114,8 @@
     "event_types": [
       "application",
       "alert",
-      "network"
+      "network",
+      "page"
     ],
     "default_value": ""
   },
@@ -616,6 +617,23 @@
     "default_value": ""
   },
   {
+    "parameter_name": "company",
+    "type": "String",
+    "description": "Company name is added as part of groups/organisation unit configurations using AD importer feature. A rule in a policy can be specified as it should only apply to all users matching specific company names which can be sub orgs for a customer.",
+    "example": [
+      "Singapore Pools",
+      "Singapore Totalisator Board",
+      "NotAvailable",
+      "Vendor",
+      "Secureworks"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": ""
+  },
+  {
     "parameter_name": "CononicalName",
     "type": "String",
     "description": "CNAME record type is used to create an alias from one domain name to another, allowing multiple domain names to point to the same location.",
@@ -975,6 +993,26 @@
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       "application/xml",
       "application/vnd.ms-excel.sheet.macroEnabled.12"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "department",
+    "type": "String",
+    "description": "Department name is added as part of groups/organisation unit configurations using AD importer feature. A rule in a policy can be specified as it should only apply to all users matching department == Marketing.",
+    "example": [
+      "PRODUCT OPS & SVCS",
+      "7 - Northeast",
+      "Technology",
+      "Morgan Stanley at Work",
+      "RESEARCH TECHNOLOGY",
+      "Field Service",
+      "SALES AND DISTRIBUTION",
+      "Management/Other"
     ],
     "event_types": [
       "alert",
@@ -1699,6 +1737,59 @@
     "default_value": 0
   },
   {
+    "parameter_name": "ext_labels",
+    "type": "List",
+    "description": "Data Classification and Encryption framework that will support MIP where MIP is Sensitivity labels from Microsoft Purview Information Protection let you classify and protect your organization's data. \next_labels is list of map which carries the information Sensitivity Labels applied to the file. \nData returned will be have 4 sub fields. id: Sensitivity Label ID. name: Sensitivity Label Name. instance: Instance whose Sensitivity Label is applied. vendor: Vendor whose Sensitivity Label is applied.",
+    "example": [
+      [
+        {
+          "id": "d8ccdd79-b790-40fe-8cde-4bf6ce2eec57",
+          "instance": "test_instance_1",
+          "name": "Internal",
+          "vendor": "mip"
+        }
+      ],
+      [
+        {
+          "id": "0398bece-4cad-4176-a27c-6d014ddc78e7",
+          "instance": "test_instance_2",
+          "name": "Group Use Only",
+          "vendor": "mip"
+        }
+      ],
+      [
+        {
+          "id": "96191017-31ce-4c9c-a666-cca4adc423a1",
+          "instance": "test_instance_3",
+          "name": "Restrita",
+          "vendor": "mip"
+        }
+      ],
+      [
+        {
+          "id": "66675354-68dd-4ee8-acf9-2b3cd2f15754",
+          "instance": "test_instance_4",
+          "name": "Confidencial",
+          "vendor": "mip"
+        }
+      ],
+      [
+        {
+          "id": "42b66124-a1d6-4497-af90-9aa374c7a233",
+          "instance": "test_instance_5",
+          "name": "Reservada",
+          "vendor": "mip"
+        }
+      ]
+    ],
+    "event_types": [
+      "alert",
+      "application",
+      "incident"
+    ],
+    "default_value": []
+  },
+  {
     "parameter_name": "file_cls_encrypted",
     "type": "Boolean",
     "description": "Its a boolean value representing  whether its CLS encrypted or not.",
@@ -1795,6 +1886,20 @@
     ],
     "event_types": [
       "network"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "forward_to_proxy_xau",
+    "type": "String",
+    "description": "'Forward to Proxy' is a feature to dynamically configure chain proxy endpoints, so that, traffic can be chained to another proxy based on a policy hit. This allows to re-direct traffic to appropriate destinations for services that have an explicit proxy endpoint (such as browser isolation, structured encryption etc.). 'x_authenticated_user' is one of fields defined for 'Forward to Proxy' profile - When set, XAU header is attached and sent to the chain proxy service",
+    "example": [
+      "ara.margossian@democompany.com",
+      "test.user_1@democompany.com",
+      "test.user_2@democompany.com"
+    ],
+    "event_types": [
+      "page"
     ],
     "default_value": ""
   },
@@ -3214,7 +3319,8 @@
     "example": [
       "HTTPS/2",
       "HTTP/2",
-      "TCP"
+      "TCP",
+      "HTTP/1.1"
     ],
     "event_types": [
       "page",
@@ -3274,6 +3380,34 @@
     ],
     "event_types": [
       "network"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "rbi_template_id",
+    "type": "String",
+    "description": "RBI stands for Remote Browser Isolation. Netskope RBI is focused on the threat protection use case. It delivers Targeted RBI, isolation of users web browsing of uncategorized and potentially security risky web pages to provide an additional layer of threat protection. This field holds information about template_id created by webUI while configuring RBI template.",
+    "example": [
+      "default",
+      "hello-rbi-2022-abcd-foo",
+      "test-rbi-custom-id"
+    ],
+    "event_types": [
+      "page"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "rbi_template_name",
+    "type": "String",
+    "description": "RBI stands for Remote Browser Isolation. Netskope RBI is focused on the threat protection use case. It delivers Targeted RBI, isolation of users web browsing of uncategorized and potentially security risky web pages to provide an additional layer of threat protection. This field holds information about the name used by user while configuring RBI template.",
+    "example": [
+      "Default RBI Template",
+      "Test Julien Isorce 202",
+      "Test Julien Isorce 207"
+    ],
+    "event_types": [
+      "page"
     ],
     "default_value": ""
   },
