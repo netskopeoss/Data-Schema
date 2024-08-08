@@ -617,23 +617,6 @@
     "default_value": ""
   },
   {
-    "parameter_name": "company",
-    "type": "String",
-    "description": "Company name is added as part of groups/organisation unit configurations using AD importer feature. A rule in a policy can be specified as it should only apply to all users matching specific company names which can be sub orgs for a customer.",
-    "example": [
-      "Singapore Pools",
-      "Singapore Totalisator Board",
-      "NotAvailable",
-      "Vendor",
-      "Secureworks"
-    ],
-    "event_types": [
-      "alert",
-      "application"
-    ],
-    "default_value": ""
-  },
-  {
     "parameter_name": "CononicalName",
     "type": "String",
     "description": "CNAME record type is used to create an alias from one domain name to another, allowing multiple domain names to point to the same location.",
@@ -993,26 +976,6 @@
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
       "application/xml",
       "application/vnd.ms-excel.sheet.macroEnabled.12"
-    ],
-    "event_types": [
-      "alert",
-      "application"
-    ],
-    "default_value": ""
-  },
-  {
-    "parameter_name": "department",
-    "type": "String",
-    "description": "Department name is added as part of groups/organisation unit configurations using AD importer feature. A rule in a policy can be specified as it should only apply to all users matching department == Marketing.",
-    "example": [
-      "PRODUCT OPS & SVCS",
-      "7 - Northeast",
-      "Technology",
-      "Morgan Stanley at Work",
-      "RESEARCH TECHNOLOGY",
-      "Field Service",
-      "SALES AND DISTRIBUTION",
-      "Management/Other"
     ],
     "event_types": [
       "alert",
