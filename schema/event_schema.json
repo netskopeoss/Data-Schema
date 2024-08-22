@@ -3542,6 +3542,22 @@
     "default_value": ""
   },
   {
+    "parameter_name": "retro_scan_name",
+    "type": "String",
+    "description": "Name for the retroactive scans. A retroactive policy scans all the files and folders for the app instance right from the inception of the SaaS app. A retroactive scan is decoupled from ongoing (a.k.a future transaction) scan. By default, the name is pre-populated in Retro_Name_[AppName]_[InstanceName]_YYYYMMDD format. Customer can also overwrite the pre-populated name while configuring the retro scan policies.",
+    "example": [
+      "Retro_Scan_sharepoint_schwab.sharepoint.com_20240719_195702",
+      "Retro_Scan_dropbox_schwab.dropbox.com_20240719_195705",
+      "Retro Scan 2023-08-31 13:42PM",
+      "Retro_Scan_box_schwab.box.com_20240719_195706"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": ""
+  },
+  {
     "parameter_name": "sa_profile_id",
     "type": "Integer",
     "description": "IAAS/CSA profile ID as provided by cloud providers AWS, GCP and Azure etc.",
@@ -4680,6 +4696,26 @@
       "application"
     ],
     "default_value": ""
+  },
+  {
+    "parameter_name": "user_confidence_index",
+    "type": "Integer",
+    "description": "UCI (User Confidence Index) is one of the ways that UEBA describes how risky the user’s behavior is. The lower UCI is, the more risky the user behavior is. The UCI starts from an initial value and is deducted an amount when the user’s behavior is detected to be anomaly by UEBA engine. The user’s UCI is daily-based, i.e. UEBA engine will create the new UCI with an initial score for users when an UTC day starts. Each user is supposed to start from 1000, but his/her previous day performance will rollover to current day and therefore impact the initial UCI",
+    "example": [
+      100,
+      217,
+      253,
+      0,
+      170,
+      650,
+      154,
+      950
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": 0
   },
   {
     "parameter_name": "user_generated",
