@@ -2541,6 +2541,7 @@
       "DLP Scan timeout"
     ],
     "event_types": [
+      "application",
       "alert_type_policy",
       "alert_type_watchlist"
     ],
@@ -2876,6 +2877,7 @@
       "no"
     ],
     "event_types": [
+      "application",
       "alert_type_policy",
       "alert_type_watchlist"
     ],
