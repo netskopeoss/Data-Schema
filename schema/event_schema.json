@@ -64,7 +64,9 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -200,7 +202,9 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -248,7 +252,9 @@
       "alert_type_uba",
       "alert_type_security_assessment",
       "alert_type_dlp",
-      "alert_type_policy"
+      "alert_type_policy",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -344,7 +350,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -415,7 +423,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -451,7 +461,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -562,7 +574,8 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -1531,7 +1544,9 @@
       "ECP-TC4675.ECP.local"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -1627,7 +1642,8 @@
       "local"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_device"
     ],
     "default_value": ""
   },
@@ -1693,7 +1709,9 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_compromised_credential",
-      "alert_type_security_assessment"
+      "alert_type_security_assessment",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": 0
   },
@@ -2058,7 +2076,8 @@
       "test_dst2_for_user2"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -2072,7 +2091,8 @@
       "\\servershare\file.txt"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -2361,7 +2381,8 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -2384,7 +2405,9 @@
       "alert_type_malsite",
       "alert_type_watchlist",
       "alert_type_uba",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -2636,7 +2659,8 @@
       "incident",
       "epdlp",
       "alert_type_watchlist",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": 0
   },
@@ -2768,7 +2792,8 @@
       "alert_type_remediation",
       "alert_type_watchlist",
       "alert_type_quarantine",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -2948,7 +2973,8 @@
       "Lenovo Printer"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_device"
     ],
     "default_value": ""
   },
@@ -3818,7 +3844,8 @@
       "alert_type_watchlist",
       "alert_type_uba",
       "alert_type_quarantine",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": 0
   },
@@ -3845,7 +3872,8 @@
       "alert_type_watchlist",
       "alert_type_uba",
       "alert_type_quarantine",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -4561,7 +4589,8 @@
       "alert_type_malsite",
       "alert_type_watchlist",
       "alert_type_uba",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": 0
   },
@@ -5146,7 +5175,8 @@
       "http://192.168.50.184:80/WebServices/Device"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_device"
     ],
     "default_value": ""
   },
@@ -5705,7 +5735,8 @@
       "alert_type_watchlist",
       "alert_type_uba",
       "alert_type_quarantine",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6257,7 +6288,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6341,7 +6374,9 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6369,7 +6404,9 @@
       "USER-epdlp"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6637,7 +6674,8 @@
       "32764"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6671,7 +6709,9 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6685,7 +6725,9 @@
       "block"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6780,7 +6822,9 @@
       "readonly"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6854,7 +6898,8 @@
       "C=US, S=Washington, L=Redmond, O=Microsoft Corporation, CN=Microsoft Corporation"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6869,7 +6914,8 @@
       "POWERPNT.EXE"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -6885,7 +6931,8 @@
       "C:Program FilesMicrosoft OfficerootOffice16POWERPNT.EXE"
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -8150,7 +8197,8 @@
       "alert",
       "application",
       "epdlp",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -8282,7 +8330,8 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -9006,7 +9055,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": 0
   },
@@ -9173,7 +9224,9 @@
       "alert_type_uba",
       "alert_type_quarantine",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -9498,7 +9551,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -9628,7 +9683,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -9662,6 +9719,92 @@
     "default_value": ""
   },
   {
+    "parameter_name": "usb_device_id",
+    "type": "String",
+    "description": "ID of the USB device",
+    "example": [
+      "USB\\VID_03f0&PID_5307&REV_1100"
+    ],
+    "event_types": [
+      "alert_type_device"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "usb_device_name",
+    "type": "String",
+    "description": "Name of the USB device",
+    "example": [
+      "v165w"
+    ],
+    "event_types": [
+      "alert_type_device"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "usb_device_sn",
+    "type": "String",
+    "description": "Serial number of the USB device",
+    "example": [
+      "AA04012700008497"
+    ],
+    "event_types": [
+      "alert_type_device"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "usb_device_type",
+    "type": "String",
+    "description": "Device type of the USB device",
+    "example": [
+      "usb mass storage"
+    ],
+    "event_types": [
+      "alert_type_device",
+      "alert_type_content"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "usb_is_encrypted",
+    "type": "Boolean",
+    "description": "Whether the data in the USB device is encrypted",
+    "example": [
+      true,
+      false
+    ],
+    "event_types": [
+      "alert_type_device"
+    ],
+    "default_value": false
+  },
+  {
+    "parameter_name": "usb_product_id",
+    "type": "String",
+    "description": "Product ID of the USB device",
+    "example": [
+      "21255"
+    ],
+    "event_types": [
+      "alert_type_device"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "usb_vendor_id",
+    "type": "String",
+    "description": "ID of the vendor of the USB device",
+    "example": [
+      "HP"
+    ],
+    "event_types": [
+      "alert_type_device"
+    ],
+    "default_value": ""
+  },
+  {
     "parameter_name": "user",
     "type": "String",
     "description": "User email.",
@@ -9690,7 +9833,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
@@ -9985,7 +10130,9 @@
       "alert_type_quarantine",
       "alert_type_compromised_credential",
       "alert_type_security_assessment",
-      "alert_type_dlp"
+      "alert_type_dlp",
+      "alert_type_device",
+      "alert_type_content"
     ],
     "default_value": ""
   },
