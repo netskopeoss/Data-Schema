@@ -7342,6 +7342,43 @@
     "default_value": ""
   },
   {
+    "parameter_name": "record_type",
+    "type": "String",
+    "description": "Indicate the event type of the record",
+    "example": [
+      "page",
+      "application",
+      "alert"
+    ],
+    "event_types": [
+      "page",
+      "alert",
+      "application",
+      "infrastructure",
+      "audit",
+      "network",
+      "incident",
+      "epdlp",
+      "clientstatus",
+      "alert_type_policy",
+      "alert_type_ctep",
+      "alert_type_ips",
+      "alert_type_c2",
+      "alert_type_malware",
+      "alert_type_remediation",
+      "alert_type_malsite",
+      "alert_type_watchlist",
+      "alert_type_uba",
+      "alert_type_quarantine",
+      "alert_type_compromised_credential",
+      "alert_type_security_assessment",
+      "alert_type_dlp",
+      "alert_type_content",
+      "alert_type_device"
+    ],
+    "default_value": ""
+  },
+  {
     "parameter_name": "redirect_url",
     "type": "String",
     "description": "URL name where traffic is redirected based on the applied Policy.",
