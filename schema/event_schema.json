@@ -8235,7 +8235,11 @@
       "application",
       "epdlp",
       "alert_type_dlp",
-      "alert_type_content"
+      "alert_type_content",
+      "alert_type_malware",
+      "alert_type_policy",
+      "alert_type_watchlist",
+      "alert_type_uba"
     ],
     "default_value": ""
   },
