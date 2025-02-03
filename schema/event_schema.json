@@ -4058,10 +4058,12 @@
   {
     "parameter_name": "group",
     "type": "String",
-    "description": "Indicates the name of the policy group.",
+    "description": "Indicates the name of the UEBA policy group. Note: this field is not applicable for the alerts data. Hence, it has empty value in the response. It is planned to be deprecated from the schema.",
     "example": [
       "ueba_batch_group",
-      "ueba_stream_group"
+      "ueba_stream_group",
+      "sdubey_automation_introspection@netskope.com",
+      "sdubey_automation_inline@netskope.com"
     ],
     "event_types": [
       "alert_type_policy",
@@ -7247,6 +7249,22 @@
     "event_types": [
       "alert_type_policy",
       "alert_type_quarantine"
+    ],
+    "default_value": ""
+  },
+  {
+    "parameter_name": "qdomain",
+    "type": "String",
+    "description": "Stands for Fully Qualified Domain Name.",
+    "example": [
+      "signaler-pa.clients6.google.com",
+      "extension.femetrics.grammarly.io",
+      "play.google.com",
+      "aa-pa.clients6.google.com",
+      "ssl.gstatic.com"
+    ],
+    "event_types": [
+      "network"
     ],
     "default_value": ""
   },
