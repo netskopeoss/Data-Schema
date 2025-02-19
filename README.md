@@ -26,6 +26,14 @@ example: Provides sample values per field names.
 
 event_types: Respective field names are available in the listed event types.
 
+applicable_for: Information about which Netskope's solution this Field will be part of. We are supporting Data Export and Log Streaming as of now.    
+
+Ex:
+"applicable_for": [
+      "data_export",
+      "log_streaming"
+]   
+   
 default_value: If values are not present, default values are returned which are defined per data types. 
                Transaction Event follows w3c log format. If a field is empty, the value is string -
 
@@ -38,4 +46,6 @@ Boolean:  False
 List/Array:  []
 
 position: For transaction events, data is in w3c log format. Position column represents the order the particular field appears in the Response.
+
+version: Applicable for just the transaction events. Provides information about what are all the transaction events formats this Field will be part of, we are supporting up to v3 currently.
 ```
