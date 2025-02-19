@@ -9,7 +9,6 @@
       "5182808a2a99fc688d4a8457"
     ],
     "event_types": [
-      "alarm_history",
       "alert",
       "application",
       "audit",
@@ -3027,7 +3026,6 @@
       "amark-android"
     ],
     "event_types": [
-      "alarm_history",
       "epdlp"
     ],
     "default_value": "",
@@ -7538,7 +7536,6 @@
       "34.7696267853"
     ],
     "event_types": [
-      "alarm_history",
       "infrastructure"
     ],
     "default_value": "",
@@ -10305,7 +10302,6 @@
       "FF03450FF7EB31FCD"
     ],
     "event_types": [
-      "alarm_history",
       "alert",
       "alert_type_malsite",
       "alert_type_policy",
@@ -10449,7 +10445,6 @@
       "Low"
     ],
     "event_types": [
-      "alarm_history",
       "alert",
       "alert_type_dlp",
       "alert_type_malsite",
@@ -11372,7 +11367,6 @@
       }
     ],
     "event_types": [
-      "alarm_history",
       "audit"
     ],
     "default_value": {},
@@ -11719,7 +11713,6 @@
       1708409385
     ],
     "event_types": [
-      "alarm_history",
       "alert",
       "alert_type_c2",
       "alert_type_compromised_credential",

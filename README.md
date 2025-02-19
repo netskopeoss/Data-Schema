@@ -33,8 +33,7 @@ Ex:
       "data_export",
       "log_streaming"
 ]   
- 
-  
+   
 default_value: If values are not present, default values are returned which are defined per data types. 
                Transaction Event follows w3c log format. If a field is empty, the value is string -
 
@@ -48,5 +47,5 @@ List/Array:  []
 
 position: For transaction events, data is in w3c log format. Position column represents the order the particular field appears in the Response.
 
-version: Applicable for just the transaction events. Provides information about what are the transaction events format this Field will be part of. We are supporting up to v3 as of now.   
+version: Applicable for just the transaction events. Provides information about what are all the transaction events formats this Field will be part of, we are supporting up to v3 currently.
 ```
