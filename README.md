@@ -18,7 +18,7 @@ Metadata of each field will be composite of the below details :-
 ```
 parameter_name: Field name. Rest api calls returns pre-defined set of fields per event type. 
 
-type: Field value data type. String, Integer, Float, Dictionery, Boolean, LongInt and List etc.
+type: Field value data type. String, Integer64, Integer32, Float, Dictionery, Boolean, LongInt and List etc.
 
 description: Fields description for better understanding of the API response to the end users.
 
@@ -38,7 +38,8 @@ default_value: If values are not present, default values are returned which are 
                Transaction Event follows w3c log format. If a field is empty, the value is string -
 
 String:  ""
-Integer:  0
+Integer64:  0
+Integer32:  0
 LongInt: 0
 Float:   0.0
 Dictionery/Map:  {}
