@@ -2032,7 +2032,7 @@
   },
   {
     "parameter_name": "count",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Number of raw log lines/events sessionized or suppressed during the suppressed interval.",
     "example": [
       1,
@@ -4297,7 +4297,7 @@
   },
   {
     "parameter_name": "endpoint_count",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Remediation action works via an EDR agent integration. The EDR server provides a way to query data about the endpoints as well as a mechanism to take actions based on the results. This fields denotes the total number of endpoints configured.",
     "example": [
       0,
@@ -7770,7 +7770,7 @@
   },
   {
     "parameter_name": "num_sessions",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Number of open session count.",
     "example": [
       1,
@@ -7885,7 +7885,7 @@
   },
   {
     "parameter_name": "object_count",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "This field denotes the number of files impacted by an event.",
     "example": [
       10,
@@ -11610,7 +11610,7 @@
   },
   {
     "parameter_name": "threshold",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Threshold (Count at which the anomaly should trigger). Applicable to Bulk Anomaly types( Bulk Upload/ Download/ Delete) and Failed Login Anomaly type.",
     "example": [
       0,
@@ -11863,7 +11863,7 @@
   },
   {
     "parameter_name": "total_collaborator_count",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Count of collaborators on a file/folder. Supported for some apps.",
     "example": [
       58,
