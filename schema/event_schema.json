@@ -1874,7 +1874,7 @@
   },
   {
     "parameter_name": "conn_duration",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Duration of the connection in milliseconds. Useful for querying long-lived sessions.",
     "example": [
       47,
@@ -3747,7 +3747,7 @@
   },
   {
     "parameter_name": "dst_geoip_src",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Source from where the location of Destination IP was derived.",
     "example": [
       0,
@@ -6891,7 +6891,7 @@
   },
   {
     "parameter_name": "malsite_confidence",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Confidence score attched with malsite detection.",
     "example": [
       98,
@@ -10897,7 +10897,7 @@
   },
   {
     "parameter_name": "src_geoip_src",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "Source from where the location of Source IP was derived.",
     "example": [
       0,
