@@ -10652,7 +10652,8 @@
       "alert_type_policy",
       "alert_type_quarantine",
       "alert_type_watchlist",
-      "application"
+      "application",
+      "incident"
     ],
     "default_value": "",
     "applicable_for": [
