@@ -787,7 +787,7 @@
   },
   {
     "parameter_name": "app_session_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Unique App/Site Session ID for traffic_type = CloudApp and Web. An app session starts when a user starts using a cloud app/site on and ends once they have been inactive for a certain period of time(15 minutes). Use app_session_id to check all the user activities in a single app session. app_session_id is unique for a user, device, browser and domain.",
     "example": [
       130464223392976,
@@ -1089,7 +1089,7 @@
   },
   {
     "parameter_name": "bin_timestamp",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Applicable to only: Shared Credentials, Data Exfiltration, Bulk Anomaly types( Bulk Upload/ Download/ Delete) and Failed Login Anomaly type. Bin TimeStamp (is a window used that is used for certain types of anomalies - for breaking into several windows per day/hour).",
     "example": [
       1625702400,
@@ -1122,7 +1122,7 @@
   },
   {
     "parameter_name": "breach_date",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Breach Metric date for compromised credentials.",
     "example": [
       1700352376,
@@ -1269,7 +1269,7 @@
   },
   {
     "parameter_name": "browser_session_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Browser Session Id.",
     "example": [
       6013040120128863783,
@@ -1364,7 +1364,7 @@
   },
   {
     "parameter_name": "bytes",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Sum of client bytes plus server bytes.",
     "example": [
       1093,
@@ -1465,7 +1465,7 @@
   },
   {
     "parameter_name": "cci",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Cloud confidence Index value as Integer.",
     "example": [
       31,
@@ -1633,7 +1633,7 @@
   },
   {
     "parameter_name": "client_bytes",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total number of bytes uploaded from client to server.",
     "example": [
       3613916,
@@ -1658,7 +1658,7 @@
   },
   {
     "parameter_name": "client_install_time",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Time in epoch format when Netskope Client is installed on User's device.",
     "example": [
       1709048309,
@@ -1676,7 +1676,7 @@
   },
   {
     "parameter_name": "client_packets",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total number of packets uploaded from client to server.",
     "example": [
       300,
@@ -1874,7 +1874,7 @@
   },
   {
     "parameter_name": "conn_duration",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Duration of the connection in milliseconds. Useful for querying long-lived sessions.",
     "example": [
       47,
@@ -1902,7 +1902,7 @@
   },
   {
     "parameter_name": "conn_endtime",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Connection end time.",
     "example": [
       1700352376,
@@ -1922,7 +1922,7 @@
   },
   {
     "parameter_name": "conn_starttime",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Connection start time.",
     "example": [
       1700352376,
@@ -1942,7 +1942,7 @@
   },
   {
     "parameter_name": "connection_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Each connection has a unique ID. Shows the ID for the connection event.",
     "example": [
       5047636402716175950,
@@ -2032,7 +2032,7 @@
   },
   {
     "parameter_name": "count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Number of raw log lines/events sessionized or suppressed during the suppressed interval.",
     "example": [
       1,
@@ -2087,7 +2087,7 @@
   },
   {
     "parameter_name": "created_date",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Indicates the date in epoch time when watchlist model is configured.",
     "example": [
       1700352376,
@@ -2123,7 +2123,7 @@
   },
   {
     "parameter_name": "cs-bytes",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Bytes received from the client.",
     "example": [
       1093,
@@ -2281,7 +2281,7 @@
   },
   {
     "parameter_name": "cs-uri-port",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Port specified in the request header.",
     "example": [
       443,
@@ -3256,7 +3256,7 @@
   },
   {
     "parameter_name": "dlp_fingerprint_score",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Fingerprint classification score",
     "example": [
       92,
@@ -3277,7 +3277,7 @@
   },
   {
     "parameter_name": "dlp_incident_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Incident ID associated with sub-file in DLP scans. In the case of main file, this is same as the parent incident ID.",
     "example": [
       5593408369243076225,
@@ -3403,7 +3403,7 @@
   },
   {
     "parameter_name": "dlp_parent_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Incident ID associated with main container (or non-container) file that was scanned.",
     "example": [
       6398957211952493728,
@@ -3504,7 +3504,7 @@
   },
   {
     "parameter_name": "dlp_rule_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Count of dlp rule hits.",
     "example": [
       1267,
@@ -3528,7 +3528,7 @@
   },
   {
     "parameter_name": "dlp_rule_score",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "DLP rule score for weighted dictionaries.",
     "example": [
       1267,
@@ -3589,7 +3589,7 @@
   },
   {
     "parameter_name": "dlp_unique_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Integer value of number of unique matches seen per rule data. Only present if rule is uniquely counted.",
     "example": [
       386,
@@ -3747,7 +3747,7 @@
   },
   {
     "parameter_name": "dst_geoip_src",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Source from where the location of Destination IP was derived.",
     "example": [
       0,
@@ -4061,7 +4061,7 @@
   },
   {
     "parameter_name": "dstport",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Destination port.",
     "example": [
       1143,
@@ -4159,7 +4159,7 @@
   },
   {
     "parameter_name": "email_modified",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Threat scan emails for phishing URLs detection. This field captures the email modified time in epoch format.",
     "example": [
       1713777085,
@@ -4297,7 +4297,7 @@
   },
   {
     "parameter_name": "endpoint_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Remediation action works via an EDR agent integration. The EDR server provides a way to query data about the endpoints as well as a mechanism to take actions based on the results. This fields denotes the total number of endpoints configured.",
     "example": [
       0,
@@ -4572,7 +4572,7 @@
   },
   {
     "parameter_name": "external_collaborator_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Count of external collaborators on a file/folder. Supported for some apps.",
     "example": [
       67,
@@ -4598,7 +4598,7 @@
   },
   {
     "parameter_name": "external_email",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Flag to check if External Email ID is detected.",
     "example": [
       1,
@@ -4869,7 +4869,7 @@
   },
   {
     "parameter_name": "file_size",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Size of the file in bytes.",
     "example": [
       0,
@@ -5166,7 +5166,7 @@
   },
   {
     "parameter_name": "gid",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Signal used by IPS service internally.",
     "example": [
       1,
@@ -5331,7 +5331,7 @@
   },
   {
     "parameter_name": "host_info.last_update_timestamp",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Time in epoch format when last updated was received from the User's device.",
     "example": [
       1724126098,
@@ -5417,7 +5417,7 @@
   },
   {
     "parameter_name": "host_info.os",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "User's device operating system code which is mapped to OS name i.e. Linux, Windows and Android etc.",
     "example": [
       1,
@@ -5538,7 +5538,7 @@
   },
   {
     "parameter_name": "http_port",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Http port used detected by IPS event manager service. Actual metadata comes from an HTTP header - X-NS-FLOW-DATA that is created by the proxy services.",
     "example": [
       80,
@@ -5574,7 +5574,7 @@
   },
   {
     "parameter_name": "http_transaction_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "HTTP transaction count.",
     "example": [
       39,
@@ -5791,7 +5791,7 @@
   },
   {
     "parameter_name": "iaas_remediated_on",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "IAAS/CSA scan alerts can be remediated by taking remediation steps. This field captures the time in epoch format when remediation steps were taken.",
     "example": [
       1565244616,
@@ -5824,7 +5824,7 @@
   },
   {
     "parameter_name": "incident_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Unique Incident ID associated with main container (or non-container) file that was scanned.",
     "example": [
       824468959608223323,
@@ -5965,7 +5965,7 @@
   },
   {
     "parameter_name": "internal_collaborator_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Count of internal collaborators on a file/folder. Supported for some apps.",
     "example": [
       153,
@@ -6220,7 +6220,7 @@
   },
   {
     "parameter_name": "last_event_timestamp",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Time in epoch format for the last event generated by NS client.",
     "example": [
       1725467076,
@@ -6296,7 +6296,7 @@
   },
   {
     "parameter_name": "last_seen_device_event.actor",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "This field holds codes which are mapped to the values example: {0: User, 1: Admin, 2: System, 4: Network joined} etc. Actor is responsible for the last event generation.",
     "example": [
       1,
@@ -6315,7 +6315,7 @@
   },
   {
     "parameter_name": "last_seen_device_event.event",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "This field holds the codes which are mapped to the type of event generated example: {0: Installed, 1: Tunnel Up, 2: Tunnel Down, 4: Tunnel down due to config error} etc",
     "example": [
       1,
@@ -6353,7 +6353,7 @@
   },
   {
     "parameter_name": "last_seen_device_event.npa_status",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Netskope Private Access status code as captured by Netskope Client. Code are mapped like {0: Disabled,1: Allowed, 2: Enabled, 3: Connecting, 4: Connected}",
     "example": [
       0,
@@ -6389,7 +6389,7 @@
   },
   {
     "parameter_name": "last_seen_device_event.status",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Netskope client status captured in the last event from user's device. Codes are mapped like this {0: Disabled, 1: Enabled, 2: Uninstalled, 3: Fail Closed, 4: Managed} etc.",
     "example": [
       0,
@@ -6411,7 +6411,7 @@
   },
   {
     "parameter_name": "last_seen_device_event.status_v2",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Netskope client V2 status captured in the last event from user's device. Codes are mapped like this {0: Uninstalled, 1: Dormant, 2: Enabled, 3: Disabled} etc.",
     "example": [
       0,
@@ -6429,7 +6429,7 @@
   },
   {
     "parameter_name": "last_seen_device_event.timestamp",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Time in epoch format from the last event sent by device.",
     "example": [
       172548676,
@@ -6446,7 +6446,7 @@
   },
   {
     "parameter_name": "last_timestamp",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Last timestamp (timestamp in the first/older event). Applies to only proximity anomaly alert.",
     "example": [
       1710086150,
@@ -6465,7 +6465,7 @@
   },
   {
     "parameter_name": "latest_incident_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Latest incident ID captured by DLP backend services.",
     "example": [
       7824468959608223323,
@@ -6517,8 +6517,7 @@
       "alert",
       "application"
     ],
-    "applicable_for": [
-    ]
+    "applicable_for": []
   },
   {
     "parameter_name": "lh_fileid",
@@ -6533,8 +6532,7 @@
       "alert",
       "application"
     ],
-    "applicable_for": [
-    ]
+    "applicable_for": []
   },
   {
     "parameter_name": "lh_version",
@@ -6549,8 +6547,7 @@
       "alert",
       "application"
     ],
-    "applicable_for": [
-    ]
+    "applicable_for": []
   },
   {
     "parameter_name": "loc",
@@ -6894,7 +6891,7 @@
   },
   {
     "parameter_name": "malsite_confidence",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Confidence score attched with malsite detection.",
     "example": [
       98,
@@ -6952,7 +6949,7 @@
   },
   {
     "parameter_name": "malsite_first_seen",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Malsite first seen timestamp. Time is epoch seconds format.",
     "example": [
       1685302400,
@@ -7033,7 +7030,7 @@
   },
   {
     "parameter_name": "malsite_last_seen",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Malsite last seen timestamp. Time in epoch format seconds.",
     "example": [
       1685302400,
@@ -7412,7 +7409,7 @@
   },
   {
     "parameter_name": "message_size",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Message size in bytes. Field is used by NsProxy.",
     "example": [
       221110,
@@ -7591,7 +7588,7 @@
   },
   {
     "parameter_name": "modified",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Timestamp corresponding to the modification time of the entity file, object etc.",
     "example": [
       1708473600,
@@ -7614,7 +7611,7 @@
   },
   {
     "parameter_name": "modified_date",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "File modification date found during malware detection. Timestamp in epoch format.",
     "example": [
       1708473600,
@@ -7773,7 +7770,7 @@
   },
   {
     "parameter_name": "num_sessions",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Number of open session count.",
     "example": [
       1,
@@ -7793,7 +7790,7 @@
   },
   {
     "parameter_name": "num_users",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Number of users.",
     "example": [
       34,
@@ -7808,7 +7805,7 @@
   },
   {
     "parameter_name": "numbytes",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total number of bytes that were transmitted for the connection - numbytes = client_bytes + server_bytes.",
     "example": [
       10621990,
@@ -7888,7 +7885,7 @@
   },
   {
     "parameter_name": "object_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "This field denotes the number of files impacted by an event.",
     "example": [
       10,
@@ -8312,7 +8309,7 @@
   },
   {
     "parameter_name": "outer_doc_type",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "DLP service uses this field's code internally while sending DLP alerts downstream. Codes are mapped to document type i.e. Text File, PDF file etc.",
     "example": [
       235,
@@ -9240,8 +9237,7 @@
       "alert",
       "network"
     ],
-    "applicable_for": [
-    ]
+    "applicable_for": []
   },
   {
     "parameter_name": "quarantine_action_reason",
@@ -9254,8 +9250,7 @@
     "event_types": [
       "alert"
     ],
-    "applicable_for": [
-    ]
+    "applicable_for": []
   },
   {
     "parameter_name": "quarantine_file_id",
@@ -9522,8 +9517,7 @@
     "event_types": [
       "alert"
     ],
-    "applicable_for": [
-    ]
+    "applicable_for": []
   },
   {
     "parameter_name": "remediation_profile",
@@ -9559,7 +9553,7 @@
   },
   {
     "parameter_name": "req_cnt",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total number of HTTP requests (equal to number of transaction events for this page event) sent from client to server over one underlying TCP connection.",
     "example": [
       2000,
@@ -9583,7 +9577,7 @@
   },
   {
     "parameter_name": "request_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Unique id attached to proxy activity events and dlp activity events.",
     "example": [
       2780503013482479616,
@@ -9689,7 +9683,7 @@
   },
   {
     "parameter_name": "resp_cnt",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total number of HTTP responses (equal to number of transaction events for this page event) from server to client.",
     "example": [
       2057,
@@ -9716,7 +9710,7 @@
   },
   {
     "parameter_name": "resp_content_len",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Response content length.",
     "example": [
       298328,
@@ -9757,7 +9751,7 @@
   },
   {
     "parameter_name": "response_time",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Response time in milliseconds from the server/app as captured by NPA solution.",
     "example": [
       354,
@@ -9815,7 +9809,7 @@
   },
   {
     "parameter_name": "risk_level_id",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "This field is set by both RBA and MLAD anomaly engines for every anomaly that's detected.\n-MLAD always sets individual anomalies risk-level to 0 (low). RBA has different rules.",
     "example": [
       1,
@@ -9833,7 +9827,7 @@
   },
   {
     "parameter_name": "risk_score",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Risk score calculated by Netskope Solution's anomaly engines.",
     "example": [
       93,
@@ -9848,7 +9842,7 @@
   },
   {
     "parameter_name": "rs-status",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "The HTTP status code received from the remote server.",
     "example": [
       200,
@@ -9893,7 +9887,7 @@
   },
   {
     "parameter_name": "sa_profile_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "IAAS/CSA profile ID as provided by cloud providers AWS, GCP and Azure etc.",
     "example": [
       4294957296,
@@ -10089,7 +10083,7 @@
   },
   {
     "parameter_name": "sc-bytes",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Bytes received from the server.",
     "example": [
       1093,
@@ -10137,7 +10131,7 @@
   },
   {
     "parameter_name": "sc-status",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "The HTTP status code received from the server.",
     "example": [
       200,
@@ -10161,7 +10155,7 @@
   },
   {
     "parameter_name": "scan_time",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Time when the scan is done by TSS Service. Timestamp in epoch format.",
     "example": [
       1774308875,
@@ -10317,7 +10311,7 @@
   },
   {
     "parameter_name": "server_bytes",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total number of downloaded bytes from server to client.",
     "example": [
       1920409,
@@ -10344,7 +10338,7 @@
   },
   {
     "parameter_name": "server_packets",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total number of server packet from server to client.",
     "example": [
       2000,
@@ -10380,7 +10374,7 @@
   },
   {
     "parameter_name": "session_duration",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Session duration of a session.",
     "example": [
       5000,
@@ -10399,7 +10393,7 @@
   },
   {
     "parameter_name": "session_number_unique",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Aggregated count for unique session ids.",
     "example": [
       10,
@@ -10465,7 +10459,7 @@
   },
   {
     "parameter_name": "severity_id",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Malware severity category ids. These ids are mapped with severity category values like high, low, medium etc.",
     "example": [
       0,
@@ -10505,7 +10499,7 @@
   },
   {
     "parameter_name": "severity_level_id",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "If the Severity Level ID is 1, it means that URL / IP /Domain is detected from Internal threat feed and if Severity Level ID is 2, then it means the detection happened based on the OEM DB Malsite Category.",
     "example": [
       0,
@@ -10658,7 +10652,8 @@
       "alert_type_policy",
       "alert_type_quarantine",
       "alert_type_watchlist",
-      "application"
+      "application",
+      "incident"
     ],
     "default_value": "",
     "applicable_for": [
@@ -10706,7 +10701,7 @@
   },
   {
     "parameter_name": "signature_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Id attaches to the Signatures used by IPS service. They can be both in house or third party.",
     "example": [
       42372,
@@ -10840,7 +10835,7 @@
   },
   {
     "parameter_name": "spet",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "suppression end time. When events are suppressed (eg:- collaboration apps) then the suppression end time will be set and only one event will be send with suppression start time and end time and count of occurrence.",
     "example": [
       1413232177,
@@ -10854,7 +10849,7 @@
   },
   {
     "parameter_name": "spst",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "suppression start time. When events are suppressed (eg:- collaboration apps) then the suppression end time will be set and only one event will be send with suppression start time and end time and count of occurrence.",
     "example": [
       1413232177,
@@ -10903,7 +10898,7 @@
   },
   {
     "parameter_name": "src_geoip_src",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Source from where the location of Source IP was derived.",
     "example": [
       0,
@@ -11215,7 +11210,7 @@
   },
   {
     "parameter_name": "srcport",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Port used by the source/user where event is created. It is used by NPA applications.",
     "example": [
       49384,
@@ -11392,7 +11387,7 @@
   },
   {
     "parameter_name": "suppression_end_time",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "When events are suppressed (like collaboration apps), then the suppression end time will be set and only one event will be send with suppression start time and end time and count of occurrence.",
     "example": [
       1708989085,
@@ -11442,7 +11437,7 @@
   },
   {
     "parameter_name": "suppression_start_time",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "When events are suppressed (like collaboration apps), then the suppression end time will be set and only one event will be send with suppression start time and end time and count of occurrence.",
     "example": [
       1708989085,
@@ -11580,7 +11575,7 @@
   },
   {
     "parameter_name": "threat_source_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Threat source id used by TSS threat engines EX: 1 - NetskopeThreatIntel, 2 - OEM DB etc.",
     "example": [
       0,
@@ -11616,7 +11611,7 @@
   },
   {
     "parameter_name": "threshold",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Threshold (Count at which the anomaly should trigger). Applicable to Bulk Anomaly types( Bulk Upload/ Download/ Delete) and Failed Login Anomaly type.",
     "example": [
       0,
@@ -11637,7 +11632,7 @@
   },
   {
     "parameter_name": "threshold_time",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "It captures the time interval in seconds used by UEBA services. Applicable to: Shared Credentials, Data Ex filtration, Bulk Anomaly types( Bulk Upload/ Download/ Delete) and Failed Login Anomaly type.",
     "example": [
       0,
@@ -11680,7 +11675,7 @@
   },
   {
     "parameter_name": "time-taken",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Delta (integer value in ms) when the request processing started and the full response was received.",
     "example": [
       589,
@@ -11705,7 +11700,7 @@
   },
   {
     "parameter_name": "timestamp",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Timestamp when the event/alert happened. Event timestamp in Unix epoch format.",
     "example": [
       1708989085,
@@ -11869,7 +11864,7 @@
   },
   {
     "parameter_name": "total_collaborator_count",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Count of collaborators on a file/folder. Supported for some apps.",
     "example": [
       58,
@@ -11891,7 +11886,7 @@
   },
   {
     "parameter_name": "total_packets",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Total value of Server Packets + Client Packets.",
     "example": [
       303889,
@@ -11946,7 +11941,7 @@
   },
   {
     "parameter_name": "transaction_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Unique ID for a given request/response.",
     "example": [
       7147084621365701239,
@@ -12054,7 +12049,7 @@
   },
   {
     "parameter_name": "true_type_id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "true file type of the file is used to take decision to send the file to TSS/DLP analysis file. Filter lib finds the true file type of the file. Id used for mapping true type of the file interanlly. ",
     "example": [
       370,
@@ -12250,7 +12245,7 @@
   },
   {
     "parameter_name": "tunnel_up_time",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "GRE Tunnel up time. Used for NPA applications.",
     "example": [
       303889,
@@ -12700,7 +12695,7 @@
   },
   {
     "parameter_name": "user_confidence_index",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "UCI (User Confidence Index) is one of the ways that UEBA describes how risky the user\u2019s behavior is. The lower UCI is, the more risky the user behavior is. The UCI starts from an initial value and is deducted an amount when the user\u2019s behavior is detected to be anomaly by UEBA engine. The user\u2019s UCI is daily-based, i.e. UEBA engine will create the new UCI with an initial score for users when an UTC day starts. Each user is supposed to start from 1000, but his/her previous day performance will rollover to current day and therefore impact the initial UCI",
     "example": [
       100,
@@ -12789,7 +12784,7 @@
   },
   {
     "parameter_name": "user_info.device_classification_status",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "User's device classification code defined as {0: Managed, 1: Unmanaged, 2: Unknown, 3: Not Configured}.",
     "example": [
       0,
@@ -13425,7 +13420,7 @@
   },
   {
     "parameter_name": "windowId",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "UEBA detection engine uses this field to capture the time range for anomaly. Epoch timestamp in milliseconds",
     "example": [
       1698192000000,
@@ -13509,7 +13504,7 @@
   },
   {
     "parameter_name": "x-c-browser-version",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Client\u2019s browser version.",
     "example": [
       50,
@@ -13714,7 +13709,7 @@
   },
   {
     "parameter_name": "x-c-zipcode",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Zip code of the client.",
     "example": [
       84414,
@@ -13761,7 +13756,7 @@
   },
   {
     "parameter_name": "x-category-id",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Primary category ID applicable for the url in this transaction, e.g. category ID is 7 for the Cloud Storage category.",
     "example": [
       7,
@@ -13893,7 +13888,7 @@
   },
   {
     "parameter_name": "x-cs-app-cci",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Cloud Confidence Index of the Cloud application from the CCI database.",
     "example": [
       17,
@@ -14155,7 +14150,7 @@
   },
   {
     "parameter_name": "x-cs-connect-port",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "The port value received in the Client to Proxy HTTP CONNECT request. This field is empty if there is no CONNECT.",
     "example": [
       443,
@@ -14237,7 +14232,7 @@
   },
   {
     "parameter_name": "x-cs-dst-port",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "The destination port of the client to proxy session.",
     "example": [
       443,
@@ -14317,7 +14312,7 @@
   },
   {
     "parameter_name": "x-cs-page-id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Identifier associated with the page event object.",
     "example": [
       1170730000000000000,
@@ -14340,7 +14335,7 @@
   },
   {
     "parameter_name": "x-cs-session-id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "A session for the current user which consists of: user, device, OS, app, browser.",
     "example": [
       50530851439098160,
@@ -14448,7 +14443,7 @@
   },
   {
     "parameter_name": "x-cs-src-port",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "The source port of the client to proxy session.",
     "example": [
       54447,
@@ -14617,7 +14612,7 @@
   },
   {
     "parameter_name": "x-cs-timestamp",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the \u201cdate\u201d and \u201ctime\u201d fields.",
     "example": [
       1480330369,
@@ -14791,7 +14786,7 @@
   },
   {
     "parameter_name": "x-other-category-id",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "IDs of secondary categories applicable for the url in this transaction, e.g. category ID is 537 for the News & Media; Entertainment category.",
     "example": [
       537,
@@ -15232,7 +15227,7 @@
   },
   {
     "parameter_name": "x-request-id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Request ID needed to correlate DLP and TSS incidents with transaction events.",
     "example": [
       2334064361201696768,
@@ -15334,7 +15329,7 @@
   },
   {
     "parameter_name": "x-rs-file-size",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Reserved for future use.",
     "example": [
       "N/A"
@@ -15529,7 +15524,7 @@
   },
   {
     "parameter_name": "x-s-zipcode",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "Destination zip code.",
     "example": [
       94025,
@@ -15613,7 +15608,7 @@
   },
   {
     "parameter_name": "x-sr-dst-port",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "The destination port of the proxy to remote server session.",
     "example": [
       80,
@@ -15695,7 +15690,7 @@
   },
   {
     "parameter_name": "x-sr-src-port",
-    "type": "Integer",
+    "type": "Integer32",
     "description": "The source port of the proxy to remote server session. This field is blank if dedicated IPs are used.",
     "example": [
       15556,
@@ -16073,7 +16068,7 @@
   },
   {
     "parameter_name": "x-transaction-id",
-    "type": "Integer",
+    "type": "Integer64",
     "description": "Transaction ID needed to correlate application events with transaction events.",
     "example": [
       1821255295454864980,
