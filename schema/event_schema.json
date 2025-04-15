@@ -16148,5 +16148,28 @@
     "applicable_for": [
       "data_export"
     ]
+  },
+  {
+    "parameter_name": "record_type",
+    "type": "String",
+    "description": "Type of record",
+    "example": [
+      "page",
+      "application",
+      "network",
+      "alert",
+      "incident"
+    ],
+    "event_types": [
+      "page",
+      "application",
+      "network",
+      "alert",
+      "incident"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ]
   }
 ]
