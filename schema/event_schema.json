@@ -429,7 +429,6 @@
     ],
     "event_types": [
       "alert",
-      "connection",
       "page"
     ]
   },
