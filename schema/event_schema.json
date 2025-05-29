@@ -415,6 +415,24 @@
     ]
   },
   {
+    "parameter_name": "alert_detection_stage",
+    "type": "String",
+    "description": "Specifies the stage at which the policy triggered the alert, such as accessing the application, downloading content, or updating data.",
+    "example": [
+      "Access",
+      "Download",
+      "Update"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "page"
+    ]
+  },
+  {
     "parameter_name": "alert_generated",
     "type": "Boolean",
     "description": "Indicates whether alert is generated or not and its populated as true or false.",
@@ -741,6 +759,24 @@
       "alert_type_uba"
     ],
     "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "app-cci-apphosting-provider",
+    "type": "String",
+    "description": "Indicates the hosting provider or platform where the application is hosted, as captured by the APP CCI service. This may include cloud providers or edge hosting services.",
+    "example": [
+      "Akamai EdgeControl",
+      "Apple Inc",
+      "Amazon Web Services"
+    ],
+    "default_value": "",
+    "event_types": [
+      "alert",
+      "application"
+    ],
     "applicable_for": [
       "data_export"
     ]
@@ -2067,6 +2103,23 @@
     ]
   },
   {
+    "parameter_name": "count_metric_value",
+    "type": "Integer",
+    "description": "Represents the recorded value for specific metrics, such as N_Log_Volume_Count, collected by on-premise appliances.",
+    "example": [
+      507737,
+      200737,
+      407137
+    ],
+    "default_value": 0,
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "infrastructure"
+    ]
+  },
+  {
     "parameter_name": "country",
     "type": "String",
     "description": "Country code name where user is logged in from as detected by Netskope Client.",
@@ -2429,6 +2482,7 @@
       "alert_type_uba",
       "alert_type_watchlist",
       "application",
+      "epdlp",
       "network",
       "page"
     ],
@@ -3624,6 +3678,7 @@
       "network"
     ],
     "applicable_for": [
+      "data_export",
       "log_streaming"
     ]
   },
@@ -6505,9 +6560,78 @@
     ]
   },
   {
+    "parameter_name": "legal_hold_profile_name",
+    "type": "String",
+    "description": "Legal Hold is a process that an organization uses to preserve all forms of relevant information when litigation is reasonably anticipated. A Legal Hold profile is used for specifying where the files need to be held for legal purposes when action of Legal Hold is taken. This field is the profile name added during configuration by admin. Legalhold fields are set when an entity (file, chat message, etc.) is legally held by CASB API.",
+    "example": [
+      "google_autoskope.com_legalhold_profile",
+      "microsoft_related_apps_data_profile"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
+    "parameter_name": "lh_custodian_email",
+    "type": "String",
+    "description": "Email address of the custodian associated with the Legal Hold profile. This value is derived from the customer’s Legal Hold configuration.",
+    "example": [
+      "apic_auto_custodian@autoskope.com",
+      "john@democompany.com"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
+    "parameter_name": "lh_dest_app",
+    "type": "String",
+    "description": "Name of the destination SaaS application where the entity is copied for legal review as part of a Legal Hold action.",
+    "example": [
+      "gdrive",
+      "Slack for enterprise",
+      "Okta"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
+    "parameter_name": "lh_dest_instance",
+    "type": "String",
+    "description": "Name of the destination instance within the SaaS application where the entity is copied for legal review as part of a Legal Hold action.",
+    "example": [
+      "autoskope.com",
+      "salesforce.com"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
     "parameter_name": "lh_custodian_name",
     "type": "String",
-    "description": "Custodian name for the legal hold profile.",
+    "description": "Name of the custodian associated with the Legal Hold profile, as defined in the customer's Legal Hold configuration.",
     "example": [
       "John adams",
       "Mark wu"
@@ -6517,12 +6641,14 @@
       "alert",
       "application"
     ],
-    "applicable_for": []
+    "applicable_for": [
+      "data_export"
+    ]
   },
   {
     "parameter_name": "lh_fileid",
     "type": "String",
-    "description": "Legal hold unique file id.",
+    "description": "Unique identifier of the file placed under Legal Hold.",
     "example": [
       "1pOvmWcdPTnF7CIsBhrqug3ohfG4rG4cL",
       "3pOvmWcdPTnF7CIsBhrqug3ohfG4rG4cN"
@@ -6532,12 +6658,99 @@
       "alert",
       "application"
     ],
-    "applicable_for": []
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "lh_filename",
+    "type": "String",
+    "description": "Name of the file that has been placed under Legal Hold.",
+    "example": [
+      "GD_File_PCI-pdf_1619080833.pdf",
+      "TAXDoc_PCI-pdf_19019080833.pdf"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
+    "parameter_name": "lh_filepath",
+    "type": "String",
+    "description": "Full path of the file that has been placed under Legal Hold, indicating its location within the source system.",
+    "example": [
+      "/My Drive/test_google_GD_Folder_folder_1619080812/GD_File_PCI-pdf_1619080833.pdf",
+      "/Test Drive/test_google_GD_Folder_folder_1619080812/GD_File_PCI-pdf_1619080833.pdf"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
+    "parameter_name": "lh_original_filename",
+    "type": "String",
+    "description": "The original name of the file before it was placed under Legal Hold.",
+    "example": [
+      "GD_File_PCI-pdf_1619080833.pdf",
+      "MP_File_PCI-pdf_1629080833.pdf"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
+    "parameter_name": "lh_shared",
+    "type": "String",
+    "description": "Indicates the sharing status of the file under Legal Hold, such as whether it is private or publicly shared.",
+    "example": [
+      "private",
+      "public"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
+    "parameter_name": "lh_shared_with",
+    "type": "String",
+    "description": "Specifies the user or users with whom the Legal Hold file has been shared.",
+    "example": [
+      "tchung@netskope.com,eladio.schiller@example.com,a7642376423@hotmail.com,ylu@netskope.com,vlee@netskope.com,werner.pfannerstill@example.com",
+      "eladio.schiller@example.coms.com,test@kloudless.com,dtestthorman@kloudless.com"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
   },
   {
     "parameter_name": "lh_version",
     "type": "String",
-    "description": "File version of original file.",
+    "description": "Indicates the version number of the original file placed under Legal Hold.",
     "example": [
       "1.3",
       "2.0"
@@ -6547,7 +6760,9 @@
       "alert",
       "application"
     ],
-    "applicable_for": []
+    "applicable_for": [
+      "data_export"
+    ]
   },
   {
     "parameter_name": "loc",
@@ -7745,6 +7960,27 @@
     ]
   },
   {
+    "parameter_name": "ns_activity",
+    "type": "String",
+    "description": "Represents the normalized activity type, mapping application-specific actions to standardized activity labels used by the system.",
+    "example": [
+      "Download",
+      "Upload",
+      "view",
+      "unlock",
+      "CASB API Scan",
+      "Copy"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
     "parameter_name": "nsdeviceuid",
     "type": "String",
     "description": "Device ID attached to Devices Host Info Object.",
@@ -7840,6 +8076,7 @@
     ],
     "default_value": "",
     "applicable_for": [
+      "data_export",
       "log_streaming"
     ],
     "event_types": [
@@ -9202,6 +9439,23 @@
     ]
   },
   {
+    "parameter_name": "q_shared_with",
+    "type": "String",
+    "description": "Email addresses of users with whom the quarantined file has been shared.",
+    "example": [
+      "clsin@netskape.com,admin@nskloudless.onmicrosoft.com",
+      "Tlsin@netskape.com,admin@nskloudless.onmicrosoft.com"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ]
+  },
+  {
     "parameter_name": "qdomain",
     "type": "String",
     "description": "Stands for Fully Qualified Domain Name.",
@@ -9217,6 +9471,7 @@
     ],
     "default_value": "",
     "event_types": [
+      "alert",
       "network"
     ],
     "applicable_for": [
@@ -9237,7 +9492,9 @@
       "alert",
       "network"
     ],
-    "applicable_for": []
+    "applicable_for": [
+      "data_export"
+    ]
   },
   {
     "parameter_name": "quarantine_action_reason",
@@ -9760,6 +10017,7 @@
     ],
     "default_value": 0,
     "applicable_for": [
+      "data_export",
       "log_streaming"
     ],
     "event_types": [
@@ -10756,6 +11014,46 @@
     ]
   },
   {
+    "parameter_name": "smtp_block_reason",
+    "type": "String",
+    "description": "Provides the reason why SMTP email traffic was blocked by CFW, which treats SMTP like any other network traffic.",
+    "example": [
+      "SMTP Client ID Blacklisted.",
+      "Domain is in blocklist."
+    ],
+    "event_types": [
+      "network"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "smtp_client_domain",
+    "type": "String",
+    "description": "Specifies the domain name of the SMTP client, as observed and processed by CFW during email traffic inspection.",
+    "example": [
+      "gmail.com",
+      "outlook.com",
+      "live.com",
+      "yahoo.com",
+      "yahoo.fr",
+      "yahoo.co.uk",
+      "icloud.com",
+      "msn.com",
+      "laptop-xysg",
+      "abc.com"
+    ],
+    "event_types": [
+      "network"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
     "parameter_name": "smtp_status",
     "type": "String",
     "description": "Customers can configure Netskope SMTP Proxy with Microsoft O365 Exchange, all outgoing emails from Microsoft O365 Exchange are sent to Netskope SMTP Proxy for policy evaluation and will send Back to Exchange  for mail delivery. This field denotes the status code for ex: SMTP status 250 shows successful delivery of mail.",
@@ -10824,6 +11122,23 @@
       "visa_docs.doc",
       "tax_return.pdf",
       "babies_pic.jpg"
+    ],
+    "event_types": [
+      "epdlp"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "source_file_path",
+    "type": "String",
+    "description": "Full file path on the user's device where the source file is located, as captured in Endpoint DLP events.",
+    "example": [
+      "/home/username/Documents/file.txt",
+      "C:\\Test\\MyDirectory\\MyTestFile.txt",
+      "\\servershare\file.txt"
     ],
     "event_types": [
       "epdlp"
@@ -11602,6 +11917,7 @@
     ],
     "default_value": "",
     "applicable_for": [
+      "data_export",
       "log_streaming"
     ],
     "event_types": [
@@ -12728,10 +13044,12 @@
     "example": [
       "high",
       "medium",
-      "low"
+      "low",
+      "Moderate"
     ],
     "default_value": "",
     "applicable_for": [
+      "data_export",
       "log_streaming"
     ],
     "event_types": [
@@ -16147,6 +16465,23 @@
     "default_value": "",
     "applicable_for": [
       "data_export"
+    ]
+  },
+  {
+    "parameter_name": "zip_password",
+    "type": "String",
+    "description": "Password used to zip-compress the quarantined file. Required when quarantine is triggered by TSS detection.",
+    "example": [
+      "TestAbtuwwwpl2#44$",
+      "samplebtuwwwpl2@44$"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "alert",
+      "application"
     ]
   }
 ]
