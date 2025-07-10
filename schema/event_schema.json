@@ -10316,6 +10316,23 @@
     ]
   },
   {
+    "parameter_name": "sampled_text_size",
+    "type": "Integer64",
+    "description": "Indicates the number of bytes sent to the DLP service for inspection when a file is extra large. Represents the amount of extracted text (in MB) from large files on the endpoint. Only a portion of the file is sampled to limit the extracted content size. The sampled text is sent to DLP for processing, and the verdict for the entire file is based on this sample.",
+    "example": [
+      76158336,
+      1024000,
+      96000345
+    ],
+    "event_types": [
+      "epdlp"
+    ],
+    "default_value": 0,
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
     "parameter_name": "sanctioned_instance",
     "type": "String",
     "description": "A sanctioned instance is a company owned account in an external application. A value of yes indicates that the company has granted    access for the specific SaaS / IaaS account to Netskope. A value of no    represents a personal user account or an enterprise account not    authorized by the enterprise Administrator",
