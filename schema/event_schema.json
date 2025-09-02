@@ -709,11 +709,17 @@
       "High",
       "Medium"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "app_activity",
@@ -861,11 +867,17 @@
       "UPLOAD",
       "Download"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "appcategory",
@@ -1757,11 +1769,17 @@
       "Microsoft Azure",
       "GCP"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "co",
@@ -3159,11 +3177,17 @@
       "1919502852885809545",
       "6563048889927593977"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "displayName",
@@ -4192,11 +4216,17 @@
       "1",
       "0"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "email_from_user",
@@ -4206,11 +4236,17 @@
       "mark@developers.yahoo.com",
       "johns@developers.linkedin.com"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "email_modified",
@@ -4221,11 +4257,17 @@
       1713797085,
       1713777015
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "email_source",
@@ -4270,11 +4312,17 @@
       "marka@yahoo.com",
       "john@democompany.com"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "employeeType",
@@ -4321,11 +4369,17 @@
       "MIP encrypted - Sanctioned",
       "MIP encrypted - Unsanctioned"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "end_time",
@@ -4800,11 +4854,17 @@
       "71e37440d9534d6c16d1aa193401bea1",
       "51e37440d4534d6c16d1aa193401bea1"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "file_name",
@@ -4860,11 +4920,17 @@
       "vamorales@dummycompnay.cl",
       "cmayorp@dummycompnay.cl"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "file_password_protected",
@@ -5010,11 +5076,17 @@
       "../parent-directory/file.txt",
       "\\\\server\\share\\file.txt"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "fllg",
@@ -5024,11 +5096,17 @@
       "English",
       "Spanish"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "flow_status",
@@ -5055,11 +5133,17 @@
       "yes",
       "no"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "forward_to_proxy_profile",
@@ -6847,11 +6931,17 @@
       "08/06/2016, 14:25:27",
       "08/06/2016, 14:25:27"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "location",
@@ -7015,11 +7105,17 @@
       "low",
       "medium"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "mal_type",
@@ -8033,11 +8129,17 @@
       17,
       20
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "numbytes",
@@ -9802,11 +9904,17 @@
     "example": [
       "?"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "req_cnt",
@@ -9932,11 +10040,17 @@
     "example": [
       "?"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "resp_cnt",
@@ -10092,11 +10206,17 @@
       71,
       23
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "rs-status",
@@ -10200,11 +10320,17 @@
       "BPR-SALESFORCE",
       "BPR-SERVICENOW"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "sa_rule_id",
@@ -10641,11 +10767,17 @@
       "medium",
       "Low"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "session_duration",
@@ -10674,11 +10806,17 @@
       10,
       45
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "sessionid",
@@ -11173,11 +11311,17 @@
       1413232177,
       1423232177
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "spst",
@@ -11187,11 +11331,17 @@
       1413232177,
       1423232177
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "src_country",
@@ -11372,11 +11522,17 @@
     "example": [
       "?"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "src_region",
@@ -11663,11 +11819,17 @@
       "message_changed",
       "huddle_thread"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "supporting_data",
@@ -11815,11 +11977,17 @@
     "example": [
       "[{\u201cname\u201d: \u201cmajor environment\u201d, \u201cvalue\u201d: \u201ctest\u201d}, {\u201cname\u201d: \u201cowner\u201d, \u201cvalue\u201d: \u201cabc\u201d }]"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "telemetry_app",
@@ -11859,11 +12027,17 @@
       "346",
       "120"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "threat_match_field",
@@ -12604,11 +12778,17 @@
       "markadam@netskope.com",
       "johnc@netskope.com"
     ],
+    "event_types": [
+      "alert",
+      "network",
+      "page",
+      "application",
+      "epdlp"
+    ],
     "default_value": "",
     "applicable_for": [
       "log_streaming"
-    ],
-    "event_types": []
+    ]
   },
   {
     "parameter_name": "two_factor_auth",
@@ -13693,8 +13873,10 @@
       "32",
       "7"
     ],
+    "event_types": [
+      "incident"
+    ],
     "default_value": "",
-    "event_types": [],
     "applicable_for": [
       "log_streaming"
     ]
