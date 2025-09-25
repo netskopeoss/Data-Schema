@@ -16682,5 +16682,40 @@
       "alert",
       "application"
     ]
-  }
+  },
+  {
+    "parameter_name": "smtp_client_domain",
+    "type": "String",
+    "description": "SMTP client Identity",
+    "example": [
+      "domain.com",
+      "example.com"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export",
+      "restapi",
+      "webui"
+    ],
+    "event_types": [
+      "alert"
+    ]
+  },
+  {
+    "parameter_name": "block_reason",
+    "type": "String",
+    "description": "SMTP Block Reason",
+    "example": [
+      "SMTP Client ID Blacklisted",      
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export",
+      "restapi",
+      "webui"
+    ],
+    "event_types": [
+      "alert"
+    ]
+  }   
 ]
