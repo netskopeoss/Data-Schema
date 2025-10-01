@@ -16706,7 +16706,7 @@
     "type": "String",
     "description": "SMTP Block Reason",
     "example": [
-      "SMTP Client ID Blacklisted",      
+      "SMTP Client ID Blacklisted"
     ],
     "default_value": "",
     "applicable_for": [
