@@ -593,7 +593,7 @@
           "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
-          "transformation": "x-cs-timestamp('YYYY-MM-DD HH:MM:SS')"
+          "transformation": "x-c-local-timestamp('YYYY-MM-DD HH:MM:SS')"
         }
       }
     ],
@@ -941,7 +941,8 @@
     "type": "String",
     "description": "Reserved for future use.",
     "example": [
-      "N/A"
+      "instance1",
+      "instance2"
     ],
     "event_types": [
       {
@@ -960,13 +961,16 @@
     "type": "String",
     "description": "Reserved for future use.",
     "example": [
-      "N/A"
+      "tag1",
+      "tag2"
     ],
     "event_types": [
       {
         "transaction": {
           "default_value": "",
-          "introduced_in": 202409
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-cs-app-instance-tags"
         }
       }
     ],
@@ -2205,7 +2209,8 @@
     "type": "String",
     "description": "Reserved for future use.",
     "example": [
-      "N/A"
+      "English",
+      "French"
     ],
     "event_types": [
       {
@@ -2245,7 +2250,8 @@
     "type": "String",
     "description": "Reserved for future use.",
     "example": [
-      "N/A"
+      "3a7bd3e2360a3d29eea436fcfb7e44c735d117c8e2f1f5732b0c30b5ed5a51bd",
+      "4a7bd3e2360a3d29eea436fcfb7e44c735d117c8e2f1f5732b0c30b5ed5a51bd"
     ],
     "event_types": [
       {
@@ -2264,7 +2270,9 @@
     "type": "Integer64",
     "description": "Reserved for future use.",
     "example": [
-      "N/A"
+      2048,
+      4096,
+      8192
     ],
     "event_types": [
       {
@@ -3714,26 +3722,6 @@
     ]
   },
   {
-    "parameter_name": "x-error-debug",
-    "type": "String",
-    "description": "Error debug information",
-    "example": [
-      "debug-info-1",
-      "debug-info-2"
-    ],
-    "event_types": [
-      {
-        "transaction": {
-          "default_value": "",
-          "introduced_in": 202511
-        }
-      }
-    ],
-    "applicable_for": [
-      "log_streaming"
-    ]
-  },
-  {
     "parameter_name": "x-policy-categories",
     "type": "List",
     "description": "Policy categories matched",
@@ -3931,27 +3919,6 @@
       {
         "transaction": {
           "default_value": "",
-          "introduced_in": 202511
-        }
-      }
-    ],
-    "applicable_for": [
-      "log_streaming"
-    ]
-  },
-  {
-    "parameter_name": "x-sr-parent-transaction-id",
-    "type": "Integer64",
-    "description": "The parent transaction ID needed to correlate application events with transaction events.",
-    "example": [
-      1821255295454864980,
-      1621255295454864980,
-      1721255295454864980
-    ],
-    "event_types": [
-      {
-        "transaction": {
-          "default_value": 0,
           "introduced_in": 202511
         }
       }
