@@ -432,7 +432,7 @@
   {
     "parameter_name": "time",
     "type": "String",
-    "description": "Time of generation in HH:MI-SS format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+    "description": "Time of generation in HH:MI:SS format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
     "example": [
       "01:02-39",
       "03:02-45"
@@ -443,7 +443,7 @@
           "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
-          "transformation": "x-cs-timestamp('HH:MI-SS')"
+          "transformation": "x-cs-timestamp('HH:MI:SS')"
         }
       }
     ],
