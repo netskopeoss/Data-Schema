@@ -1,0 +1,4068 @@
+[
+  {
+    "parameter_name": "bytes",
+    "type": "Integer64",
+    "description": "Sum of client bytes plus server bytes.",
+    "example": [
+      1093,
+      20019,
+      20930,
+      16940,
+      18177
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "c-ip",
+    "type": "String",
+    "description": "Client IP as seen by the Netskope proxy. This will be the machine IP if available, IPv4 address.",
+    "example": [
+      "70.42.029.126",
+      "70.42.109.126",
+      "71.42.129.126",
+      "70.41.129.126"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-policy-src-ip"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-bytes",
+    "type": "Integer64",
+    "description": "Bytes received from the client.",
+    "example": [
+      1093,
+      2093,
+      5093,
+      1690,
+      154
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-content-type",
+    "type": "String",
+    "description": "The content-type header in the HTTP request.",
+    "example": [
+      "application/json",
+      "text/csv"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-dns",
+    "type": "String",
+    "description": "The destination domain requested.",
+    "example": [
+      "google.co.in",
+      "apple.co.in"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "cs-host"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-host",
+    "type": "String",
+    "description": "The value in the host header from the request.",
+    "example": [
+      "google.co.in",
+      "apple.co.in"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-method",
+    "type": "String",
+    "description": "The HTTP method (e.g. GET, POST).",
+    "example": [
+      "POST",
+      "GET"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-referer",
+    "type": "String",
+    "description": "The value of the referrer header.",
+    "example": [
+      "https://www.google.com",
+      "https://www.youtube.com",
+      "https://www.cnn.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-uri",
+    "type": "String",
+    "description": "Path information plus query string.",
+    "example": [
+      "/home.html?key=123",
+      "/home.html?key=abc"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "concat(x-cs-uri-path,'?',cs-uri-query)"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-uri-port",
+    "type": "Integer32",
+    "description": "Port specified in the request header.",
+    "example": [
+      443,
+      80
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-uri-query",
+    "type": "String",
+    "description": "The query string portion of the HTTP request.",
+    "example": [
+      "q=a&b=c",
+      "q=a&d=efr"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-uri-scheme",
+    "type": "String",
+    "description": "The protocol used.",
+    "example": [
+      "https",
+      "http"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-user-agent",
+    "type": "String",
+    "description": "The user-agent header in the HTTP request.",
+    "example": [
+      "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0) Gecko/20100101 Firefox/50.0"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "cs-username",
+    "type": "String",
+    "description": "The client\u2019s username.",
+    "example": [
+      "Bill@companyname.com",
+      "test_user@companyname.com",
+      "demo_user@companyname.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-c-authn-user"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "date",
+    "type": "String",
+    "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+    "example": [
+      "08/07/19",
+      "05/07/23"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-cs-timestamp('YY-MM-DD')"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "rs-status",
+    "type": "Integer64",
+    "description": "The HTTP status code received from the remote server.",
+    "example": [
+      200,
+      500,
+      401
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "s-ip",
+    "type": "String",
+    "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it\u2019s neither IPv4 or IPv6.",
+    "example": [
+      "70.42.029.126",
+      "216.58.193.33",
+      "71.42.129.126",
+      "70.41.129.126"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-policy-dst-ip"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "sc-bytes",
+    "type": "Integer64",
+    "description": "Bytes received from the server.",
+    "example": [
+      1093,
+      2091,
+      2093,
+      1694,
+      154
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "sc-content-type",
+    "type": "String",
+    "description": "The content-type header from the response.",
+    "example": [
+      "text/html",
+      "text/plain",
+      "application/json"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "sc-status",
+    "type": "Integer32",
+    "description": "The HTTP status code received from the server.",
+    "example": [
+      200,
+      401,
+      403,
+      500
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "time",
+    "type": "String",
+    "description": "Time of generation in HH:MI:SS format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+    "example": [
+      "01:02-39",
+      "03:02-45"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-cs-timestamp('HH:MI:SS')"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "time-taken",
+    "type": "Integer64",
+    "description": "Delta (integer value in ms) when the request processing started and the full response was received.",
+    "example": [
+      589,
+      389,
+      300,
+      179,
+      203
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-browser",
+    "type": "String",
+    "description": "Client\u2019s browser.",
+    "example": [
+      "Firefox",
+      "Safari",
+      "Chrome"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-browser-version",
+    "type": "Integer32",
+    "description": "Client\u2019s browser version.",
+    "example": [
+      50,
+      32,
+      731
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-country",
+    "type": "String",
+    "description": "Country of the client (user).",
+    "example": [
+      "United States",
+      "Canada",
+      "Mexico"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-device",
+    "type": "String",
+    "description": "Client\u2019s device type.",
+    "example": [
+      "Windows device",
+      "Macbook"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-latitude",
+    "type": "Float",
+    "description": "Latitude of the client.",
+    "example": [
+      37.3394,
+      33.3394,
+      31.3094,
+      35.3094
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0.0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-local-time",
+    "type": "String",
+    "description": "The local time of the client calculated from geolocation of the device IP.",
+    "example": [
+      "Thu Jan 12 08:41:08 2023",
+      "Thu Jan 13 08:41:08 2023"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-c-local-timestamp('YYYY-MM-DD HH:MI:SS')"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-location",
+    "type": "String",
+    "description": "Location of the client.",
+    "example": [
+      "Palo Alto",
+      "San Jose",
+      "Delhi"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-longitude",
+    "type": "Float",
+    "description": "Latitude of the client.",
+    "example": [
+      -37.3394,
+      -33.3394,
+      -31.3094,
+      -35.3094
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0.0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-os",
+    "type": "String",
+    "description": "Operating system of the client.",
+    "example": [
+      "Windows 10",
+      "MacOs ventura",
+      "Android 10.1"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-region",
+    "type": "String",
+    "description": "Region of the client.",
+    "example": [
+      "California",
+      "Texas",
+      "Delhi"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-zipcode",
+    "type": "Integer32",
+    "description": "Zip code of the client.",
+    "example": [
+      84414,
+      124001,
+      94555,
+      94536
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-category",
+    "type": "String",
+    "description": "Primary category name applicable for the url in this transaction.",
+    "example": [
+      "Cloud Storage",
+      "Web app",
+      "Mobile app"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-category-id",
+    "type": "Integer32",
+    "description": "Primary category ID applicable for the url in this transaction, e.g. category ID is 7 for the Cloud Storage category.",
+    "example": [
+      7,
+      11,
+      13
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "deprecated": true,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-client-ssl-err",
+    "type": "String",
+    "description": "Description of SSL error between client (browser) and proxy.",
+    "example": [
+      "Handshake error (error:1417A0C1:SSL routines: tls_post_process_client_hello:no shared cipher)"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-access-method",
+    "type": "String",
+    "description": "Steering method used to access the Netskope cloud.",
+    "example": [
+      "Client",
+      "Secure Forwarder",
+      "API Connector",
+      "Proxy Chaining",
+      "Reverse Proxy"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app",
+    "type": "String",
+    "description": "Cloud application name.",
+    "example": [
+      "Dropbox",
+      "Box",
+      "Okta"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-activity",
+    "type": "String",
+    "description": "The cloud application activity identified by the proxy.",
+    "example": [
+      "Browse",
+      "Download"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-category",
+    "type": "String",
+    "description": "Cloud application category from the CCI database.",
+    "example": [
+      "Business Intelligence and Data Analytics",
+      "Business Intelligence"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-cci",
+    "type": "Integer32",
+    "description": "Cloud Confidence Index of the Cloud application from the CCI database.",
+    "example": [
+      17,
+      23,
+      76
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-ccl",
+    "type": "String",
+    "description": "Cloud Confidence Level of the Cloud application from the CCI database.",
+    "example": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-from-user",
+    "type": "String",
+    "description": "The user identity detected in the cloud application.",
+    "example": [
+      "user@company.com",
+      "user@democompany.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-instance-id",
+    "type": "String",
+    "description": "The cloud application instance ID identified by the proxy.",
+    "example": [
+      "mycompany.com",
+      "democompany.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-instance-name",
+    "type": "String",
+    "description": "Reserved for future use.",
+    "example": [
+      "instance1",
+      "instance2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-instance-tag",
+    "type": "String",
+    "description": "Reserved for future use.",
+    "example": [
+      "tag1",
+      "tag2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-cs-app-instance-tags"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-object-id",
+    "type": "String",
+    "description": "The ID of the object transferred to/from the cloud application.",
+    "example": [
+      "1iNtlIbpIivrmMEHPgtjEDk_T5Fe0a778",
+      "1iNtlI3pIivrmMEHPgtjEDk_T5Fe0a778",
+      "5iNtlIbpIivrmMEHPgtjEDk_T5Fe0a778"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-object-name",
+    "type": "String",
+    "description": "The name of the object transferred to/from the cloud application.",
+    "example": [
+      "sample-data.pdf",
+      "demo_file.txt"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-object-type",
+    "type": "String",
+    "description": "The type of the object transferred to/from the cloud application.",
+    "example": [
+      "File",
+      "Image"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-suite",
+    "type": "String",
+    "description": "The cloud application suite name.",
+    "example": [
+      "Google",
+      "Microsoft"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-tags",
+    "type": "String",
+    "description": "Cloud application tags from the CCI database.",
+    "example": [
+      "Marketing",
+      "HR"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-to-user",
+    "type": "String",
+    "description": "The recipients of a share/send activity detected in the cloud application.",
+    "example": [
+      "user@company.com",
+      "user@democompany.com",
+      "user@partner.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-connect-host",
+    "type": "String",
+    "description": "The host value received in the Client to Proxy HTTP CONNECT request. This field is empty if there is no CONNECT.",
+    "example": [
+      "www.google.com",
+      "www.cnn.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-connect-port",
+    "type": "Integer32",
+    "description": "The port value received in the Client to Proxy HTTP CONNECT request. This field is empty if there is no CONNECT.",
+    "example": [
+      443,
+      80
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-connect-user-agent",
+    "type": "String",
+    "description": "The User-Agent header value received in the Client to Proxy HTTP CONNECT request. This field is empty if there is no CONNECT or the field is missing.",
+    "example": [
+      "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:50.0)Gecko/20100101 Firefox/50.0",
+      "Mozilla/7.0 (Windows NT 10.0; WOW64; rv:50.0)Gecko/20100101 Firefox/50.0"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-domain-fronted-sni",
+    "type": "String",
+    "description": "The SNI of the SSL connection where Netskope detected domain fronting. In other words, the SNI and Host header were mismatched. SSL inspection must be enabled to see this field.",
+    "example": [
+      "google.co.in",
+      "youtube.co.in"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-dst-ip",
+    "type": "String",
+    "description": "The destination IP of the client to proxy session.",
+    "example": [
+      "216.58.193.67",
+      "70.46.129.126"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-dst-port",
+    "type": "Integer32",
+    "description": "The destination port of the client to proxy session.",
+    "example": [
+      443,
+      80
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-http-version",
+    "type": "String",
+    "description": "The version of the HTTP protocol of the request.",
+    "example": [
+      "HTTP2",
+      "HTTP1.1"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ip-connect-xff",
+    "type": "String",
+    "description": "X-Forwarded-For header value received in the Client to Proxy HTTP CONNECT request. This field is empty if there is no CONNECT or if the field is missing.",
+    "example": [
+      "163.116.163.24",
+      "192.168.1.1"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ip-xff",
+    "type": "String",
+    "description": "X-Forwarded-For header value received in the Client to Proxy GET request. This field is empty if there is no header or if GET is not decrypted.",
+    "example": [
+      "163.116.163.24",
+      "192.168.1.2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-page-id",
+    "type": "Integer64",
+    "description": "Identifier associated with the page event object.",
+    "example": [
+      1170730000000000000,
+      1270730000000000000,
+      1140730000000000000
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-session-id",
+    "type": "Integer64",
+    "description": "A session for the current user which consists of: user, device, OS, app, browser.",
+    "example": [
+      50530851439098160,
+      40530851437098160,
+      30530851437098160
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-site",
+    "type": "String",
+    "description": "Destination site.",
+    "example": [
+      "Google Maps",
+      "Apple Maps"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-sni",
+    "type": "String",
+    "description": "The hostname that the client is attempting to connect to using the SNI extension in the TLS handshake.",
+    "example": [
+      "google.co.in",
+      "youtube.co.in"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-src-ip",
+    "type": "String",
+    "description": "The source IP of the client to proxy session.",
+    "example": [
+      "70.42.129.126",
+      "70.46.129.126"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-src-ip-egress",
+    "type": "String",
+    "description": "The public IP used to contact the NewEdge data plane on the traffic coming from the Client device.",
+    "example": [
+      "70.42.129.126",
+      "71.42.129.126"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-src-port",
+    "type": "Integer32",
+    "description": "The source port of the client to proxy session.",
+    "example": [
+      54447,
+      54440
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-cipher",
+    "type": "String",
+    "description": "The SSL Cipher negotiated between the Client device and the NewEdge data plane for the HTTPS request.",
+    "example": [
+      "TLS_AES_256_GCM_SHA384",
+      "TLS_AES_255_GCM_SHA384"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-engine-action",
+    "type": "String",
+    "description": "Indicates the result of the SSL Engine behavior after certificate evaluation and SSL/TLS negotiation. Possible values include: allow, block, or bypass.",
+    "example": [
+      "allow",
+      "block",
+      "bypass"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-engine-action-reason",
+    "type": "String",
+    "description": "Provides details of the SSL Engine action.",
+    "example": [
+      "SSL Error \u2013 Incomplete Certificate Trust Chain",
+      "SSL Error \u2013 Invalid Certificate Trust Chain"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-fronting-error",
+    "type": "String",
+    "description": "Indicates if the server certificate received from the destination server has a mismatch between the SNI and the hostname of the encrypted HTTP request.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-handshake-error",
+    "type": "String",
+    "description": "Indicates if the SSL Engine encountered a problem when establishing the SSL/TLS negotiation.\nFor more information, refer to the x-server-ssl-err and x-client-ssl-err fields.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-ja3",
+    "type": "String",
+    "description": "Fingerprints the way the Client communicates over TLS.",
+    "example": [
+      "3d908070f157946cc4ea9dca39dbe374",
+      "2d908070f157946cc4ea9dca39dbe374",
+      "2d808070f157946cc4ea9dca39dbe374"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-version",
+    "type": "String",
+    "description": "The SSL Version negotiated between the Client device and the NewEdge data plane for the HTTPS request.",
+    "example": [
+      "TLSv1.3",
+      "TLSv1.4"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-timestamp",
+    "type": "Integer64",
+    "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the \u201cdate\u201d and \u201ctime\u201d fields.",
+    "example": [
+      1480330369,
+      1680330369,
+      1680330369
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-traffic-type",
+    "type": "String",
+    "description": "Type of traffic could be \u201cWeb\u201d or \u201cCloudApp\u201d. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
+    "example": [
+      "Web",
+      "CloudApp"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-tunnel-id",
+    "type": "String",
+    "description": "VPN tunnel ID.",
+    "example": [
+      "998a4499-a5a6-4a55-b243-b67ce89dd870",
+      "9798a4499-a5a6-4a55-b243-b67ce89dd870",
+      "998a4499-b5a6-4a55-b243-b67ce89dd870"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-uri-path",
+    "type": "String",
+    "description": "Path of the URI from the received HTTP request.",
+    "example": [
+      "/example/path",
+      "/example/unc/path"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-url",
+    "type": "String",
+    "description": "The full URL of the request received, includes scheme, host, port, path and query.",
+    "example": [
+      "https://play.google.com/log?format=json&hasfast=true&authuser=0",
+      "https://play.youtube.com/log?format=json&hasfast=true&authuser=0"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-userip",
+    "type": "String",
+    "description": "The client IP address. If the client IP address is not found, the field is left blank.",
+    "example": [
+      "199.188.180.55",
+      "190.188.180.55",
+      "197.188.180.55"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-policy-src-ip"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-error",
+    "type": "String",
+    "description": "The error encountered when processing the transaction.",
+    "example": [
+      "dns-resolution",
+      "file-corrupted"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-other-category",
+    "type": "String",
+    "description": "Secondary categories applicable for the url in this transaction.",
+    "example": [
+      "News & Media",
+      "Entertainment",
+      "Gambling"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-other-category-id",
+    "type": "Integer32",
+    "description": "IDs of secondary categories applicable for the url in this transaction, e.g. category ID is 537 for the News & Media; Entertainment category.",
+    "example": [
+      537,
+      119,
+      137
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "deprecated": true,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-action",
+    "type": "String",
+    "description": "The action performed by the proxy on the transaction after the Real-time policy engine analysis (e.g. allow, block, bypass, alert, user alert).",
+    "example": [
+      "allow",
+      "block",
+      "bypass",
+      "alert",
+      "user alert"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-dst-host",
+    "type": "String",
+    "description": "The hostname computed by the Real-time policy engine. The source for the hostname is provided in the x-policy-dst-host-source field.",
+    "example": [
+      "chat.google.com",
+      "video.google.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-dst-host-source",
+    "type": "String",
+    "description": "The source for the hostname value computed by the Real-time policy engine (e.g. OriginalDestDomain, Sni, Uri, HttpHostHeader).",
+    "example": [
+      "OriginalDestDomain",
+      "HttpHostHeader",
+      "Sni",
+      "Uri"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-dst-ip",
+    "type": "String",
+    "description": "The destination IP computed by the Real-time policy engine, from DNS resolution.",
+    "example": [
+      "10.50.1.192",
+      "142.251.46.206"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-justification-reason",
+    "type": "String",
+    "description": "The justification provided by the end user in case of \u201cuseralert\u201d action.",
+    "example": [
+      "sharing with a trusted partner",
+      "needed for a demo"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-justification-type",
+    "type": "String",
+    "description": "The justification type selected by the end user in case of \u201cuseralert\u201d action.",
+    "example": [
+      "justification"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-name",
+    "type": "String",
+    "description": "The Real-time policy name that triggered the action.",
+    "example": [
+      "DefaultAction",
+      "DemoPolicyApplied"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-src-ip",
+    "type": "String",
+    "description": "The source IP computed by the Real-time policy engine from the source IP or XFF header.",
+    "example": [
+      "10.50.1.192",
+      "10.54.1.192"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-enddate",
+    "type": "String",
+    "description": "The end date/time of the server certificate received from the destination server.",
+    "example": [
+      "Jan 9 08:18:29 2023 GMT",
+      "Jan 10 08:18:29 2023 GMT"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-cert-end('YYYY-MM-DD HH:MI:SS')"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-expired",
+    "type": "String",
+    "description": "Indicates if the server certificate received from the destination server is expired or not yet valid.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-incomplete-chain",
+    "type": "String",
+    "description": "Indicates if the server certificate received from destination server has an incomplete issuer chain.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-issuer-cn",
+    "type": "String",
+    "description": "The issuer CN attribute of the server certificate received from destination server.",
+    "example": [
+      "GTS CA 1C3",
+      "GTS CA 19C2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-mismatch",
+    "type": "String",
+    "description": "Indicates if the server certificate received from the destination server has a mismatch between the SNI and the CN/SAN.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-revocation-check",
+    "type": "String",
+    "description": "Reserved for future use.",
+    "example": [
+      "OCSP + url",
+      "CRL + url",
+      "NoSsl",
+      "NotChecked"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-revoked",
+    "type": "String",
+    "description": "Indicates if the server certificate received from the destination server is revoked.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-self-signed",
+    "type": "String",
+    "description": "Indicates if the server certificate received from  the destination server is self-signed.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-startdate",
+    "type": "String",
+    "description": "The start date/time of the server certificate received from the destination server.",
+    "example": [
+      "Oct 17 08:18:30 2022 GMT",
+      "Jan 9 08:18:29 2023 GMT"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-cert-start('YYYY-MM-DD HH:MI:SS')"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-subject-cn",
+    "type": "String",
+    "description": "The CN attribute of the server certificate received from the destination server.",
+    "example": [
+      "upload.video.google.com",
+      "download.video.google.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-untrusted-root",
+    "type": "String",
+    "description": "Indicates if the server certificate received from the destination server is signed by a trusted issuer.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-valid",
+    "type": "String",
+    "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn\u2019t reflect the action of the SSL Engine.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-request-id",
+    "type": "Integer64",
+    "description": "Request ID needed to correlate DLP and TSS incidents with transaction events.",
+    "example": [
+      2334064361201696768,
+      2230064361201696768,
+      2204064361201696768
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-rs-file-category",
+    "type": "String",
+    "description": "The category of the object transferred to/from the remote server.",
+    "example": [
+      "Word Processor",
+      "Image IDs"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-rs-file-language",
+    "type": "String",
+    "description": "Reserved for future use.",
+    "example": [
+      "English",
+      "French"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-rs-file-md5",
+    "type": "String",
+    "description": "The MD5 Hash of the object transferred to/from the remote server.",
+    "example": [
+      "bcdd51c6a4f3f99c4e658f07e4c57e91",
+      "bced51c6a4f3f99c4e658f07e4c57e91",
+      "bcdd41c6a4f3f99c4e658f07e4c57e91"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-rs-file-sha256",
+    "type": "String",
+    "description": "Reserved for future use.",
+    "example": [
+      "3a7bd3e2360a3d29eea436fcfb7e44c735d117c8e2f1f5732b0c30b5ed5a51bd",
+      "4a7bd3e2360a3d29eea436fcfb7e44c735d117c8e2f1f5732b0c30b5ed5a51bd"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-rs-file-size",
+    "type": "Integer64",
+    "description": "Reserved for future use.",
+    "example": [
+      2048,
+      4096,
+      8192
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-rs-file-type",
+    "type": "String",
+    "description": "The type of the object transferred to/from the remote server.",
+    "example": [
+      "text/plain",
+      "application/json"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-country",
+    "type": "String",
+    "description": "Destination country.",
+    "example": [
+      "United States",
+      "Canada",
+      "Mexico"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-country"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-custom-signing-ca-error",
+    "type": "String",
+    "description": "Indicates that the SSL Engine failed to intercept with a Custom signing CA.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-dp-name",
+    "type": "String",
+    "description": "The dataplane name processing the request.",
+    "example": [
+      "FR-PAR1",
+      "US-SJC1"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-latitude",
+    "type": "Float",
+    "description": "Destination latitude.",
+    "example": [
+      37.4192008972168,
+      15.419200897216797,
+      17.419200897016797
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0.0,
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-latitude"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-location",
+    "type": "String",
+    "description": "Destination location (e.g. city).",
+    "example": [
+      "Menlo Park",
+      "San Jose",
+      "Newyork"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-location"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-longitude",
+    "type": "Float",
+    "description": "Destination longitude.",
+    "example": [
+      -37.4192008972168,
+      -15.419200897216797,
+      -17.419200897016797
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0.0,
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-longitude"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-region",
+    "type": "String",
+    "description": "Destination region (e.g. state).",
+    "example": [
+      "California",
+      "Texas",
+      "Nevada"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-region"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-s-zipcode",
+    "type": "Integer32",
+    "description": "Destination zip code.",
+    "example": [
+      94025,
+      94536,
+      94001
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "deprecated": true,
+          "introduced_in": 202409,
+          "transformation": "x-r-zipcode"
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sc-notification-name",
+    "type": "String",
+    "description": "The name of the user notification displayed to the end user in case of action \u201cblock\u201d or \u201cuseralert\u201d.",
+    "example": [
+      "block_page.html",
+      "allow_page.html"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-server-ssl-err",
+    "type": "String",
+    "description": "Description of SSL error between proxy and content servers.",
+    "example": [
+      "Handshake error (error:141A318A:SSL routines: tls_process_ske_dhe:dh key too small) Blocked by SSL_HANDSHAKE_ERROR"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-dst-ip",
+    "type": "String",
+    "description": "The destination IP of the proxy to remote server session.",
+    "example": [
+      "163.116.163.24",
+      "216.58.193.67"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-dst-port",
+    "type": "Integer32",
+    "description": "The destination port of the proxy to remote server session.",
+    "example": [
+      80,
+      443
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-headers-name",
+    "type": "String",
+    "description": "List of custom headers inserted.",
+    "example": [
+      "X-Dropbox-allowed-Team-Ids, x-my-header"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-headers-value",
+    "type": "String",
+    "description": "List of custom header values inserted.",
+    "example": [
+      "1234, 123456"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-src-ip",
+    "type": "String",
+    "description": "The source IP of the proxy to remote server session. This field is blank if dedicated IPs are used.",
+    "example": [
+      "163.116.163.24",
+      "70.46.129.126"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-src-port",
+    "type": "Integer32",
+    "description": "The source port of the proxy to remote server session. This field is blank if dedicated IPs are used.",
+    "example": [
+      15556,
+      80
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-cipher",
+    "type": "String",
+    "description": "The SSL Cipher negotiated between the NewEdge data plane and the Destination Server for the HTTPS request.",
+    "example": [
+      "TLS_AES_256_GCM_SHA384",
+      "TLS_AES_356_GCM_SHA384"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-client-certificate-error",
+    "type": "String",
+    "description": "Indicates that the destination server requested a Client certificate during SSL/TLS negotiation.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-engine-action",
+    "type": "String",
+    "description": "Indicates the result of the SSL Engine behavior after certificate evaluation and SSL/TLS Negotiation. Possible values include: allow, block, or bypass.",
+    "example": [
+      "allow",
+      "block",
+      "bypass"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-engine-action-reason",
+    "type": "String",
+    "description": "Provides details of the SSL Engine action.",
+    "example": [
+      "InvalidCert (malformed or invalid certificate)",
+      "RejectedCert (malformed or invalid certificate)"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-handshake-error",
+    "type": "String",
+    "description": "Indicates if the SSL Engine encountered a problem to establish SSL/TLS negotiation. For more information, refer to the x-server-ssl-err and x-client-ssl-err fields for more information.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-ja3s",
+    "type": "String",
+    "description": "Fingerprints the way the server responds to the TLS.",
+    "example": [
+      "907bf3ecef1c987c889946b737b43de8",
+      "905bf3ecef1c987c889946b737b43de8",
+      "903bf3ecef1c987c889946b737b43de8"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-malformed-ssl",
+    "type": "String",
+    "description": "Indicates that the SSL Engine encountered a malformed SSL packet during SSL/TLS negotiation.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-ssl-version",
+    "type": "String",
+    "description": "The SSL Version negotiated between the NewEdge data plane and the Destination Server for the HTTPS request.",
+    "example": [
+      "TLSv1.3",
+      "TLSv2.3"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-bypass",
+    "type": "String",
+    "description": "Indicates if the request was SSL bypassed.",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-bypass-reason",
+    "type": "String",
+    "description": "Indicates if the request was SSL bypassed, this field provides the reason.",
+    "example": [
+      "SSL Error \u2013 SSL Handshake Error"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-action",
+    "type": "String",
+    "description": "Action of the SSL Decryption Policy that matched the request. Possible values include, Decrypt or Do not decrypt.",
+    "example": [
+      "Do not decrypt",
+      "Decrypt"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-categories",
+    "type": "String",
+    "description": "Destination Hostname Categories computed by the SSL Policy Engine to evaluate the SSL Decryption Policies.",
+    "example": [
+      "Content Server",
+      "Cloud Storage"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-dst-host",
+    "type": "String",
+    "description": "The Destination Hostname computed by the SSL Policy Engine to evaluate the SSL Decryption Policies.",
+    "example": [
+      "www.netskope.com",
+      "www.netstate.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-dst-host-source",
+    "type": "String",
+    "description": "Describes how the Destination Hostname was computed by the SSL Policy Engine. Possible values include from SNI or original host.",
+    "example": [
+      "Sni",
+      "original host"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-dst-ip",
+    "type": "String",
+    "description": "The Destination IP computed by the SSL Policy Engine to evaluate the SSL Decryption Policies.",
+    "example": [
+      "1141.193.213.20",
+      "141.192.213.20"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-name",
+    "type": "String",
+    "description": "Name of the SSL Decryption Policy that matched the request.",
+    "example": [
+      "Do not decrypt",
+      "Financial Services"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-src-ip",
+    "type": "String",
+    "description": "The Source IP computed by the SSL Policy Engine to evaluate the SSL Decryption Policies.",
+    "example": [
+      "10.1.1.1",
+      "10.1.2.1"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-transaction-id",
+    "type": "Integer64",
+    "description": "Transaction ID needed to correlate application events with transaction events.",
+    "example": [
+      1821255295454864980,
+      1621255295454864980,
+      1721255295454864980
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-type",
+    "type": "String",
+    "description": "The type of log message, which can be \u201chttp_transaction\u201d or \u201cWebSocket\u201d. NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
+    "example": [
+      "http_transaction",
+      "WebSocket"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202409
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "rs-bytes",
+    "type": "Integer64",
+    "description": "Response size in bytes from the remote server to the proxy.",
+    "example": [
+      1093,
+      2093,
+      5093,
+      1690,
+      154
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "sr-bytes",
+    "type": "Integer64",
+    "description": "Request size in bytes from the proxy to the remote server.",
+    "example": [
+      1093,
+      2093,
+      5093,
+      1690,
+      154
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-action",
+    "type": "String",
+    "description": "Action taken",
+    "example": [
+      "allow",
+      "block"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-action-reason",
+    "type": "String",
+    "description": "Action taken reason",
+    "example": [
+      "policy match",
+      "block due to malware"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-source",
+    "type": "String",
+    "description": "Authentication source",
+    "example": [
+      "saml",
+      "ldap"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-surrogate",
+    "type": "String",
+    "description": "Authentication source for surrogate login",
+    "example": [
+      "saml",
+      "ldap"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-surrogate-status",
+    "type": "String",
+    "description": "Authentication source status for surrogate login",
+    "example": [
+      "success",
+      "failure"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-user",
+    "type": "String",
+    "description": "Authentication user",
+    "example": [
+      "test.user",
+      "admin.user"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authz-groups",
+    "type": "List",
+    "description": "Authentication user groups",
+    "example": [
+      [
+        "test.group1, test.group2"
+      ],
+      [
+        "admin.group1, admin.group2"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authz-ou",
+    "type": "String",
+    "description": "Authentication user organizational unit",
+    "example": [
+      "Engineering",
+      "Finance"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authz-source",
+    "type": "String",
+    "description": "Authentication source for authorization",
+    "example": [
+      "ldap",
+      "saml"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-device-classification",
+    "type": "String",
+    "description": "Device classification",
+    "example": [
+      "corporate",
+      "personal"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-device-uid",
+    "type": "String",
+    "description": "Device unique identifier",
+    "example": [
+      "device-12345",
+      "device-67890"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-hostname",
+    "type": "String",
+    "description": "Device hostname",
+    "example": [
+      "device-12345",
+      "device-67890"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-local-timestamp",
+    "type": "Integer64",
+    "description": "Device local timestamp in milliseconds since epoch",
+    "example": [
+      1692541234567,
+      1692547890123
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-nsclient-client-profile",
+    "type": "String",
+    "description": "NSClient client profile name",
+    "example": [
+      "profile-1",
+      "profile-2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-nsclient-steering-profile",
+    "type": "String",
+    "description": "NSClient steering profile name",
+    "example": [
+      "profile-1",
+      "profile-2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-nsclient-version",
+    "type": "String",
+    "description": "NSClient version",
+    "example": [
+      "123.45.67",
+      "89.10.11"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-os-family",
+    "type": "String",
+    "description": "Device operating system family",
+    "example": [
+      "Windows",
+      "macOS"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-os-version",
+    "type": "String",
+    "description": "Device operating system version",
+    "example": [
+      "10",
+      "macOS 11.2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-timezone",
+    "type": "String",
+    "description": "Device timezone",
+    "example": [
+      "PST",
+      "EST"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-c-user-confidence-index",
+    "type": "Integer32",
+    "description": "User confidence index",
+    "example": [
+      85,
+      90
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-access-proxy",
+    "type": "List",
+    "description": "Cloud Security Access Proxy names",
+    "example": [
+      [
+        "proxy-1, proxy-2"
+      ],
+      [
+        "proxy-3, proxy-4"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-instance-tags",
+    "type": "List",
+    "description": "Cloud Security Application Instance Tags",
+    "example": [
+      [
+        "tag-1, tag-2"
+      ],
+      [
+        "tag-3, tag-4"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-connect-xau",
+    "type": "String",
+    "description": "Cloud Security Connect XAU status",
+    "example": [
+      "ENABLED",
+      "DISABLED"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-nsclient-tunnel-type",
+    "type": "String",
+    "description": "Cloud Security NSClient Tunnel Type",
+    "example": [
+      "IPSec",
+      "SSL"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-parent-process",
+    "type": "String",
+    "description": "Cloud Security Parent Process Name",
+    "example": [
+      "explorer.exe",
+      "cmd.exe"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-pid",
+    "type": "Integer64",
+    "description": "Cloud Security Process ID",
+    "example": [
+      1234,
+      5678
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ppid",
+    "type": "Integer64",
+    "description": "Cloud Security Parent Process ID",
+    "example": [
+      1234,
+      5678
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-process",
+    "type": "String",
+    "description": "Cloud Security Process Name",
+    "example": [
+      "chrome.exe",
+      "firefox.exe"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-malformed-ssl",
+    "type": "String",
+    "description": "Cloud Security SSL Malformed SSL indicator",
+    "example": [
+      "yes",
+      "no"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-xau",
+    "type": "String",
+    "description": "Cloud Security XAU status",
+    "example": [
+      "ENABLED",
+      "DISABLED"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-eip-policy-footprint",
+    "type": "String",
+    "description": "EIP Policy Footprint",
+    "example": [
+      "footprint-1",
+      "footprint-2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-eip-policy-name",
+    "type": "String",
+    "description": "EIP Policy Name",
+    "example": [
+      "policy-1",
+      "policy-2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-categories",
+    "type": "List",
+    "description": "Policy categories matched",
+    "example": [
+      [
+        "category-1, category-2"
+      ],
+      [
+        "category-3, category-4"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-end",
+    "type": "Integer64",
+    "description": "The end date/time of the server certificate received from the destination server.",
+    "example": [
+      1724192008970,
+      1754192008970
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-start",
+    "type": "Integer64",
+    "description": "The start date/time of the server certificate received from the destination server.",
+    "example": [
+      1724192008970,
+      1754192008970
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-country",
+    "type": "String",
+    "description": "Destination country.",
+    "example": [
+      "US",
+      "IN",
+      "GB"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-latitude",
+    "type": "Float",
+    "description": "Destination latitude.",
+    "example": [
+      37.7749,
+      28.6139
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0.0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-location",
+    "type": "String",
+    "description": "Destination location (City).",
+    "example": [
+      "Menlo Park",
+      "San Jose",
+      "Newyork"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-longitude",
+    "type": "Float",
+    "description": "Destination longitude.",
+    "example": [
+      37.7749,
+      28.6139
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0.0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-region",
+    "type": "String",
+    "description": "Destination region (State).",
+    "example": [
+      "California",
+      "Texas"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-r-zipcode",
+    "type": "String",
+    "description": "Destination zipcode/postal code.",
+    "example": [
+      "94025",
+      "10021"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-forward-dest",
+    "type": "String",
+    "description": "The forwarded destination hostname or IP address of the proxy to remote server session.",
+    "example": [
+      "www.example.com",
+      "www.test.com"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-issuer",
+    "type": "String",
+    "description": "Issuer of the SSL certificate presented by the destination server.",
+    "example": [
+      "Let's Encrypt Authority X3",
+      "DigiCert Inc"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-support",
+    "type": "String",
+    "description": "Support information for the transaction.",
+    "example": [
+      "support-info-1",
+      "support-info-2"
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": "",
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-engine",
+    "type": "List",
+    "description": "Threat Prevention engines that scanned the transaction.",
+    "example": [
+      [
+        "antivirus, antispyware"
+      ],
+      [
+        "antimalware, urlfiltering"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-malware-name",
+    "type": "List",
+    "description": "Names of malware detected in the transaction.",
+    "example": [
+      [
+        "Trojan.GenericKD.32768",
+        "Worm.AutoRun.12345"
+      ],
+      [
+        "Adware.Win32.Agent",
+        "Spyware.Zeus.67890"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-result",
+    "type": "List",
+    "description": "Threat Prevention results for the transaction.",
+    "example": [
+      [
+        "clean, infected"
+      ],
+      [
+        "blocked, cleaned"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-severity",
+    "type": "List",
+    "description": "Threat Prevention severity levels for the transaction.",
+    "example": [
+      [
+        "low, high"
+      ],
+      [
+        "medium, critical"
+      ]
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": [],
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  }
+]
