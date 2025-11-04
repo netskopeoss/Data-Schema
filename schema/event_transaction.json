@@ -432,7 +432,7 @@
   {
     "parameter_name": "time",
     "type": "String",
-    "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+    "description": "Time of generation in HH:MI-SS format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
     "example": [
       "01:02-39",
       "03:02-45"
@@ -443,7 +443,7 @@
           "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
-          "transformation": "x-cs-timestamp('HH:MM-SS')"
+          "transformation": "x-cs-timestamp('HH:MI-SS')"
         }
       }
     ],
@@ -593,7 +593,7 @@
           "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
-          "transformation": "x-c-local-timestamp('YYYY-MM-DD HH:MM:SS')"
+          "transformation": "x-c-local-timestamp('YYYY-MM-DD HH:MI:SS')"
         }
       }
     ],
@@ -1931,7 +1931,7 @@
           "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
-          "transformation": "x-r-cert-end('YYYY-MM-DD HH:MM:SS')"
+          "transformation": "x-r-cert-end('YYYY-MM-DD HH:MI:SS')"
         }
       }
     ],
@@ -2095,7 +2095,7 @@
           "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
-          "transformation": "x-r-cert-start('YYYY-MM-DD HH:MM:SS')"
+          "transformation": "x-r-cert-start('YYYY-MM-DD HH:MI:SS')"
         }
       }
     ],
