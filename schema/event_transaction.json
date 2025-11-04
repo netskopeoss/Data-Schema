@@ -3819,27 +3819,6 @@
     ]
   },
   {
-    "parameter_name": "x-r-country",
-    "type": "String",
-    "description": "Destination country.",
-    "example": [
-      "US",
-      "IN",
-      "GB"
-    ],
-    "event_types": [
-      {
-        "transaction": {
-          "default_value": "",
-          "introduced_in": 202511
-        }
-      }
-    ],
-    "applicable_for": [
-      "log_streaming"
-    ]
-  },
-  {
     "parameter_name": "x-r-latitude",
     "type": "Float",
     "description": "Destination latitude.",
