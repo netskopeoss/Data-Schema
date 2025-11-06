@@ -301,8 +301,8 @@
     "type": "String",
     "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
     "example": [
-      "08/07/19",
-      "05/07/23"
+      "25-12-22",
+      "24-01-23"
     ],
     "event_types": [
       {
@@ -434,8 +434,8 @@
     "type": "String",
     "description": "Time of generation in HH:MI:SS format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
     "example": [
-      "01:02-39",
-      "03:02-45"
+      "01:02:45",
+      "03:22:55"
     ],
     "event_types": [
       {
@@ -584,8 +584,8 @@
     "type": "String",
     "description": "The local time of the client calculated from geolocation of the device IP.",
     "example": [
-      "Thu Jan 12 08:41:08 2023",
-      "Thu Jan 13 08:41:08 2023"
+      "2023-01-12 08:41:08",
+      "2025-01-13 08:41:08"
     ],
     "event_types": [
       {
@@ -1922,8 +1922,8 @@
     "type": "String",
     "description": "The end date/time of the server certificate received from the destination server.",
     "example": [
-      "Jan 9 08:18:29 2023 GMT",
-      "Jan 10 08:18:29 2023 GMT"
+      "2023-10-17 08:18:30",
+      "2025-01-09 08:18:29"
     ],
     "event_types": [
       {
@@ -2086,8 +2086,8 @@
     "type": "String",
     "description": "The start date/time of the server certificate received from the destination server.",
     "example": [
-      "Oct 17 08:18:30 2022 GMT",
-      "Jan 9 08:18:29 2023 GMT"
+      "2022-10-17 08:18:30",
+      "2023-01-09 08:18:29"
     ],
     "event_types": [
       {
