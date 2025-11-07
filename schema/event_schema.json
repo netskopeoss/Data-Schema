@@ -9413,6 +9413,57 @@
     ]
   },
   {
+    "parameter_name": "publisher_pop",
+    "type": "String",
+    "description": "The publisher a NPA component runs on customer premise which connects the cloud and customer private app. The POP is the Netskope Point of Presence closest to the publisher.",
+    "example": [
+      "US-LON3",
+      "US-SFO2",
+      "US-CHI1",
+      "NL-AMST4"
+    ],
+    "event_types": [
+      "network"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "publisher_ip",
+    "type": "String",
+    "description": "The publisher a NPA component runs on customer premise which connects the cloud and customer private app. The IP is the ip address of the publisher connecting to the Netskope Pop.",
+    "example": [
+      "192.168.1.10",
+      "192.168.1.12",
+      "10.10.1.99"
+    ],
+    "event_types": [
+      "network"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "publisher_port",
+    "type": "Integer32",
+    "description": "The publisher a NPA component runs on customer premise which connects the cloud and customer private app. The Port is the port number of the publisher connecting to the Netskope Pop.",
+    "example": [
+      80,
+      443
+    ],
+    "event_types": [
+      "network"
+    ],
+    "default_value": 0,
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
     "parameter_name": "q_admin",
     "type": "String",
     "description": "EMail address of user under which the quarantine folder will be created.",
@@ -16717,5 +16768,5 @@
     "event_types": [
       "alert"
     ]
-  }   
+  }
 ]
