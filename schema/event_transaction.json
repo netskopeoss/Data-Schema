@@ -1061,7 +1061,7 @@
   },
   {
     "parameter_name": "x-cs-app-tags",
-    "type": "String",
+    "type": "List",
     "description": "Cloud application tags from the CCI database.",
     "example": [
       "Marketing",
@@ -1712,7 +1712,7 @@
   },
   {
     "parameter_name": "x-other-category",
-    "type": "String",
+    "type": "List",
     "description": "Secondary categories applicable for the url in this transaction.",
     "example": [
       "News & Media",
@@ -1722,8 +1722,10 @@
     "event_types": [
       {
         "transaction": {
+          "deprecated": true,
           "default_value": "",
-          "introduced_in": 202409
+          "introduced_in": 202409,
+          "transformation": "x-policy-categories"
         }
       }
     ],
