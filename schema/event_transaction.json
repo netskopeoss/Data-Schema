@@ -299,7 +299,7 @@
   {
     "parameter_name": "date",
     "type": "String",
-    "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
+    "description": "Date of generation, YYYY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
     "example": [
       "25-12-22",
       "24-01-23"
@@ -310,7 +310,7 @@
           "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
-          "transformation": "x-cs-timestamp('YY-MM-DD')"
+          "transformation": "x-cs-timestamp('YYYY-MM-DD')"
         }
       }
     ],
