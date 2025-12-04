@@ -3026,6 +3026,26 @@
     ]
   },
   {
+    "parameter_name": "x-tenant-id",
+    "type": "Integer32",
+    "description": "Tenant ID",
+    "example": [
+      1004,
+      17175
+    ],
+    "event_types": [
+      {
+        "transaction": {
+          "default_value": 0,
+          "introduced_in": 202511
+        }
+      }
+    ],
+    "applicable_for": [
+      "log_streaming"
+    ]
+  },
+  {
     "parameter_name": "rs-bytes",
     "type": "Integer64",
     "description": "Response size in bytes from the remote server to the proxy.",
