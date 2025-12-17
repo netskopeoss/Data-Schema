@@ -625,7 +625,7 @@
   {
     "parameter_name": "x-c-longitude",
     "type": "Float",
-    "description": "Latitude of the client.",
+    "description": "Longitude of the client.",
     "example": [
       -37.3394,
       -33.3394,
