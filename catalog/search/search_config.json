@@ -1,0 +1,182 @@
+{
+  "search_indexes": [
+    {
+      "index_name": "field_parameters",
+      "entity_type": "field",
+      "searchable_fields": [
+        {
+          "field_name": "parameter_name",
+          "weight": 10,
+          "boost": true
+        },
+        {
+          "field_name": "description",
+          "weight": 5,
+          "boost": true
+        },
+        {
+          "field_name": "type",
+          "weight": 3,
+          "boost": false
+        },
+        {
+          "field_name": "event_types",
+          "weight": 2,
+          "boost": false
+        },
+        {
+          "field_name": "tags",
+          "weight": 4,
+          "boost": true
+        }
+      ],
+      "facets": [
+        {
+          "facet_name": "Data Type",
+          "field": "type",
+          "type": "terms"
+        },
+        {
+          "facet_name": "Event Type",
+          "field": "event_types",
+          "type": "terms"
+        },
+        {
+          "facet_name": "Applicable For",
+          "field": "applicable_for",
+          "type": "terms"
+        }
+      ]
+    },
+    {
+      "index_name": "event_types",
+      "entity_type": "event_type",
+      "searchable_fields": [
+        {
+          "field_name": "event_type_name",
+          "weight": 10,
+          "boost": true
+        },
+        {
+          "field_name": "category",
+          "weight": 5,
+          "boost": true
+        },
+        {
+          "field_name": "description",
+          "weight": 4,
+          "boost": false
+        }
+      ],
+      "facets": [
+        {
+          "facet_name": "Category",
+          "field": "category",
+          "type": "terms"
+        }
+      ]
+    }
+  ],
+  "filter_definitions": [
+    {
+      "filter_id": "data_type",
+      "display_name": "Data Type",
+      "field": "type",
+      "filter_type": "checkbox",
+      "options": [
+        {"value": "String", "label": "String", "count": 450},
+        {"value": "Integer64", "label": "Integer (64-bit)", "count": 120},
+        {"value": "Integer32", "label": "Integer (32-bit)", "count": 80},
+        {"value": "Float", "label": "Float", "count": 45},
+        {"value": "Boolean", "label": "Boolean", "count": 35},
+        {"value": "Dictionary", "label": "Dictionary/Map", "count": 25},
+        {"value": "List", "label": "List/Array", "count": 30},
+        {"value": "LongInt", "label": "Long Integer", "count": 15}
+      ]
+    },
+    {
+      "filter_id": "event_type",
+      "display_name": "Event Type",
+      "field": "event_types",
+      "filter_type": "checkbox",
+      "options": [
+        {"value": "alert", "label": "Alert", "count": 280},
+        {"value": "application", "label": "Application", "count": 320},
+        {"value": "network", "label": "Network", "count": 250},
+        {"value": "page", "label": "Page", "count": 200},
+        {"value": "audit", "label": "Audit", "count": 150},
+        {"value": "incident", "label": "Incident", "count": 180},
+        {"value": "infrastructure", "label": "Infrastructure", "count": 90},
+        {"value": "transaction", "label": "Transaction", "count": 197}
+      ]
+    },
+    {
+      "filter_id": "applicable_for",
+      "display_name": "Applicable For",
+      "field": "applicable_for",
+      "filter_type": "checkbox",
+      "options": [
+        {"value": "data_export", "label": "Data Export", "count": 650},
+        {"value": "log_streaming", "label": "Log Streaming", "count": 550}
+      ]
+    },
+    {
+      "filter_id": "compliance_classification",
+      "display_name": "Compliance Classification",
+      "field": "compliance.classification",
+      "filter_type": "checkbox",
+      "options": [
+        {"value": "PII", "label": "Personally Identifiable Information (PII)", "count": 85},
+        {"value": "PHI", "label": "Protected Health Information (PHI)", "count": 12},
+        {"value": "FINANCIAL", "label": "Financial Data", "count": 25},
+        {"value": "NONE", "label": "Non-Sensitive", "count": 626}
+      ]
+    },
+    {
+      "filter_id": "quality_score",
+      "display_name": "Data Quality Score",
+      "field": "quality.score",
+      "filter_type": "range",
+      "options": [
+        {"value": "90-100", "label": "Excellent (90-100)", "count": 350},
+        {"value": "75-89", "label": "Good (75-89)", "count": 280},
+        {"value": "50-74", "label": "Fair (50-74)", "count": 100},
+        {"value": "0-49", "label": "Poor (0-49)", "count": 18}
+      ]
+    },
+    {
+      "filter_id": "has_lineage",
+      "display_name": "Has Lineage Information",
+      "field": "lineage.available",
+      "filter_type": "checkbox",
+      "options": [
+        {"value": "true", "label": "Yes", "count": 520},
+        {"value": "false", "label": "No", "count": 228}
+      ]
+    }
+  ],
+  "ranking_criteria": {
+    "factors": [
+      {
+        "factor": "relevance",
+        "weight": 0.4
+      },
+      {
+        "factor": "popularity",
+        "weight": 0.2
+      },
+      {
+        "factor": "quality_score",
+        "weight": 0.2
+      },
+      {
+        "factor": "freshness",
+        "weight": 0.1
+      },
+      {
+        "factor": "usage_count",
+        "weight": 0.1
+      }
+    ]
+  }
+}

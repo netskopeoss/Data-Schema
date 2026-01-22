@@ -1,0 +1,141 @@
+[
+  {
+    "lineage_id": "event_schema_lineage_001",
+    "dataset_name": "Event Schema",
+    "version": "1.0",
+    "upstream_sources": [
+      {
+        "source_name": "Netskope Client Logs",
+        "source_type": "Service",
+        "connection_type": "direct",
+        "fields_used": ["_id", "access_method", "user", "timestamp"]
+      },
+      {
+        "source_name": "Cloud App Connectors",
+        "source_type": "API",
+        "connection_type": "direct",
+        "fields_used": ["app", "activity", "cloud_provider"]
+      },
+      {
+        "source_name": "Network Traffic Monitors",
+        "source_type": "Stream",
+        "connection_type": "transformation",
+        "fields_used": ["src_ip", "dst_ip", "bytes", "protocol"]
+      }
+    ],
+    "downstream_consumers": [
+      {
+        "consumer_name": "Security Dashboard",
+        "consumer_type": "Dashboard",
+        "fields_consumed": ["alert_type", "severity", "user", "timestamp"]
+      },
+      {
+        "consumer_name": "Compliance Reports",
+        "consumer_type": "Report",
+        "fields_consumed": ["user", "activity", "app", "dlp_rule"]
+      },
+      {
+        "consumer_name": "REST API v2 Data Export",
+        "consumer_type": "API",
+        "fields_consumed": ["*"]
+      },
+      {
+        "consumer_name": "ML Anomaly Detection",
+        "consumer_type": "ML_Model",
+        "fields_consumed": ["user", "activity", "bytes", "timestamp"]
+      }
+    ],
+    "transformations": [
+      {
+        "transformation_id": "enrich_user_info",
+        "transformation_type": "enrich",
+        "description": "Enriches events with user department and location information from identity provider",
+        "input_fields": ["user", "user_id"],
+        "output_fields": ["user", "user_id", "department", "location"],
+        "transformation_logic": "JOIN user_directory ON event.user_id = user_directory.id"
+      },
+      {
+        "transformation_id": "normalize_timestamps",
+        "transformation_type": "cleanse",
+        "description": "Normalizes all timestamps to UTC and ISO 8601 format",
+        "input_fields": ["timestamp", "event_time"],
+        "output_fields": ["timestamp"],
+        "transformation_logic": "CAST(timestamp AS TIMESTAMP) AT TIME ZONE 'UTC'"
+      },
+      {
+        "transformation_id": "filter_valid_events",
+        "transformation_type": "filter",
+        "description": "Filters out test events and internal system events",
+        "input_fields": ["event_type", "user"],
+        "output_fields": ["*"],
+        "transformation_logic": "WHERE event_type NOT IN ('test', 'system') AND user NOT LIKE '%@internal.netskope.com'"
+      }
+    ],
+    "metadata": {
+      "created_by": "Data Engineering Team",
+      "created_at": "2024-01-01T00:00:00Z",
+      "updated_at": "2026-01-22T00:00:00Z",
+      "owner": "Netskope Data Team"
+    }
+  },
+  {
+    "lineage_id": "transaction_event_lineage_001",
+    "dataset_name": "Transaction Events",
+    "version": "3.0",
+    "upstream_sources": [
+      {
+        "source_name": "Web Proxy Logs",
+        "source_type": "Service",
+        "connection_type": "direct",
+        "fields_used": ["c-ip", "cs-bytes", "sc-bytes", "time-taken"]
+      },
+      {
+        "source_name": "SSL/TLS Inspection",
+        "source_type": "Service",
+        "connection_type": "transformation",
+        "fields_used": ["ssl_version", "cipher", "certificate_info"]
+      }
+    ],
+    "downstream_consumers": [
+      {
+        "consumer_name": "Bandwidth Analytics",
+        "consumer_type": "Analytics",
+        "fields_consumed": ["bytes", "cs-bytes", "sc-bytes"]
+      },
+      {
+        "consumer_name": "Log Streaming Service",
+        "consumer_type": "API",
+        "fields_consumed": ["*"]
+      },
+      {
+        "consumer_name": "Performance Monitoring Dashboard",
+        "consumer_type": "Dashboard",
+        "fields_consumed": ["time-taken", "bytes", "status"]
+      }
+    ],
+    "transformations": [
+      {
+        "transformation_id": "w3c_format_conversion",
+        "transformation_type": "transformation",
+        "description": "Converts internal format to W3C log format",
+        "input_fields": ["*"],
+        "output_fields": ["*"],
+        "transformation_logic": "Format according to W3C Extended Log File Format specification"
+      },
+      {
+        "transformation_id": "calculate_total_bytes",
+        "transformation_type": "aggregate",
+        "description": "Calculates total bytes as sum of client and server bytes",
+        "input_fields": ["cs-bytes", "sc-bytes"],
+        "output_fields": ["bytes"],
+        "transformation_logic": "bytes = cs-bytes + sc-bytes"
+      }
+    ],
+    "metadata": {
+      "created_by": "Data Engineering Team",
+      "created_at": "2024-09-01T00:00:00Z",
+      "updated_at": "2026-01-22T00:00:00Z",
+      "owner": "Netskope Data Team"
+    }
+  }
+]

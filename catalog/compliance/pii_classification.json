@@ -1,0 +1,445 @@
+[
+  {
+    "field_name": "user",
+    "classification": "PII",
+    "pii_type": ["NAME", "USER_ID"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": [
+          "Article 6 - Lawful basis for processing",
+          "Article 17 - Right to erasure",
+          "Article 20 - Right to data portability"
+        ],
+        "retention_period": "As long as user account is active + 30 days",
+        "deletion_required": true
+      },
+      {
+        "framework": "CCPA",
+        "requirements": [
+          "Right to know",
+          "Right to delete",
+          "Right to opt-out"
+        ],
+        "retention_period": "As long as user account is active",
+        "deletion_required": true
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["hashing", "tokenization", "masking"],
+      "default_method": "tokenization"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": true,
+      "right_to_erasure": true,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "HIGH",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": true,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Username or email address identifying the user"
+    }
+  },
+  {
+    "field_name": "user_id",
+    "classification": "PII",
+    "pii_type": ["USER_ID"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": ["Article 6 - Lawful basis for processing"],
+        "retention_period": "As long as user account is active + 30 days",
+        "deletion_required": true
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["hashing", "tokenization"],
+      "default_method": "tokenization"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": false,
+      "right_to_erasure": true,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "HIGH",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": true,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Internal unique identifier for user"
+    }
+  },
+  {
+    "field_name": "src_ip",
+    "classification": "PII",
+    "pii_type": ["IP_ADDRESS"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": [
+          "Article 4(1) - IP addresses are personal data",
+          "Article 6 - Lawful basis for processing"
+        ],
+        "retention_period": "90 days for security logs",
+        "deletion_required": false
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["masking", "generalization"],
+      "default_method": "masking"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": false,
+      "right_to_erasure": false,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "MEDIUM",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": false,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Source IP address may be personal data under GDPR"
+    }
+  },
+  {
+    "field_name": "userip",
+    "classification": "PII",
+    "pii_type": ["IP_ADDRESS"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": [
+          "Article 4(1) - IP addresses are personal data"
+        ],
+        "retention_period": "90 days",
+        "deletion_required": false
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["masking", "generalization"],
+      "default_method": "masking"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": false,
+      "right_to_erasure": false,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "MEDIUM",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": false,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "User IP address"
+    }
+  },
+  {
+    "field_name": "device_id",
+    "classification": "PII",
+    "pii_type": ["DEVICE_ID"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": ["Article 4(1) - Device identifiers are personal data"],
+        "retention_period": "As long as device is enrolled",
+        "deletion_required": true
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["hashing", "tokenization"],
+      "default_method": "hashing"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": false,
+      "right_to_erasure": true,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "MEDIUM",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": false,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Unique device identifier"
+    }
+  },
+  {
+    "field_name": "from_user",
+    "classification": "PII",
+    "pii_type": ["EMAIL", "NAME"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": ["Article 6 - Lawful basis for processing"],
+        "retention_period": "90 days",
+        "deletion_required": true
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["masking", "tokenization"],
+      "default_method": "masking"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": true,
+      "right_to_erasure": true,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "HIGH",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": true,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Email sender information"
+    }
+  },
+  {
+    "field_name": "to_user",
+    "classification": "PII",
+    "pii_type": ["EMAIL", "NAME"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": ["Article 6 - Lawful basis for processing"],
+        "retention_period": "90 days",
+        "deletion_required": true
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["masking", "tokenization"],
+      "default_method": "masking"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": true,
+      "right_to_erasure": true,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "HIGH",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": true,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Email recipient information"
+    }
+  },
+  {
+    "field_name": "latitude",
+    "classification": "PII",
+    "pii_type": ["GEOLOCATION"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": [
+          "Article 4(1) - Location data is personal data",
+          "Requires explicit consent"
+        ],
+        "retention_period": "30 days",
+        "deletion_required": true
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["generalization", "redaction"],
+      "default_method": "generalization"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": false,
+      "right_to_erasure": true,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "HIGH",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": true,
+      "approval_required_for_access": true
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Geographic location latitude coordinate"
+    }
+  },
+  {
+    "field_name": "longitude",
+    "classification": "PII",
+    "pii_type": ["GEOLOCATION"],
+    "compliance_frameworks": [
+      {
+        "framework": "GDPR",
+        "requirements": [
+          "Article 4(1) - Location data is personal data",
+          "Requires explicit consent"
+        ],
+        "retention_period": "30 days",
+        "deletion_required": true
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["generalization", "redaction"],
+      "default_method": "generalization"
+    },
+    "data_subject_rights": {
+      "right_to_access": true,
+      "right_to_rectification": false,
+      "right_to_erasure": true,
+      "right_to_portability": true,
+      "right_to_restriction": true
+    },
+    "risk_level": "HIGH",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": true,
+      "approval_required_for_access": true
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Geographic location longitude coordinate"
+    }
+  },
+  {
+    "field_name": "access_key_id",
+    "classification": "CONFIDENTIAL",
+    "pii_type": [],
+    "compliance_frameworks": [
+      {
+        "framework": "SOC2",
+        "requirements": ["Access control", "Encryption at rest and in transit"],
+        "retention_period": "1 year",
+        "deletion_required": false
+      }
+    ],
+    "anonymization": {
+      "supported": true,
+      "methods": ["masking", "encryption"],
+      "default_method": "masking"
+    },
+    "data_subject_rights": {
+      "right_to_access": false,
+      "right_to_rectification": false,
+      "right_to_erasure": false,
+      "right_to_portability": false,
+      "right_to_restriction": false
+    },
+    "risk_level": "CRITICAL",
+    "audit_requirements": {
+      "access_logging_required": true,
+      "change_tracking_required": true,
+      "approval_required_for_access": true
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Security Team",
+      "notes": "AWS access key ID - highly sensitive credential"
+    }
+  },
+  {
+    "field_name": "app",
+    "classification": "NONE",
+    "pii_type": [],
+    "compliance_frameworks": [],
+    "anonymization": {
+      "supported": false,
+      "methods": [],
+      "default_method": null
+    },
+    "data_subject_rights": {
+      "right_to_access": false,
+      "right_to_rectification": false,
+      "right_to_erasure": false,
+      "right_to_portability": false,
+      "right_to_restriction": false
+    },
+    "risk_level": "NONE",
+    "audit_requirements": {
+      "access_logging_required": false,
+      "change_tracking_required": false,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Application name - non-sensitive metadata"
+    }
+  },
+  {
+    "field_name": "timestamp",
+    "classification": "NONE",
+    "pii_type": [],
+    "compliance_frameworks": [],
+    "anonymization": {
+      "supported": false,
+      "methods": [],
+      "default_method": null
+    },
+    "data_subject_rights": {
+      "right_to_access": false,
+      "right_to_rectification": false,
+      "right_to_erasure": false,
+      "right_to_portability": false,
+      "right_to_restriction": false
+    },
+    "risk_level": "NONE",
+    "audit_requirements": {
+      "access_logging_required": false,
+      "change_tracking_required": false,
+      "approval_required_for_access": false
+    },
+    "metadata": {
+      "last_reviewed": "2026-01-15",
+      "reviewed_by": "Privacy Team",
+      "notes": "Event timestamp - non-sensitive temporal data"
+    }
+  }
+]

@@ -1,0 +1,212 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Data Quality Schema",
+  "description": "Schema for tracking data quality metrics and trust scores",
+  "type": "object",
+  "properties": {
+    "dataset_name": {
+      "type": "string",
+      "description": "Name of the dataset or field being assessed"
+    },
+    "quality_score": {
+      "type": "object",
+      "description": "Overall quality score and components",
+      "properties": {
+        "overall": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Overall quality score (0-100)"
+        },
+        "dimensions": {
+          "type": "object",
+          "properties": {
+            "completeness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Percentage of non-null values"
+            },
+            "accuracy": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Data accuracy based on validation rules"
+            },
+            "consistency": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Consistency across related datasets"
+            },
+            "timeliness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "How current the data is"
+            },
+            "validity": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Conformance to defined formats and rules"
+            },
+            "uniqueness": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "Absence of duplicates"
+            }
+          }
+        }
+      },
+      "required": ["overall"]
+    },
+    "trust_level": {
+      "type": "string",
+      "enum": ["VERIFIED", "TRUSTED", "UNVERIFIED", "DEPRECATED"],
+      "description": "Overall trust level of the data source"
+    },
+    "data_freshness": {
+      "type": "object",
+      "description": "Information about data recency",
+      "properties": {
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the data was last updated"
+        },
+        "update_frequency": {
+          "type": "string",
+          "enum": ["real-time", "hourly", "daily", "weekly", "monthly", "on-demand"],
+          "description": "How frequently the data is updated"
+        },
+        "latency": {
+          "type": "string",
+          "description": "Expected delay from source to availability (e.g., '5 minutes', '1 hour')"
+        },
+        "staleness_threshold": {
+          "type": "string",
+          "description": "Time after which data is considered stale"
+        }
+      }
+    },
+    "validation_rules": {
+      "type": "array",
+      "description": "Data validation rules applied",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rule_id": {
+            "type": "string"
+          },
+          "rule_type": {
+            "type": "string",
+            "enum": ["format", "range", "pattern", "reference", "custom"]
+          },
+          "description": {
+            "type": "string"
+          },
+          "pass_rate": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Percentage of records passing this rule"
+          }
+        }
+      }
+    },
+    "source_trust": {
+      "type": "object",
+      "description": "Trust information about the data source",
+      "properties": {
+        "source_name": {
+          "type": "string"
+        },
+        "source_type": {
+          "type": "string",
+          "enum": ["primary", "secondary", "derived", "third_party"]
+        },
+        "certification": {
+          "type": "string",
+          "enum": ["gold", "silver", "bronze", "none"],
+          "description": "Data source certification level"
+        },
+        "verified_by": {
+          "type": "string"
+        },
+        "last_audit_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "usage_statistics": {
+      "type": "object",
+      "description": "Usage patterns indicating trust and value",
+      "properties": {
+        "query_count": {
+          "type": "integer",
+          "description": "Number of times queried"
+        },
+        "unique_users": {
+          "type": "integer",
+          "description": "Number of unique users accessing this data"
+        },
+        "downstream_dependencies": {
+          "type": "integer",
+          "description": "Number of downstream systems/reports using this data"
+        },
+        "average_rating": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Average user rating"
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "description": "Known data quality issues",
+      "items": {
+        "type": "object",
+        "properties": {
+          "issue_id": {
+            "type": "string"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"]
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["open", "in_progress", "resolved", "accepted"]
+          },
+          "created_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "last_assessed": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "assessed_by": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["dataset_name", "quality_score", "trust_level"]
+}
