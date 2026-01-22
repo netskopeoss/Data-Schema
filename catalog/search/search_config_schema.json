@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Search Configuration Schema",
+  "description": "Configuration for search and discovery capabilities in the data catalog",
+  "type": "object",
+  "properties": {
+    "search_indexes": {
+      "type": "array",
+      "description": "Searchable indexes for different entity types",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index_name": {
+            "type": "string",
+            "description": "Name of the search index"
+          },
+          "entity_type": {
+            "type": "string",
+            "enum": ["field", "dataset", "event_type", "transformation"],
+            "description": "Type of entity being indexed"
+          },
+          "searchable_fields": {
+            "type": "array",
+            "description": "Fields that can be searched",
+            "items": {
+              "type": "object",
+              "properties": {
+                "field_name": {
+                  "type": "string"
+                },
+                "weight": {
+                  "type": "number",
+                  "description": "Search relevance weight (higher = more important)"
+                },
+                "boost": {
+                  "type": "boolean",
+                  "description": "Whether to boost this field in search results"
+                }
+              }
+            }
+          },
+          "facets": {
+            "type": "array",
+            "description": "Faceted search filters",
+            "items": {
+              "type": "object",
+              "properties": {
+                "facet_name": {
+                  "type": "string"
+                },
+                "field": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": ["terms", "range", "histogram"]
+                }
+              }
+            }
+          }
+        },
+        "required": ["index_name", "entity_type", "searchable_fields"]
+      }
+    },
+    "filter_definitions": {
+      "type": "array",
+      "description": "Available filters for search refinement",
+      "items": {
+        "type": "object",
+        "properties": {
+          "filter_id": {
+            "type": "string"
+          },
+          "display_name": {
+            "type": "string"
+          },
+          "field": {
+            "type": "string"
+          },
+          "filter_type": {
+            "type": "string",
+            "enum": ["checkbox", "dropdown", "range", "date_range", "autocomplete"]
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "value": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "required": ["filter_id", "display_name", "field", "filter_type"]
+      }
+    },
+    "ranking_criteria": {
+      "type": "object",
+      "description": "Criteria for ranking search results",
+      "properties": {
+        "factors": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "factor": {
+                "type": "string",
+                "enum": ["relevance", "popularity", "freshness", "quality_score", "usage_count"]
+              },
+              "weight": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

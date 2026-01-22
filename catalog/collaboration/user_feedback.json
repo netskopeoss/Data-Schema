@@ -1,0 +1,296 @@
+[
+  {
+    "entity_id": "event_schema",
+    "entity_type": "dataset",
+    "ratings": {
+      "average_rating": 4.7,
+      "total_ratings": 145,
+      "rating_distribution": {
+        "5_star": 95,
+        "4_star": 38,
+        "3_star": 8,
+        "2_star": 3,
+        "1_star": 1
+      }
+    },
+    "user_ratings": [
+      {
+        "rating_id": "r001",
+        "user_id": "u123",
+        "user_name": "Sarah Johnson",
+        "rating": 5,
+        "created_at": "2025-12-15T10:30:00Z",
+        "updated_at": "2025-12-15T10:30:00Z"
+      },
+      {
+        "rating_id": "r002",
+        "user_id": "u456",
+        "user_name": "Mike Chen",
+        "rating": 4,
+        "created_at": "2025-12-18T14:20:00Z",
+        "updated_at": "2025-12-18T14:20:00Z"
+      }
+    ],
+    "comments": [
+      {
+        "comment_id": "c001",
+        "user_id": "u789",
+        "user_name": "Alex Rodriguez",
+        "comment": "Excellent documentation! The field descriptions are very clear and the examples are helpful. Would love to see more examples for complex nested fields.",
+        "comment_type": "suggestion",
+        "created_at": "2025-11-20T09:15:00Z",
+        "updated_at": "2025-11-20T09:15:00Z",
+        "upvotes": 23,
+        "replies": [
+          {
+            "reply_id": "r001",
+            "user_id": "u101",
+            "user_name": "Data Team",
+            "reply": "Thanks for the feedback! We're working on adding more examples for nested structures in the next update.",
+            "created_at": "2025-11-21T10:00:00Z",
+            "upvotes": 12
+          }
+        ],
+        "status": "answered"
+      },
+      {
+        "comment_id": "c002",
+        "user_id": "u234",
+        "user_name": "Emily Watson",
+        "comment": "How often is this schema updated? I noticed some new fields in production that aren't documented yet.",
+        "comment_type": "question",
+        "created_at": "2026-01-10T11:30:00Z",
+        "updated_at": "2026-01-10T11:30:00Z",
+        "upvotes": 8,
+        "replies": [
+          {
+            "reply_id": "r002",
+            "user_id": "u101",
+            "user_name": "Data Team",
+            "reply": "We update the schema monthly. The new fields you're seeing should be included in the upcoming January release. If urgent, please file a support ticket.",
+            "created_at": "2026-01-11T09:00:00Z",
+            "upvotes": 5
+          }
+        ],
+        "status": "answered"
+      },
+      {
+        "comment_id": "c003",
+        "user_id": "u567",
+        "user_name": "David Park",
+        "comment": "For the 'access_method' field, it would be helpful to have a diagram showing the relationship between different access methods and their use cases.",
+        "comment_type": "documentation",
+        "created_at": "2025-12-05T15:45:00Z",
+        "updated_at": "2025-12-05T15:45:00Z",
+        "upvotes": 15,
+        "replies": [],
+        "status": "open"
+      }
+    ],
+    "bookmarks": {
+      "total_bookmarks": 342,
+      "bookmarked_by": [
+        {
+          "user_id": "u123",
+          "user_name": "Sarah Johnson",
+          "bookmarked_at": "2025-10-15T08:00:00Z"
+        },
+        {
+          "user_id": "u456",
+          "user_name": "Mike Chen",
+          "bookmarked_at": "2025-11-02T14:30:00Z"
+        }
+      ]
+    },
+    "usage_feedback": [
+      {
+        "feedback_id": "f001",
+        "user_id": "u890",
+        "use_case": "Building security analytics dashboard using alert and network events",
+        "difficulty_level": "moderate",
+        "documentation_rating": 4,
+        "suggestions": "More examples of joining different event types would be helpful",
+        "created_at": "2025-12-10T16:00:00Z"
+      },
+      {
+        "feedback_id": "f002",
+        "user_id": "u345",
+        "use_case": "Compliance reporting for GDPR and CCPA requirements",
+        "difficulty_level": "easy",
+        "documentation_rating": 5,
+        "suggestions": "The PII classifications are very helpful. No changes needed.",
+        "created_at": "2026-01-05T10:30:00Z"
+      }
+    ],
+    "expert_contacts": [
+      {
+        "user_id": "u101",
+        "user_name": "Netskope Data Team",
+        "role": "owner",
+        "contact_preference": "data-team@netskope.com"
+      },
+      {
+        "user_id": "u202",
+        "user_name": "James Kumar",
+        "role": "maintainer",
+        "contact_preference": "james.kumar@netskope.com"
+      },
+      {
+        "user_id": "u303",
+        "user_name": "Lisa Anderson",
+        "role": "expert",
+        "contact_preference": "lisa.anderson@netskope.com"
+      }
+    ],
+    "metadata": {
+      "last_updated": "2026-01-20T12:00:00Z",
+      "most_active_contributors": ["Alex Rodriguez", "Emily Watson", "David Park"]
+    }
+  },
+  {
+    "entity_id": "transaction_events",
+    "entity_type": "dataset",
+    "ratings": {
+      "average_rating": 4.5,
+      "total_ratings": 98,
+      "rating_distribution": {
+        "5_star": 62,
+        "4_star": 28,
+        "3_star": 6,
+        "2_star": 1,
+        "1_star": 1
+      }
+    },
+    "user_ratings": [
+      {
+        "rating_id": "r003",
+        "user_id": "u678",
+        "user_name": "Tom Martinez",
+        "rating": 5,
+        "created_at": "2025-11-28T13:45:00Z",
+        "updated_at": "2025-11-28T13:45:00Z"
+      }
+    ],
+    "comments": [
+      {
+        "comment_id": "c004",
+        "user_id": "u891",
+        "user_name": "Rachel Green",
+        "comment": "The W3C format explanation is very thorough. Having the position field really helps with parsing.",
+        "comment_type": "clarification",
+        "created_at": "2025-12-20T10:15:00Z",
+        "updated_at": "2025-12-20T10:15:00Z",
+        "upvotes": 17,
+        "replies": [],
+        "status": "open"
+      },
+      {
+        "comment_id": "c005",
+        "user_id": "u912",
+        "user_name": "Kevin Liu",
+        "comment": "Is there a migration guide for moving from v2 to v3 transaction events?",
+        "comment_type": "question",
+        "created_at": "2026-01-08T09:00:00Z",
+        "updated_at": "2026-01-08T09:00:00Z",
+        "upvotes": 11,
+        "replies": [
+          {
+            "reply_id": "r003",
+            "user_id": "u101",
+            "user_name": "Data Team",
+            "reply": "Yes! Check the 'transformation' field in deprecated items - it shows the new field mappings. We'll add a dedicated migration doc soon.",
+            "created_at": "2026-01-09T11:30:00Z",
+            "upvotes": 8
+          }
+        ],
+        "status": "answered"
+      }
+    ],
+    "bookmarks": {
+      "total_bookmarks": 215,
+      "bookmarked_by": [
+        {
+          "user_id": "u678",
+          "user_name": "Tom Martinez",
+          "bookmarked_at": "2025-11-15T12:00:00Z"
+        }
+      ]
+    },
+    "usage_feedback": [
+      {
+        "feedback_id": "f003",
+        "user_id": "u456",
+        "use_case": "Web traffic analysis and bandwidth monitoring",
+        "difficulty_level": "easy",
+        "documentation_rating": 5,
+        "suggestions": "Perfect for our use case",
+        "created_at": "2025-12-28T14:00:00Z"
+      }
+    ],
+    "expert_contacts": [
+      {
+        "user_id": "u101",
+        "user_name": "Netskope Data Team",
+        "role": "owner",
+        "contact_preference": "data-team@netskope.com"
+      },
+      {
+        "user_id": "u404",
+        "user_name": "Marcus Thompson",
+        "role": "expert",
+        "contact_preference": "marcus.thompson@netskope.com"
+      }
+    ],
+    "metadata": {
+      "last_updated": "2026-01-18T15:30:00Z",
+      "most_active_contributors": ["Rachel Green", "Kevin Liu"]
+    }
+  },
+  {
+    "entity_id": "user",
+    "entity_type": "field",
+    "ratings": {
+      "average_rating": 4.8,
+      "total_ratings": 67,
+      "rating_distribution": {
+        "5_star": 55,
+        "4_star": 10,
+        "3_star": 2,
+        "2_star": 0,
+        "1_star": 0
+      }
+    },
+    "user_ratings": [],
+    "comments": [
+      {
+        "comment_id": "c006",
+        "user_id": "u543",
+        "user_name": "Anna Schmidt",
+        "comment": "Clear documentation on this critical field. The PII classification is particularly helpful for compliance work.",
+        "comment_type": "documentation",
+        "created_at": "2026-01-12T08:30:00Z",
+        "updated_at": "2026-01-12T08:30:00Z",
+        "upvotes": 9,
+        "replies": [],
+        "status": "open"
+      }
+    ],
+    "bookmarks": {
+      "total_bookmarks": 156,
+      "bookmarked_by": []
+    },
+    "usage_feedback": [],
+    "expert_contacts": [
+      {
+        "user_id": "u303",
+        "user_name": "Lisa Anderson",
+        "role": "expert",
+        "contact_preference": "lisa.anderson@netskope.com"
+      }
+    ],
+    "metadata": {
+      "last_updated": "2026-01-15T09:00:00Z",
+      "most_active_contributors": ["Anna Schmidt"]
+    }
+  }
+]

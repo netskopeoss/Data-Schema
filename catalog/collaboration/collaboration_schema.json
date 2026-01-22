@@ -1,0 +1,225 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Collaboration Schema",
+  "description": "Schema for user collaboration features including ratings, comments, and feedback",
+  "type": "object",
+  "properties": {
+    "entity_id": {
+      "type": "string",
+      "description": "ID of the entity being rated/commented (field, dataset, etc.)"
+    },
+    "entity_type": {
+      "type": "string",
+      "enum": ["field", "dataset", "event_type", "schema"],
+      "description": "Type of entity"
+    },
+    "ratings": {
+      "type": "object",
+      "description": "Rating information",
+      "properties": {
+        "average_rating": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5,
+          "description": "Average rating (0-5 stars)"
+        },
+        "total_ratings": {
+          "type": "integer",
+          "description": "Total number of ratings"
+        },
+        "rating_distribution": {
+          "type": "object",
+          "properties": {
+            "5_star": {"type": "integer"},
+            "4_star": {"type": "integer"},
+            "3_star": {"type": "integer"},
+            "2_star": {"type": "integer"},
+            "1_star": {"type": "integer"}
+          }
+        }
+      }
+    },
+    "user_ratings": {
+      "type": "array",
+      "description": "Individual user ratings",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rating_id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "user_name": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["rating_id", "user_id", "rating", "created_at"]
+      }
+    },
+    "comments": {
+      "type": "array",
+      "description": "User comments and discussions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "comment_id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "user_name": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "comment_type": {
+            "type": "string",
+            "enum": ["question", "clarification", "issue", "suggestion", "documentation"],
+            "description": "Type of comment"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "upvotes": {
+            "type": "integer",
+            "default": 0
+          },
+          "replies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "reply_id": {"type": "string"},
+                "user_id": {"type": "string"},
+                "user_name": {"type": "string"},
+                "reply": {"type": "string"},
+                "created_at": {"type": "string", "format": "date-time"},
+                "upvotes": {"type": "integer"}
+              }
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": ["open", "answered", "resolved", "archived"]
+          }
+        },
+        "required": ["comment_id", "user_id", "comment", "created_at"]
+      }
+    },
+    "bookmarks": {
+      "type": "object",
+      "description": "User bookmarking/favoriting",
+      "properties": {
+        "total_bookmarks": {
+          "type": "integer"
+        },
+        "bookmarked_by": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "user_id": {"type": "string"},
+              "user_name": {"type": "string"},
+              "bookmarked_at": {"type": "string", "format": "date-time"}
+            }
+          }
+        }
+      }
+    },
+    "usage_feedback": {
+      "type": "array",
+      "description": "Structured feedback about data usage",
+      "items": {
+        "type": "object",
+        "properties": {
+          "feedback_id": {
+            "type": "string"
+          },
+          "user_id": {
+            "type": "string"
+          },
+          "use_case": {
+            "type": "string",
+            "description": "How the user is using this data"
+          },
+          "difficulty_level": {
+            "type": "string",
+            "enum": ["easy", "moderate", "difficult"]
+          },
+          "documentation_rating": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "suggestions": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "expert_contacts": {
+      "type": "array",
+      "description": "Subject matter experts for this data",
+      "items": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "string"
+          },
+          "user_name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["owner", "maintainer", "expert", "contributor"]
+          },
+          "contact_preference": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "last_updated": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "most_active_contributors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": ["entity_id", "entity_type"]
+}

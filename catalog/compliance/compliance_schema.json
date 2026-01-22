@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Compliance Schema",
+  "description": "Schema for tracking compliance requirements and PII classification",
+  "type": "object",
+  "properties": {
+    "field_name": {
+      "type": "string",
+      "description": "The parameter/field name being classified"
+    },
+    "classification": {
+      "type": "string",
+      "enum": ["PII", "PHI", "FINANCIAL", "CONFIDENTIAL", "PUBLIC", "INTERNAL", "NONE"],
+      "description": "Data classification level"
+    },
+    "pii_type": {
+      "type": "array",
+      "description": "Specific types of PII contained in this field",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NAME",
+          "EMAIL",
+          "PHONE",
+          "ADDRESS",
+          "SSN",
+          "IP_ADDRESS",
+          "DEVICE_ID",
+          "USER_ID",
+          "BIOMETRIC",
+          "FINANCIAL_ACCOUNT",
+          "CREDIT_CARD",
+          "HEALTH_INFO",
+          "GEOLOCATION"
+        ]
+      }
+    },
+    "compliance_frameworks": {
+      "type": "array",
+      "description": "Applicable compliance frameworks",
+      "items": {
+        "type": "object",
+        "properties": {
+          "framework": {
+            "type": "string",
+            "enum": ["GDPR", "CCPA", "HIPAA", "PCI_DSS", "SOX", "FERPA", "SOC2"]
+          },
+          "requirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Specific requirements from the framework"
+          },
+          "retention_period": {
+            "type": "string",
+            "description": "Data retention requirements (e.g., '7 years', '90 days')"
+          },
+          "deletion_required": {
+            "type": "boolean",
+            "description": "Whether deletion/right to be forgotten applies"
+          }
+        },
+        "required": ["framework"]
+      }
+    },
+    "anonymization": {
+      "type": "object",
+      "description": "Anonymization/pseudonymization options",
+      "properties": {
+        "supported": {
+          "type": "boolean"
+        },
+        "methods": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["hashing", "tokenization", "masking", "encryption", "redaction", "generalization"]
+          }
+        },
+        "default_method": {
+          "type": "string"
+        }
+      }
+    },
+    "data_subject_rights": {
+      "type": "object",
+      "description": "Data subject rights applicable to this field",
+      "properties": {
+        "right_to_access": {
+          "type": "boolean"
+        },
+        "right_to_rectification": {
+          "type": "boolean"
+        },
+        "right_to_erasure": {
+          "type": "boolean"
+        },
+        "right_to_portability": {
+          "type": "boolean"
+        },
+        "right_to_restriction": {
+          "type": "boolean"
+        }
+      }
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "NONE"],
+      "description": "Privacy/security risk level for this field"
+    },
+    "audit_requirements": {
+      "type": "object",
+      "properties": {
+        "access_logging_required": {
+          "type": "boolean"
+        },
+        "change_tracking_required": {
+          "type": "boolean"
+        },
+        "approval_required_for_access": {
+          "type": "boolean"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "last_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "reviewed_by": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["field_name", "classification"]
+}

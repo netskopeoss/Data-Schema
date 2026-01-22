@@ -1,0 +1,254 @@
+[
+  {
+    "dataset_name": "Event Schema",
+    "quality_score": {
+      "overall": 92,
+      "dimensions": {
+        "completeness": 95,
+        "accuracy": 93,
+        "consistency": 90,
+        "timeliness": 88,
+        "validity": 94,
+        "uniqueness": 96
+      }
+    },
+    "trust_level": "VERIFIED",
+    "data_freshness": {
+      "last_updated": "2026-01-22T00:00:00Z",
+      "update_frequency": "real-time",
+      "latency": "5 minutes",
+      "staleness_threshold": "15 minutes"
+    },
+    "validation_rules": [
+      {
+        "rule_id": "event_id_format",
+        "rule_type": "pattern",
+        "description": "Event ID must be a valid hexadecimal string",
+        "pass_rate": 99.8
+      },
+      {
+        "rule_id": "timestamp_range",
+        "rule_type": "range",
+        "description": "Timestamp must be within last 7 days",
+        "pass_rate": 98.5
+      },
+      {
+        "rule_id": "event_type_enum",
+        "rule_type": "reference",
+        "description": "Event type must be from predefined list",
+        "pass_rate": 99.9
+      }
+    ],
+    "source_trust": {
+      "source_name": "Netskope Cloud Platform",
+      "source_type": "primary",
+      "certification": "gold",
+      "verified_by": "Data Engineering Team",
+      "last_audit_date": "2026-01-15"
+    },
+    "usage_statistics": {
+      "query_count": 125000,
+      "unique_users": 450,
+      "downstream_dependencies": 25,
+      "average_rating": 4.7
+    },
+    "issues": [
+      {
+        "issue_id": "DQ-2024-045",
+        "severity": "low",
+        "description": "Occasional missing values in optional fields during peak load",
+        "status": "accepted",
+        "created_date": "2025-11-10"
+      }
+    ],
+    "metadata": {
+      "last_assessed": "2026-01-20T10:00:00Z",
+      "assessed_by": "Data Quality Team",
+      "notes": "High quality production dataset with excellent lineage tracking"
+    }
+  },
+  {
+    "dataset_name": "Transaction Events",
+    "quality_score": {
+      "overall": 88,
+      "dimensions": {
+        "completeness": 92,
+        "accuracy": 90,
+        "consistency": 85,
+        "timeliness": 86,
+        "validity": 91,
+        "uniqueness": 84
+      }
+    },
+    "trust_level": "VERIFIED",
+    "data_freshness": {
+      "last_updated": "2026-01-22T00:00:00Z",
+      "update_frequency": "real-time",
+      "latency": "10 minutes",
+      "staleness_threshold": "30 minutes"
+    },
+    "validation_rules": [
+      {
+        "rule_id": "bytes_positive",
+        "rule_type": "range",
+        "description": "Byte count must be non-negative",
+        "pass_rate": 99.5
+      },
+      {
+        "rule_id": "ip_format",
+        "rule_type": "format",
+        "description": "IP address must be valid IPv4 or IPv6",
+        "pass_rate": 97.8
+      },
+      {
+        "rule_id": "w3c_format_compliance",
+        "rule_type": "custom",
+        "description": "Must comply with W3C Extended Log Format",
+        "pass_rate": 96.2
+      }
+    ],
+    "source_trust": {
+      "source_name": "Netskope Web Proxy",
+      "source_type": "primary",
+      "certification": "gold",
+      "verified_by": "Data Engineering Team",
+      "last_audit_date": "2026-01-10"
+    },
+    "usage_statistics": {
+      "query_count": 89000,
+      "unique_users": 320,
+      "downstream_dependencies": 18,
+      "average_rating": 4.5
+    },
+    "issues": [
+      {
+        "issue_id": "DQ-2024-102",
+        "severity": "medium",
+        "description": "Some deprecated fields still present in v3 format",
+        "status": "in_progress",
+        "created_date": "2025-12-05"
+      }
+    ],
+    "metadata": {
+      "last_assessed": "2026-01-18T14:30:00Z",
+      "assessed_by": "Data Quality Team",
+      "notes": "Good quality with minor format migration issues being addressed"
+    }
+  },
+  {
+    "dataset_name": "Alert Events",
+    "quality_score": {
+      "overall": 94,
+      "dimensions": {
+        "completeness": 96,
+        "accuracy": 95,
+        "consistency": 93,
+        "timeliness": 92,
+        "validity": 95,
+        "uniqueness": 97
+      }
+    },
+    "trust_level": "VERIFIED",
+    "data_freshness": {
+      "last_updated": "2026-01-22T00:00:00Z",
+      "update_frequency": "real-time",
+      "latency": "2 minutes",
+      "staleness_threshold": "10 minutes"
+    },
+    "validation_rules": [
+      {
+        "rule_id": "severity_required",
+        "rule_type": "format",
+        "description": "Alert severity must be specified",
+        "pass_rate": 99.9
+      },
+      {
+        "rule_id": "alert_type_valid",
+        "rule_type": "reference",
+        "description": "Alert type must be from defined taxonomy",
+        "pass_rate": 99.7
+      }
+    ],
+    "source_trust": {
+      "source_name": "Netskope Alert Engine",
+      "source_type": "primary",
+      "certification": "gold",
+      "verified_by": "Security Team",
+      "last_audit_date": "2026-01-12"
+    },
+    "usage_statistics": {
+      "query_count": 95000,
+      "unique_users": 280,
+      "downstream_dependencies": 32,
+      "average_rating": 4.8
+    },
+    "issues": [],
+    "metadata": {
+      "last_assessed": "2026-01-19T09:15:00Z",
+      "assessed_by": "Data Quality Team",
+      "notes": "Excellent quality critical security data"
+    }
+  },
+  {
+    "dataset_name": "Network Events",
+    "quality_score": {
+      "overall": 85,
+      "dimensions": {
+        "completeness": 88,
+        "accuracy": 86,
+        "consistency": 82,
+        "timeliness": 84,
+        "validity": 87,
+        "uniqueness": 83
+      }
+    },
+    "trust_level": "TRUSTED",
+    "data_freshness": {
+      "last_updated": "2026-01-22T00:00:00Z",
+      "update_frequency": "real-time",
+      "latency": "15 minutes",
+      "staleness_threshold": "45 minutes"
+    },
+    "validation_rules": [
+      {
+        "rule_id": "protocol_valid",
+        "rule_type": "reference",
+        "description": "Network protocol must be valid (TCP/UDP/ICMP)",
+        "pass_rate": 95.5
+      },
+      {
+        "rule_id": "port_range",
+        "rule_type": "range",
+        "description": "Port number must be between 0-65535",
+        "pass_rate": 98.2
+      }
+    ],
+    "source_trust": {
+      "source_name": "Network Traffic Monitors",
+      "source_type": "primary",
+      "certification": "silver",
+      "verified_by": "Network Team",
+      "last_audit_date": "2025-12-20"
+    },
+    "usage_statistics": {
+      "query_count": 67000,
+      "unique_users": 185,
+      "downstream_dependencies": 12,
+      "average_rating": 4.2
+    },
+    "issues": [
+      {
+        "issue_id": "DQ-2025-008",
+        "severity": "medium",
+        "description": "Higher than expected null values in some optional fields during network congestion",
+        "status": "open",
+        "created_date": "2026-01-05"
+      }
+    ],
+    "metadata": {
+      "last_assessed": "2026-01-16T11:45:00Z",
+      "assessed_by": "Data Quality Team",
+      "notes": "Good quality with room for improvement in completeness"
+    }
+  }
+]

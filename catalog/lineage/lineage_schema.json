@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Data Lineage Schema",
+  "description": "Schema for tracking data lineage and transformations across the data pipeline",
+  "type": "object",
+  "properties": {
+    "lineage_id": {
+      "type": "string",
+      "description": "Unique identifier for this lineage record"
+    },
+    "dataset_name": {
+      "type": "string",
+      "description": "Name of the dataset or table"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the dataset schema"
+    },
+    "upstream_sources": {
+      "type": "array",
+      "description": "List of upstream data sources",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_name": {
+            "type": "string",
+            "description": "Name of the upstream source"
+          },
+          "source_type": {
+            "type": "string",
+            "enum": ["API", "Database", "File", "Stream", "Service"],
+            "description": "Type of the upstream source"
+          },
+          "connection_type": {
+            "type": "string",
+            "enum": ["direct", "transformation", "aggregation", "join"],
+            "description": "How this source connects to the current dataset"
+          },
+          "fields_used": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of fields used from this source"
+          }
+        },
+        "required": ["source_name", "source_type"]
+      }
+    },
+    "downstream_consumers": {
+      "type": "array",
+      "description": "List of downstream consumers of this dataset",
+      "items": {
+        "type": "object",
+        "properties": {
+          "consumer_name": {
+            "type": "string",
+            "description": "Name of the downstream consumer"
+          },
+          "consumer_type": {
+            "type": "string",
+            "enum": ["Dashboard", "Report", "API", "ML_Model", "Analytics"],
+            "description": "Type of the consumer"
+          },
+          "fields_consumed": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of fields consumed by this consumer"
+          }
+        },
+        "required": ["consumer_name", "consumer_type"]
+      }
+    },
+    "transformations": {
+      "type": "array",
+      "description": "List of transformations applied to the data",
+      "items": {
+        "type": "object",
+        "properties": {
+          "transformation_id": {
+            "type": "string",
+            "description": "Unique identifier for the transformation"
+          },
+          "transformation_type": {
+            "type": "string",
+            "enum": ["filter", "aggregate", "join", "pivot", "enrich", "validate", "cleanse"],
+            "description": "Type of transformation"
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the transformation"
+          },
+          "input_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "output_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "transformation_logic": {
+            "type": "string",
+            "description": "SQL or code snippet describing the transformation"
+          }
+        },
+        "required": ["transformation_type", "description"]
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_by": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Team or person responsible for this dataset"
+        }
+      }
+    }
+  },
+  "required": ["lineage_id", "dataset_name"]
+}
