@@ -3014,7 +3014,8 @@
       "application",
       "epdlp",
       "network",
-      "page"
+      "page",
+      "incident"
     ],
     "default_value": "",
     "applicable_for": [
@@ -6215,7 +6216,8 @@
       "I needed a test account to test the enrollment process."
     ],
     "event_types": [
-      "epdlp"
+      "epdlp",
+      "incident"
     ],
     "default_value": "",
     "applicable_for": [
@@ -11236,6 +11238,43 @@
     ]
   },
   {
+    "parameter_name": "pop_name",
+    "type": "String",
+    "description": "Name of the POP for the client. The POP is the Netskope Point of Presence closest to the client",
+    "example": [
+      "IN-DEL2",
+      "JP-NRT3",
+      "JP-NRT2",
+      "AE-DXB1",
+      "AE-DXB2",
+      ""
+    ],
+    "event_types": [
+      "clientstatus"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "pop_pinned",
+    "type": "String",
+    "description": "Indicates if the Point of Presence (PoP) is pinned for the client",
+    "example": [
+      "Yes",
+      "No",
+      "Not Available"
+    ],
+    "event_types": [
+      "clientstatus"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
     "parameter_name": "smtp_client_domain",
     "type": "String",
     "description": "Specifies the domain name of the SMTP client, as observed and processed by CFW during email traffic inspection.",
@@ -13085,6 +13124,22 @@
     "applicable_for": [
       "data_export",
       "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "usb_device",
+    "type": "String",
+    "description": "Name of the USB device that was attached to the endpoint.",
+    "example": [
+      "PDFCreator",
+      "Apple iPad "
+    ],
+    "default_value": "",
+    "event_types": [
+      "incident"
+    ],
+    "applicable_for": [
+      "data_export"
     ]
   },
   {
@@ -16767,6 +16822,45 @@
     ],
     "event_types": [
       "alert"
+    ]
+  },
+  {
+    "parameter_name": "archive_subfiles",
+    "type": "List",
+    "description": "List of subfiles in an archive.",
+    "example": [
+      [
+        "level3.7z",
+        "level3_zip.zip"
+      ]
+    ],
+    "event_types": [
+      "alert_type_content"
+    ],
+    "default_value": [],
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "endpoint_policy_match.desired_action",
+    "type": "List",
+    "description": "List of desired actions from the defined endpoint policy being triggered.",
+    "example": [
+      [
+        "allow"
+      ],
+      [
+        "alert",
+        "block"
+      ]
+    ],
+    "default_value": [],
+    "applicable_for": [
+      "data_export"
+    ],
+    "event_types": [
+      "incident"
     ]
   }
 ]
