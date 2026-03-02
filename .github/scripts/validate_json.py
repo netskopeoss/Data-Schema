@@ -23,7 +23,7 @@ def validate_json_files(schema_dir: str) -> int:
             with open(filepath, encoding="utf-8") as f:
                 json.load(f)
             print(f"VALID: {filepath}")
-        except json.JSONDecodeError as exc:
+        except (json.JSONDecodeError, OSError, UnicodeDecodeError) as exc:
             print(f"INVALID: {filepath} — {exc}", file=sys.stderr)
             has_error = True
 
