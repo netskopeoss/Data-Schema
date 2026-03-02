@@ -4,6 +4,8 @@ on:
   pull_request:
     paths:
       - 'schema/**'
+      - '.github/scripts/validate_json.py'
+      - '.github/workflows/validate-json.yml'
 
 jobs:
   validate-json:
