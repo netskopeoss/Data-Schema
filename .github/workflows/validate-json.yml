@@ -1,0 +1,18 @@
+name: Validate JSON Schema Files
+
+on:
+  pull_request:
+    paths:
+      - 'schema/**'
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files in schema directory
+        run: python3 .github/scripts/validate_json.py schema
