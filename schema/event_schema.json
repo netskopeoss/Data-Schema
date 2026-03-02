@@ -3708,6 +3708,22 @@
     ]
   },
   {
+    "parameter_name": "dom",
+    "type": "String",
+    "description": "The domain associated with the application event.",
+    "example": [
+      "example.com",
+      "test.org"
+    ],
+    "event_types": [
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
     "parameter_name": "domain",
     "type": "String",
     "description": "Domain value. This will hold the host header value or SNI or extracted from absolute URI.",
