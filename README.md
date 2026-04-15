@@ -1,52 +1,55 @@
 # Data-Schema
 
-Netskope Data team has created a schema that will explain to customers and partners what fields our logging RESTful API endpoints can contain. It will provide information about the fields, what kind of datatype they contain, examples, and labels for filtering. 
+The Netskope Data team has created a schema to help customers and partners understand the fields available in our logging RESTful API endpoints. This schema provides information about field names, data types, examples, and labels for filtering.
 
-This repository contains metadata about the parameters returned by REST API v2 dataexport Iterator Endpoints and Transaction events.
+This repository contains metadata about the parameters returned by REST API v2 Data Export Iterator Endpoints and Transaction Events.
 
-More details can be found under:
+## Documentation
 
-REST API v2 dataexport Endpoints:
+For more details, please refer to:
+
+**REST API v2 Data Export Endpoints:**  
 https://docs.netskope.com/en/netskope-help/admin-console/rest-api/rest-api-v2-overview-312207/using-the-rest-api-v2-dataexport-iterator-endpoints/
 
-Transaction events:
+**Transaction Events:**  
 https://docs.netskope.com/en/netskope-help/data-security/transaction-events/
 
+## Field Metadata
 
-Metadata of each field will be composite of the below details :-
+The metadata for each field consists of the following attributes:
 
-```
-parameter_name: Field name. Rest api calls returns pre-defined set of fields per event type. 
+**parameter_name:** The field name. REST API calls return a pre-defined set of fields per event type.
 
-type: Field value data type. String, Integer64, Integer32, Float, Dictionery, Boolean, LongInt and List etc.
+**type:** The field value data type. Supported types include: String, Integer64, Integer32, Float, Dictionary, Boolean, LongInt, and List.
 
-description: Fields description for better understanding of the API response to the end users.
+**description:** A description of the field to help users better understand the API response.
 
-example: Provides sample values per field names. 
+**example:** Sample values for the field.
 
-event_types: Respective field names are available in the listed event types.
+**event_types:** Lists the event types in which this field is available.
 
-applicable_for: Information about which Netskope's solution this Field will be part of. We are supporting Data Export and Log Streaming as of now.    
+**applicable_for:** Indicates which Netskope solution(s) include this field. Currently supports Data Export and Log Streaming.
 
-Ex:
+Example:
+```json
 "applicable_for": [
-      "data_export",
-      "log_streaming"
-]   
-   
-default_value: If values are not present, default values are returned which are defined per data types. 
-               Transaction Event follows w3c log format. If a field is empty, the value is string -
-
-String:  ""
-Integer64:  0
-Integer32:  0
-LongInt: 0
-Float:   0.0
-Dictionery/Map:  {}
-Boolean:  False
-List/Array:  []
-
-position: For transaction events, data is in w3c log format. Position column represents the order the particular field appears in the Response.
-
-version: Applicable for just the transaction events. Provides information about what are all the transaction events formats this Field will be part of, we are supporting up to v3 currently.
+  "data_export",
+  "log_streaming"
+]
 ```
+
+**default_value:** Default values returned when field values are not present. For transaction streams, if a field is empty, the value is the string "-".
+
+Default values by data type:
+- String: `""`
+- Integer64: `0`
+- Integer32: `0`
+- LongInt: `0`
+- Float: `0.0`
+- Dictionary/Map: `{}`
+- Boolean: `False`
+- List/Array: `[]`
+
+**position:** For transaction events, this represents the order in which the field appears in the response. The position is configurable and can be modified through the Log Streaming UI.
+
+**version:** Applicable only to transaction events. Indicates which transaction event format versions include this field. Currently supports up to v3.
