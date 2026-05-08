@@ -16895,6 +16895,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -16913,6 +16918,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -16932,6 +16942,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -16946,6 +16961,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -16962,6 +16982,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -16978,6 +17003,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -16994,6 +17024,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17008,6 +17043,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17022,6 +17062,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17036,6 +17081,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17050,6 +17100,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17064,6 +17119,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17078,6 +17138,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17092,6 +17157,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17106,6 +17176,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17120,6 +17195,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17136,6 +17216,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17150,6 +17235,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17164,6 +17254,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17178,6 +17273,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17192,6 +17292,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17206,6 +17311,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17220,6 +17330,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17234,6 +17349,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17248,6 +17368,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17262,6 +17387,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17276,6 +17406,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17290,6 +17425,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17304,6 +17444,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17318,6 +17463,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17332,6 +17482,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17355,6 +17510,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17371,6 +17531,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17388,6 +17553,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17407,6 +17577,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17424,6 +17599,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17440,6 +17620,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17456,6 +17641,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17472,6 +17662,11 @@
     "default_value": 0.0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17488,6 +17683,11 @@
     "default_value": 0.0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17504,6 +17704,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17520,6 +17725,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17536,6 +17746,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17552,6 +17767,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17566,6 +17786,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17580,6 +17805,11 @@
     "default_value": "",
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17594,6 +17824,11 @@
     "default_value": [],
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17610,6 +17845,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17624,6 +17864,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17638,6 +17883,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   },
   {
@@ -17654,6 +17904,11 @@
     "default_value": 0,
     "applicable_for": [
       "log_streaming"
+    ],
+    "version": [
+      "v1",
+      "v2",
+      "v3"
     ]
   }
 ]
