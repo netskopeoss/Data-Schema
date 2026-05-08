@@ -1195,7 +1195,7 @@
     "example": [
       "In December 2020, a threat actor shared what was is alleged to be a database leaked from gonitro.com--a provider of PDF software. The data was said to contain approximately 77M usernames and passwords.",
       "Unauthorized access",
-      "Renting Authority (rentingauthority[.]com) – a U.S.-based employment, rental verification, online rent payments service provider company – allegedly suffered a security incident, in which 290,569 email addresses were exposed and subsequently shared on several deep web forums. Of these, an assessed 266,189 records were successfully linked to plain-text passwords. The threat actor noted that the data dump from August 2022. Other notable data fields observed in this package include: full names, phone numbers, SSN, date of birth, driver license and user activity. The threat actor did not disclose the ultimate source of the data breach or how it was exploited."
+      "Renting Authority (rentingauthority[.]com) \u2013 a U.S.-based employment, rental verification, online rent payments service provider company \u2013 allegedly suffered a security incident, in which 290,569 email addresses were exposed and subsequently shared on several deep web forums. Of these, an assessed 266,189 records were successfully linked to plain-text passwords. The threat actor noted that the data dump from August 2022. Other notable data fields observed in this package include: full names, phone numbers, SSN, date of birth, driver license and user activity. The threat actor did not disclose the ultimate source of the data breach or how it was exploited."
     ],
     "event_types": [
       "alert",
@@ -2440,7 +2440,7 @@
   {
     "parameter_name": "cs-username",
     "type": "String",
-    "description": "The client’s username.",
+    "description": "The client\u2019s username.",
     "example": [
       "Bill@companyname.com",
       "test_user@companyname.com",
@@ -2575,7 +2575,7 @@
   {
     "parameter_name": "date",
     "type": "String",
-    "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the “x-cs-timestamp” field.",
+    "description": "Date of generation, YY-MM-DD format. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
     "example": [
       "08/07/19",
       "05/07/23"
@@ -2715,7 +2715,7 @@
   {
     "parameter_name": "destination_instance_id",
     "type": "String",
-    "description": "The Saas/Iaas App’s Instance configured as storage for forensics.",
+    "description": "The Saas/Iaas App\u2019s Instance configured as storage for forensics.",
     "example": [
       "recargapay.com",
       "emburse.com",
@@ -3273,8 +3273,8 @@
     "example": [
       "r5kessan.data",
       "20240221091235.zip",
-      "PW14102【概要書　他】水道町_.pdf",
-      "【概要書】水道町.pdf",
+      "PW14102\u3010\u6982\u8981\u66f8\u3000\u4ed6\u3011\u6c34\u9053\u753a_.pdf",
+      "\u3010\u6982\u8981\u66f8\u3011\u6c34\u9053\u753a.pdf",
       "Test_Corporate Presentation_December",
       "0519-24-TEST_AU-CFF-26964_OP-3136_Dog_PO_Protocol_Part- 2"
     ],
@@ -3563,7 +3563,7 @@
       "TennCare Member ID and Drug Name",
       "PIS-PASEP",
       "Nome Brasileiro dummy proximo a Email",
-      "Endereços test Brasileiros",
+      "Endere\u00e7os test Brasileiros",
       "Titulo de Eleitor",
       "demo_Credit_CAM",
       "Test_Account_Challans fr Statutory Payment"
@@ -3915,7 +3915,7 @@
     "example": [
       "Ikebukuro",
       "Nishikata",
-      "Ōtemachi",
+      "\u014ctemachi",
       "Ebara",
       "Chiyo",
       "Rosman",
@@ -6072,7 +6072,7 @@
     "example": [
       "trical forage",
       "clearview farm",
-      "Кириченко Виктор",
+      "\u041a\u0438\u0440\u0438\u0447\u0435\u043d\u043a\u043e \u0412\u0438\u043a\u0442\u043e\u0440",
       "food to live",
       "very finnish problems",
       "natashas_baking",
@@ -6681,7 +6681,7 @@
   {
     "parameter_name": "lh_custodian_email",
     "type": "String",
-    "description": "Email address of the custodian associated with the Legal Hold profile. This value is derived from the customer’s Legal Hold configuration.",
+    "description": "Email address of the custodian associated with the Legal Hold profile. This value is derived from the customer\u2019s Legal Hold configuration.",
     "example": [
       "apic_auto_custodian@autoskope.com",
       "john@democompany.com"
@@ -8886,7 +8886,7 @@
       "DND - ChatGPT",
       "DND Default Categories",
       "DND - GitHub Copilot",
-      "GoogleCloud-SDKアップデート No110",
+      "GoogleCloud-SDK\u30a2\u30c3\u30d7\u30c7\u30fc\u30c8 No110",
       "JetBrain No476"
     ],
     "event_types": [
@@ -9410,7 +9410,7 @@
   {
     "parameter_name": "publisher_name",
     "type": "String",
-    "description": "The publisher name for the Network Events. It’s a NPA component runs on customer’s premise which connects the cloud and customer’s private app.",
+    "description": "The publisher name for the Network Events. It\u2019s a NPA component runs on customer\u2019s premise which connects the cloud and customer\u2019s private app.",
     "example": [
       "PAPNPA02-ABT",
       "Nethub US  - 782 - B",
@@ -10311,7 +10311,7 @@
   {
     "parameter_name": "s-ip",
     "type": "String",
-    "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it’s neither IPv4 or IPv6.",
+    "description": "The server IPv4 address. NOTE: During SSL bypass, the s-ip field displays as Unavailable when it\u2019s neither IPv4 or IPv6.",
     "example": [
       "70.42.029.126",
       "216.58.193.33",
@@ -11650,7 +11650,7 @@
       "Astana",
       "Moscow Oblast",
       "Iles du Vent",
-      "Constanța",
+      "Constan\u021ba",
       "Voronezh Oblast"
     ],
     "event_types": [
@@ -12081,7 +12081,7 @@
     "type": "String",
     "description": "List of tags associated with the asset for which alert is raised. Each tag is a key/value pair.",
     "example": [
-      "[{“name”: “major environment”, “value”: “test”}, {“name”: “owner”, “value”: “abc” }]"
+      "[{\u201cname\u201d: \u201cmajor environment\u201d, \u201cvalue\u201d: \u201ctest\u201d}, {\u201cname\u201d: \u201cowner\u201d, \u201cvalue\u201d: \u201cabc\u201d }]"
     ],
     "event_types": [
       "alert",
@@ -12267,7 +12267,7 @@
   {
     "parameter_name": "time",
     "type": "String",
-    "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the “x-cs-timestamp” field.",
+    "description": "Time of generation in HH:MM-SEC format in GMT. NOTE: Human readable string for the \u201cx-cs-timestamp\u201d field.",
     "example": [
       "01:02-39",
       "03:02-45"
@@ -12403,7 +12403,7 @@
       "lee-ann_wearing_dsb1_ca/Documents/UFLI - Law/SOUND WALL",
       "WEEKLY LEASING TASKS",
       "Message",
-      "20240221　東宝G売却動画（町田・溝の口・調布）.xlsx"
+      "20240221\u3000\u6771\u5b9dG\u58f2\u5374\u52d5\u753b\uff08\u753a\u7530\u30fb\u6e9d\u306e\u53e3\u30fb\u8abf\u5e03\uff09.xlsx"
     ],
     "event_types": [
       "alert",
@@ -13331,7 +13331,7 @@
   {
     "parameter_name": "user_confidence_index",
     "type": "Integer32",
-    "description": "UCI (User Confidence Index) is one of the ways that UEBA describes how risky the user’s behavior is. The lower UCI is, the more risky the user behavior is. The UCI starts from an initial value and is deducted an amount when the user’s behavior is detected to be anomaly by UEBA engine. The user’s UCI is daily-based, i.e. UEBA engine will create the new UCI with an initial score for users when an UTC day starts. Each user is supposed to start from 1000, but his/her previous day performance will rollover to current day and therefore impact the initial UCI",
+    "description": "UCI (User Confidence Index) is one of the ways that UEBA describes how risky the user\u2019s behavior is. The lower UCI is, the more risky the user behavior is. The UCI starts from an initial value and is deducted an amount when the user\u2019s behavior is detected to be anomaly by UEBA engine. The user\u2019s UCI is daily-based, i.e. UEBA engine will create the new UCI with an initial score for users when an UTC day starts. Each user is supposed to start from 1000, but his/her previous day performance will rollover to current day and therefore impact the initial UCI",
     "example": [
       100,
       217,
@@ -13359,7 +13359,7 @@
   {
     "parameter_name": "user_confidence_level",
     "type": "String",
-    "description": "UCI (User Confidence Index) is one of the ways that UEBA describes how risky the user’s behavior is. User confidence level field holds risk level values.",
+    "description": "UCI (User Confidence Index) is one of the ways that UEBA describes how risky the user\u2019s behavior is. User confidence level field holds risk level values.",
     "example": [
       "high",
       "medium",
@@ -14121,7 +14121,7 @@
   {
     "parameter_name": "x-c-browser",
     "type": "String",
-    "description": "Client’s browser.",
+    "description": "Client\u2019s browser.",
     "example": [
       "Firefox",
       "Safari",
@@ -14144,7 +14144,7 @@
   {
     "parameter_name": "x-c-browser-version",
     "type": "Integer32",
-    "description": "Client’s browser version.",
+    "description": "Client\u2019s browser version.",
     "example": [
       50,
       32,
@@ -14190,7 +14190,7 @@
   {
     "parameter_name": "x-c-device",
     "type": "String",
-    "description": "Client’s device type.",
+    "description": "Client\u2019s device type.",
     "example": [
       "Windows device",
       "Macbook"
@@ -15148,8 +15148,8 @@
     "type": "String",
     "description": "Provides details of the SSL Engine action.",
     "example": [
-      "SSL Error – Incomplete Certificate Trust Chain",
-      "SSL Error – Invalid Certificate Trust Chain"
+      "SSL Error \u2013 Incomplete Certificate Trust Chain",
+      "SSL Error \u2013 Invalid Certificate Trust Chain"
     ],
     "event_types": [
       "transaction"
@@ -15252,7 +15252,7 @@
   {
     "parameter_name": "x-cs-timestamp",
     "type": "Integer64",
-    "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the “date” and “time” fields.",
+    "description": "Date of the request as epoch time. NOTE: This field is the epoch version of the \u201cdate\u201d and \u201ctime\u201d fields.",
     "example": [
       1480330369,
       1680330369,
@@ -15275,7 +15275,7 @@
   {
     "parameter_name": "x-cs-traffic-type",
     "type": "String",
-    "description": "Type of traffic could be “Web” or “CloudApp”. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
+    "description": "Type of traffic could be \u201cWeb\u201d or \u201cCloudApp\u201d. NOTE: During SSL bypass, x-cs-traffic-type always displays as Unavailable.",
     "example": [
       "Web",
       "CloudApp"
@@ -15534,7 +15534,7 @@
   {
     "parameter_name": "x-policy-justification-reason",
     "type": "String",
-    "description": "The justification provided by the end user in case of “useralert” action.",
+    "description": "The justification provided by the end user in case of \u201cuseralert\u201d action.",
     "example": [
       "sharing with a trusted partner",
       "needed for a demo"
@@ -15554,7 +15554,7 @@
   {
     "parameter_name": "x-policy-justification-type",
     "type": "String",
-    "description": "The justification type selected by the end user in case of “useralert” action.",
+    "description": "The justification type selected by the end user in case of \u201cuseralert\u201d action.",
     "example": [
       "justification"
     ],
@@ -15846,7 +15846,7 @@
   {
     "parameter_name": "x-r-cert-valid",
     "type": "String",
-    "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn’t reflect the action of the SSL Engine.",
+    "description": "Overall result of the evaluation of the validity of the server certificate received from destination server. This field doesn\u2019t reflect the action of the SSL Engine.",
     "example": [
       "yes",
       "no"
@@ -16187,7 +16187,7 @@
   {
     "parameter_name": "x-sc-notification-name",
     "type": "String",
-    "description": "The name of the user notification displayed to the end user in case of action “block” or “useralert”.",
+    "description": "The name of the user notification displayed to the end user in case of action \u201cblock\u201d or \u201cuseralert\u201d.",
     "example": [
       "block_page.html",
       "allow_page.html"
@@ -16543,7 +16543,7 @@
     "type": "String",
     "description": "Indicates if the request was SSL bypassed, this field provides the reason.",
     "example": [
-      "SSL Error – SSL Handshake Error"
+      "SSL Error \u2013 SSL Handshake Error"
     ],
     "event_types": [
       "transaction"
@@ -16731,7 +16731,7 @@
   {
     "parameter_name": "x-type",
     "type": "String",
-    "description": "The type of log message, which can be “http_transaction” or “WebSocket”. NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
+    "description": "The type of log message, which can be \u201chttp_transaction\u201d or \u201cWebSocket\u201d. NOTE: When parsing an HTTP Upgrade response, Netskope uses the Upgrade header to determine if the traffic is WebSocket.",
     "example": [
       "http_transaction",
       "WebSocket"
@@ -16928,7 +16928,7 @@
   {
     "parameter_name": "x-action",
     "type": "String",
-    "description": "Final action applied at the POP (allow, block or redirect): block — the Client didn't have access to the content of the Remote Server (user not allowed or processing exception); allow — the Client received the data from the Remote Server; redirect — the Client received a redirect instead of the Remote Server content. Check x-action-reason for more details.",
+    "description": "Final action applied at the POP (allow, block or redirect): block \u2014 the Client didn't have access to the content of the Remote Server (user not allowed or processing exception); allow \u2014 the Client received the data from the Remote Server; redirect \u2014 the Client received a redirect instead of the Remote Server content. Check x-action-reason for more details.",
     "example": [
       "Unknown(this is should not happen)",
       "Allow",
@@ -17609,7 +17609,7 @@
   {
     "parameter_name": "x-support",
     "type": "String",
-    "description": "[Not in public Transaction Events Fields Reference — please verify with internal docs or Netskope Support.]",
+    "description": "[Not in public Transaction Events Fields Reference \u2014 please verify with internal docs or Netskope Support.]",
     "example": [
       "1-2:3:4;"
     ],
