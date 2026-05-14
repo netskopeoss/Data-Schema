@@ -1432,7 +1432,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -1456,7 +1457,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2214,7 +2216,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2236,7 +2239,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2258,7 +2262,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2280,7 +2285,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2302,7 +2308,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2325,7 +2332,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2347,7 +2355,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2369,7 +2378,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2391,7 +2401,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2413,7 +2424,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2434,7 +2446,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2457,7 +2470,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -2591,7 +2605,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -6681,7 +6696,7 @@
   {
     "parameter_name": "lh_custodian_email",
     "type": "String",
-    "description": "Email address of the custodian associated with the Legal Hold profile. This value is derived from the customer’s Legal Hold configuration.",
+    "description": "Email address of the custodian associated with the Legal Hold profile. This value is derived from the customer\u2019s Legal Hold configuration.",
     "example": [
       "apic_auto_custodian@autoskope.com",
       "john@democompany.com"
@@ -10305,7 +10320,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -10329,7 +10345,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -10573,7 +10590,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -10596,7 +10614,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -10620,7 +10639,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -12283,7 +12303,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -12308,7 +12329,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14138,7 +14160,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14161,7 +14184,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14184,7 +14208,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14206,7 +14231,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14230,7 +14256,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14250,7 +14277,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14273,7 +14301,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14297,7 +14326,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14320,7 +14350,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14343,7 +14374,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14367,7 +14399,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14390,7 +14423,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14413,7 +14447,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14434,7 +14469,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14459,7 +14495,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14482,7 +14519,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14502,7 +14540,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14522,7 +14561,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14543,7 +14583,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14564,7 +14605,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14584,7 +14626,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14604,7 +14647,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14623,7 +14667,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14642,7 +14687,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14663,7 +14709,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14683,7 +14730,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14703,7 +14751,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14723,7 +14772,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14743,7 +14793,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14764,7 +14815,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14784,7 +14836,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14804,7 +14857,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14824,7 +14878,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14846,7 +14901,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14866,7 +14922,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14886,7 +14943,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14906,7 +14964,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14926,7 +14985,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14946,7 +15006,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14969,7 +15030,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -14992,7 +15054,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15014,7 +15077,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15036,7 +15100,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15056,7 +15121,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15077,7 +15143,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15097,7 +15164,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15118,7 +15186,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15140,7 +15209,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15161,7 +15231,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15182,7 +15253,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15203,7 +15275,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15225,7 +15298,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15246,7 +15320,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15269,7 +15344,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15291,7 +15367,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15314,7 +15391,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15334,7 +15412,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15354,7 +15433,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15377,7 +15457,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15397,7 +15478,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15420,7 +15502,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15443,7 +15526,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15466,7 +15550,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15486,7 +15571,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15508,7 +15594,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15528,7 +15615,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15548,7 +15636,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15567,7 +15656,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15587,7 +15677,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15607,7 +15698,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15628,7 +15720,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15649,7 +15742,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15670,7 +15764,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15691,7 +15786,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15712,7 +15808,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15735,7 +15832,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15756,7 +15854,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15777,7 +15876,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15798,7 +15898,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15819,7 +15920,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15840,7 +15942,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15861,7 +15964,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15884,7 +15988,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15904,7 +16009,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15923,7 +16029,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15944,7 +16051,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15963,7 +16071,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -15982,7 +16091,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16002,7 +16112,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16025,7 +16136,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16046,7 +16158,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16066,7 +16179,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16089,7 +16203,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16112,7 +16227,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16135,7 +16251,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16158,7 +16275,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16181,7 +16299,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16201,7 +16320,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16222,7 +16342,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16242,7 +16363,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16262,7 +16384,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16283,7 +16406,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16304,7 +16428,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16324,7 +16449,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16344,7 +16470,8 @@
       "log_streaming"
     ],
     "version": [
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16365,7 +16492,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16386,7 +16514,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16408,7 +16537,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16429,7 +16559,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16450,7 +16581,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16472,7 +16604,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16493,7 +16626,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16514,7 +16648,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16535,7 +16670,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16555,7 +16691,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16576,7 +16713,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16597,7 +16735,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16618,7 +16757,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16639,7 +16779,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16660,7 +16801,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16681,7 +16823,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16702,7 +16845,8 @@
     ],
     "version": [
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16725,7 +16869,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16747,7 +16892,8 @@
     "version": [
       "v1",
       "v2",
-      "v3"
+      "v3",
+      "v4"
     ]
   },
   {
@@ -16877,6 +17023,936 @@
     ],
     "event_types": [
       "incident"
+    ]
+  },
+  {
+    "parameter_name": "sr-bytes",
+    "type": "Integer64",
+    "description": "Bytes sent from the POP to Remote Server.",
+    "example": [
+      1024,
+      2048,
+      512
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 147,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "rs-bytes",
+    "type": "Integer64",
+    "description": "Bytes received from the Remote Server to the POP.",
+    "example": [
+      2048,
+      4096,
+      1024
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 148,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-action",
+    "type": "String",
+    "description": "Final action applied at the POP (allow, block or redirect): block \u2014 the Client didn't have access to the content of the Remote Server (user not allowed or processing exception); allow \u2014 the Client received the data from the Remote Server; redirect \u2014 the Client received a redirect instead of the Remote Server content. Check x-action-reason for more details.",
+    "example": [
+      "Unknown(this is should not happen)",
+      "Allow",
+      "Block",
+      "Redirect"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 149,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-action-reason",
+    "type": "String",
+    "description": "Provides insights on the cause of the x-action value.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 150,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-user",
+    "type": "String",
+    "description": "Username after authentication. Special values: Unauthenticated, Pending, Exception.",
+    "example": [
+      "bobbuilder@netskope.com"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 151,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-source",
+    "type": "String",
+    "description": "Source of the authentication.",
+    "example": [
+      "NSClient-Tunnel"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 152,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-surrogate",
+    "type": "String",
+    "description": "Type of surrogate used to track the authentication.",
+    "example": [
+      "Tunnel"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 153,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authn-surrogate-status",
+    "type": "String",
+    "description": "Status of the surrogate. Mostly used to troubleshoot authentication issues.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 154,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authz-groups",
+    "type": "List",
+    "description": "List of groups of the User after authentication. Includes all groups referenced in the policies, even if the policies are not matching this request.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 155,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authz-ou",
+    "type": "String",
+    "description": "Organization Unit of the User after authentication.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 156,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-xau",
+    "type": "String",
+    "description": "X-Authenticated-User header value received in the Client to POP HTTP GET request. Empty if there is no header or if GET is not decrypted.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 157,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-connect-xau",
+    "type": "String",
+    "description": "X-Authenticated-User header value received in the Client to POP HTTP CONNECT request. Empty if there is no CONNECT or field is missing.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 158,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-user-confidence-index",
+    "type": "Integer32",
+    "description": "User Confidence Index. Requires at least one policy based on user score.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 159,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-hostname",
+    "type": "String",
+    "description": "Hostname of the Client. Requires NS Client to be installed (both steering active and disabled supported).",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 160,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-device-uid",
+    "type": "String",
+    "description": "Device unique identifier computed by NS Client. Requires NS Client to be installed (both steering active and disabled supported).",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 161,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-os-family",
+    "type": "String",
+    "description": "OS Family of the Client. Requires NS Client to be installed (both steering active and disabled supported).",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 162,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-os-version",
+    "type": "String",
+    "description": "OS Version of the Client. Requires NS Client to be installed (both steering active and disabled supported).",
+    "example": [
+      "WINDOWS NT10"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 163,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-nsclient-version",
+    "type": "String",
+    "description": "NS Client version of the Client. Requires NS Client to be installed (both steering active and disabled supported).",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 164,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-nsclient-client-profile",
+    "type": "String",
+    "description": "Client Profile of NS Client. Requires NS Client to be installed (both steering active and disabled supported).",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 165,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-nsclient-steering-profile",
+    "type": "String",
+    "description": "Steering Profile of NS Client. Requires NS Client in active steering mode.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 166,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-device-classification",
+    "type": "String",
+    "description": "Classification profile of NS Client. Requires NS Client to be installed (both steering active and disabled supported).",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 167,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-nsclient-tunnel-type",
+    "type": "String",
+    "description": "NS Client tunnel mode (TLS or DTLS). Requires NS Client in active steering mode.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 168,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-process",
+    "type": "String",
+    "description": "Process Name on the Client. Requires NS Client in active steering mode.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 169,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-pid",
+    "type": "Integer32",
+    "description": "Process ID on the Client. Requires NS Client in active steering mode.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 170,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-parent-process",
+    "type": "String",
+    "description": "Parent Process Name on the Client. Requires NS Client in active steering mode.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 171,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ppid",
+    "type": "Integer32",
+    "description": "Parent Process ID on the Client. Requires NS Client in active steering mode.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 172,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-result",
+    "type": "List",
+    "description": "Threat Protection evaluation result.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 173,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-engine",
+    "type": "List",
+    "description": "Threat Protection engine name in case of malware detection.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 174,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-malware-name",
+    "type": "List",
+    "description": "Malware name in case of malware detection.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 175,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-tp-severity",
+    "type": "List",
+    "description": "Malware severity in case of malware detection.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 176,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-sr-forward-dest",
+    "type": "String",
+    "description": "Destination Proxy name when forward to proxy is applied on the POP to Remote Server request.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 177,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-ssl-policy-issuer",
+    "type": "String",
+    "description": "Certificate Authority name used to perform SSL Interception.",
+    "example": [
+      "Netskope CA",
+      "Netskope CA (Expiring) -> Netskope CA (Old)",
+      "Netskope CA (New)",
+      "Netskope ECA",
+      "Netskope ECA (Expiring) -> Netskope ECA (Old)",
+      "Netskope ECA (New)",
+      "BYOK",
+      "OnPremHSM"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 178,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-eip-policy-name",
+    "type": "String",
+    "description": "Egress IP policy name matching the POP to Remote Server request.",
+    "example": [
+      "Subsibiary ABC rule"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 179,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-eip-policy-footprint",
+    "type": "String",
+    "description": "Egress Footprint name matching the POP to Remote Server request.",
+    "example": [
+      "ABC",
+      "LZ-BE (for belgium)"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 180,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-policy-categories",
+    "type": "List",
+    "description": "All custom and predefined categories applicable for the URL in this transaction. Separator between values is ';'.",
+    "example": [
+      [
+        "Games",
+        "News & Media"
+      ]
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 181,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-timezone",
+    "type": "String",
+    "description": "Local timezone of the Client computed from geolocation of the device IP.",
+    "example": [
+      "-01:00",
+      "+08:00"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 182,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-support",
+    "type": "String",
+    "description": "[Not in public Transaction Events Fields Reference \u2014 please verify with internal docs or Netskope Support.]",
+    "example": [
+      "1-2:3:4;"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 183,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-country",
+    "type": "String",
+    "description": "Country of the Remote Server.",
+    "example": [
+      "US"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 184,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-latitude",
+    "type": "Float",
+    "description": "Latitude of the Remote Server.",
+    "example": [
+      37.4192008972167
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 185,
+    "default_value": 0.0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-longitude",
+    "type": "Float",
+    "description": "Longitude of the Remote Server.",
+    "example": [
+      -122.057403564453
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 186,
+    "default_value": 0.0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-location",
+    "type": "String",
+    "description": "Location (e.g. city) of the Remote Server.",
+    "example": [
+      "Mountain View"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 187,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-region",
+    "type": "String",
+    "description": "Region (e.g. state) of the Remote Server.",
+    "example": [
+      "California"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 188,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-zipcode",
+    "type": "String",
+    "description": "Zip code of the Remote Server.",
+    "example": [
+      "94043"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 189,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-authz-source",
+    "type": "String",
+    "description": "Source of the User identity.",
+    "example": [
+      "Internal"
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 190,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-app-instance-tags",
+    "type": "List",
+    "description": "List of Cloud Application Instance tags.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 191,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-ssl-malformed-ssl",
+    "type": "String",
+    "description": "Indicates if the SSL Engine encounters malformed SSL packet during SSL/TLS negotiation between the Client and the POP.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 192,
+    "default_value": "",
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-cs-access-proxy",
+    "type": "List",
+    "description": "List of Access Proxy configuration matching the request from the Client to the POP.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 193,
+    "default_value": [],
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-c-local-timestamp",
+    "type": "Integer64",
+    "description": "Local time of the Client computed from geolocation of the device IP. Epoch format in seconds.",
+    "example": [
+      1748934646
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 194,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-start",
+    "type": "Integer64",
+    "description": "Start date/time of the Remote Server certificate. Epoch format in seconds.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 195,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-r-cert-end",
+    "type": "Integer64",
+    "description": "End date/time of the Remote Server certificate. Epoch format in seconds.",
+    "example": [],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 196,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
+    ]
+  },
+  {
+    "parameter_name": "x-tenant-id",
+    "type": "Integer32",
+    "description": "ID of the Netskope Tenant. Useful when exporting events of multiple tenants in the same SIEM.",
+    "example": [
+      324123
+    ],
+    "event_types": [
+      "transaction"
+    ],
+    "position": 197,
+    "default_value": 0,
+    "applicable_for": [
+      "log_streaming"
+    ],
+    "version": [
+      "v4"
     ]
   }
 ]
