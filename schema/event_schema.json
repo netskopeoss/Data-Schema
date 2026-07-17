@@ -7682,6 +7682,263 @@
     ]
   },
   {
+    "parameter_name": "mcp_activity",
+    "type": "String",
+    "description": "The MCP (Model Context Protocol) activity associated with the event.",
+    "example": [
+      "tools/call",
+      "resources/read"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_client_capabilities",
+    "type": "String",
+    "description": "The capabilities advertised by the MCP client.",
+    "example": [
+      "roots",
+      "sampling"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_client_name",
+    "type": "String",
+    "description": "The name of the MCP client.",
+    "example": [
+      "Claude Desktop",
+      "Cursor"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_client_protocol_version",
+    "type": "String",
+    "description": "The MCP protocol version used by the MCP client.",
+    "example": [
+      "2025-06-18",
+      "2024-11-05"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_method",
+    "type": "String",
+    "description": "The MCP method invoked in the request.",
+    "example": [
+      "tools/call",
+      "prompts/get",
+      "resources/read"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_prompt_list",
+    "type": "String",
+    "description": "The list of MCP prompts associated with the event.",
+    "example": [
+      "summarize-doc",
+      "generate-tests"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_prompt_name",
+    "type": "String",
+    "description": "The name of the MCP prompt associated with the event.",
+    "example": [
+      "summarize-doc",
+      "generate-tests"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_protocol_version",
+    "type": "String",
+    "description": "The MCP protocol version used for the session.",
+    "example": [
+      "2025-06-18",
+      "2024-11-05"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_resource_list",
+    "type": "String",
+    "description": "The list of MCP resources associated with the event.",
+    "example": [
+      "file:///project/README.md",
+      "https://api.example.com/schema"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_resource_url",
+    "type": "String",
+    "description": "The URL of the MCP resource associated with the event.",
+    "example": [
+      "file:///project/README.md",
+      "https://api.example.com/schema"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_server_capabilities",
+    "type": "String",
+    "description": "The capabilities advertised by the MCP server.",
+    "example": [
+      "tools",
+      "resources",
+      "prompts"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_server_name",
+    "type": "String",
+    "description": "The name of the MCP server.",
+    "example": [
+      "filesystem",
+      "github"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_server_protocol_version",
+    "type": "String",
+    "description": "The MCP protocol version used by the MCP server.",
+    "example": [
+      "2025-06-18",
+      "2024-11-05"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_tool_list",
+    "type": "String",
+    "description": "The list of MCP tools associated with the event.",
+    "example": [
+      "read_file",
+      "create_issue"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "mcp_tool_name",
+    "type": "String",
+    "description": "The name of the MCP tool associated with the event.",
+    "example": [
+      "read_file",
+      "create_issue"
+    ],
+    "event_types": [
+      "alert",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
     "parameter_name": "md5",
     "type": "String",
     "description": "MD5 value of the file content.",
