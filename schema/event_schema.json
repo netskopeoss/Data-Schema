@@ -917,7 +917,6 @@
       "alert_type_uba",
       "alert_type_watchlist",
       "application",
-      "audit",
       "network",
       "page"
     ],
@@ -1491,7 +1490,6 @@
       "alert_type_uba",
       "alert_type_watchlist",
       "application",
-      "audit",
       "network",
       "page"
     ],
