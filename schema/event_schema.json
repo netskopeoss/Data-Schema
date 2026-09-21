@@ -9508,7 +9508,23 @@
       "POWERPNT.EXE"
     ],
     "event_types": [
+      "alert",
+      "alert_type_c2",
+      "alert_type_compromised_credential",
       "alert_type_content",
+      "alert_type_ctep",
+      "alert_type_device",
+      "alert_type_dlp",
+      "alert_type_ips",
+      "alert_type_malsite",
+      "alert_type_malware",
+      "alert_type_policy",
+      "alert_type_quarantine",
+      "alert_type_remediation",
+      "alert_type_security_assessment",
+      "alert_type_uba",
+      "alert_type_watchlist",
+      "application",
       "epdlp"
     ],
     "default_value": "",
