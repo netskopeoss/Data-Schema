@@ -2159,6 +2159,24 @@
     ]
   },
   {
+    "parameter_name": "created",
+    "type": "Integer64",
+    "description": "Indicates the time in epoch time when a dlp incident is created.",
+    "example": [
+      1700352376,
+      1700352339,
+      1700352376,
+      1700352377
+    ],
+    "event_types": [
+      "incident"
+    ],
+    "default_value": 0,
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
     "parameter_name": "created_date",
     "type": "Integer64",
     "description": "Indicates the date in epoch time when watchlist model is configured.",
@@ -4450,6 +4468,28 @@
       "alert_type_remediation"
     ],
     "default_value": 0,
+    "applicable_for": [
+      "data_export"
+    ]
+  },
+  {
+    "parameter_name": "endpoint_policy_match",
+    "type": "Json",
+    "description": "List of endpoint policy match objects, each containing action, desired_action, policy_name, and rule_matches, etc.",
+    "example": [
+      [
+        {
+          "action": "alert",
+          "desired_action": "alert",
+          "policy_name": "policy1",
+          "rule_matches": []
+        }
+      ]
+    ],
+    "event_types": [
+      "incident"
+    ],
+    "default_value": [],
     "applicable_for": [
       "data_export"
     ]
@@ -9102,6 +9142,35 @@
     "applicable_for": [
       "data_export",
       "log_streaming"
+    ]
+  },
+  {
+    "parameter_name": "parent_process_name",
+    "type": "String",
+    "description": "Parent Process Name for the endpoint process associated with the event.",
+    "example": [],
+    "event_types": [
+      "alert",
+      "alert_type_c2",
+      "alert_type_compromised_credential",
+      "alert_type_content",
+      "alert_type_ctep",
+      "alert_type_device",
+      "alert_type_dlp",
+      "alert_type_ips",
+      "alert_type_malsite",
+      "alert_type_malware",
+      "alert_type_policy",
+      "alert_type_quarantine",
+      "alert_type_remediation",
+      "alert_type_security_assessment",
+      "alert_type_uba",
+      "alert_type_watchlist",
+      "application"
+    ],
+    "default_value": "",
+    "applicable_for": [
+      "data_export"
     ]
   },
   {
