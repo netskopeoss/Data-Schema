@@ -903,7 +903,11 @@
     ],
     "event_types": [
       "alert",
+      "alert_type_c2",
+      "alert_type_compromised_credential",
+      "alert_type_ctep",
       "alert_type_dlp",
+      "alert_type_ips",
       "alert_type_malsite",
       "alert_type_malware",
       "alert_type_policy",
@@ -913,6 +917,7 @@
       "alert_type_uba",
       "alert_type_watchlist",
       "application",
+      "audit",
       "network",
       "page"
     ],
@@ -1486,6 +1491,7 @@
       "alert_type_uba",
       "alert_type_watchlist",
       "application",
+      "audit",
       "network",
       "page"
     ],
@@ -8243,7 +8249,8 @@
       "alert_type_policy",
       "alert_type_quarantine",
       "alert_type_watchlist",
-      "application"
+      "application",
+      "incident"
     ],
     "default_value": 0,
     "applicable_for": [
@@ -8305,6 +8312,7 @@
       "alert_type_ctep",
       "alert_type_ips",
       "application",
+      "network",
       "page"
     ],
     "default_value": "",
