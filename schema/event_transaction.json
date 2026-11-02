@@ -2462,17 +2462,17 @@
   },
   {
     "parameter_name": "x-s-zipcode",
-    "type": "Integer32",
+    "type": "String",
     "description": "Destination zip code.",
     "example": [
-      94025,
-      94536,
-      94001
+      "94025",
+      "94536",
+      "94001"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": 0,
+          "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
           "transformation": "x-r-zipcode"
