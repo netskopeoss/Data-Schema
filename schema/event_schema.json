@@ -1251,20 +1251,20 @@
   },
   {
     "parameter_name": "breach_score",
-    "type": "String",
+    "type": "Integer32",
     "description": "Breach score for compromised credentials.",
     "example": [
-      "70",
-      "85",
-      "99",
-      "14",
-      "23"
+      70,
+      85,
+      99,
+      14,
+      23
     ],
     "event_types": [
       "alert",
       "alert_type_compromised_credential"
     ],
-    "default_value": "",
+    "default_value": 0,
     "applicable_for": [
       "data_export",
       "log_streaming"
@@ -1519,7 +1519,7 @@
   },
   {
     "parameter_name": "cci",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Cloud confidence Index value as Integer.",
     "example": [
       31,
@@ -1934,7 +1934,7 @@
   },
   {
     "parameter_name": "conn_duration",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Duration of the connection in milliseconds. Useful for querying long-lived sessions.",
     "example": [
       47,
@@ -2498,25 +2498,12 @@
   },
   {
     "parameter_name": "custom_attr",
-    "type": "Map",
+    "type": "String",
     "description": "A map containing all the custom attributes added by customer using ADImporter returned as key-value pair.",
     "example": [
-      {
-        "usr_udf_employeeid": "A095301",
-        "usr_display_name": "McKillip, William (A095301)",
-        "usr_title": "Analyst - Business Solutions Analyst"
-      },
-      {
-        "usr_udf_supervisorname": "Wade Johnson",
-        "usr_udf_businesssegmentlevel2": "Global Commercialization Service &amp; Animal Health (C&amp;A)",
-        "usr_udf_businesssegmentlevel3": "Animal Health"
-      },
-      {
-        "usr_udf_primarydomain": "MWI.INTERNAL",
-        "usr_status": "Active",
-        "usr_udf_businesssegmentlevel3": "Animal Health",
-        "usr_udf_companyname": "MWI Veterinary Supply Company"
-      }
+      "{\"usr_udf_employeeid\":\"A095301\",\"usr_display_name\":\"McKillip, William (A095301)\",\"usr_title\":\"Analyst - Business Solutions Analyst\"}",
+      "{\"usr_udf_supervisorname\":\"Wade Johnson\",\"usr_udf_businesssegmentlevel2\":\"Global Commercialization Service &amp; Animal Health (C&amp;A)\",\"usr_udf_businesssegmentlevel3\":\"Animal Health\"}",
+      "{\"usr_udf_primarydomain\":\"MWI.INTERNAL\",\"usr_status\":\"Active\",\"usr_udf_businesssegmentlevel3\":\"Animal Health\",\"usr_udf_companyname\":\"MWI Veterinary Supply Company\"}"
     ],
     "event_types": [
       "alert",
@@ -2540,7 +2527,7 @@
       "network",
       "page"
     ],
-    "default_value": {},
+    "default_value": "",
     "applicable_for": [
       "data_export",
       "log_streaming"
@@ -3372,7 +3359,7 @@
   },
   {
     "parameter_name": "dlp_fingerprint_score",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Fingerprint classification score",
     "example": [
       92,
@@ -3620,7 +3607,7 @@
   },
   {
     "parameter_name": "dlp_rule_count",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Count of dlp rule hits.",
     "example": [
       1267,
@@ -3644,7 +3631,7 @@
   },
   {
     "parameter_name": "dlp_rule_score",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "DLP rule score for weighted dictionaries.",
     "example": [
       1267,
@@ -3705,7 +3692,7 @@
   },
   {
     "parameter_name": "dlp_unique_count",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Integer value of number of unique matches seen per rule data. Only present if rule is uniquely counted.",
     "example": [
       386,
@@ -3880,7 +3867,7 @@
   },
   {
     "parameter_name": "dst_geoip_src",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Source from where the location of Destination IP was derived.",
     "example": [
       0,
@@ -4194,7 +4181,7 @@
   },
   {
     "parameter_name": "dstport",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Destination port.",
     "example": [
       1143,
@@ -4264,11 +4251,11 @@
   },
   {
     "parameter_name": "eeml",
-    "type": "String",
+    "type": "Integer64",
     "description": "Short form for external email. Field represent if email is external or not used in breach detection engine.",
     "example": [
-      "1",
-      "0"
+      1,
+      0
     ],
     "event_types": [
       "alert",
@@ -4277,7 +4264,7 @@
       "application",
       "epdlp"
     ],
-    "default_value": "",
+    "default_value": 0,
     "applicable_for": [
       "log_streaming"
     ]
@@ -10652,7 +10639,7 @@
   },
   {
     "parameter_name": "rs-status",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "The HTTP status code received from the remote server.",
     "example": [
       200,
@@ -11309,7 +11296,7 @@
   },
   {
     "parameter_name": "severity_id",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Malware severity category ids. These ids are mapped with severity category values like high, low, medium etc.",
     "example": [
       0,
@@ -11854,7 +11841,7 @@
   },
   {
     "parameter_name": "src_geoip_src",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Source from where the location of Source IP was derived.",
     "example": [
       0,
@@ -12172,7 +12159,7 @@
   },
   {
     "parameter_name": "srcport",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Port used by the source/user where event is created. It is used by NPA applications.",
     "example": [
       49384,
@@ -12495,11 +12482,11 @@
   },
   {
     "parameter_name": "thr",
-    "type": "String",
+    "type": "Integer64",
     "description": "stands for threshold.",
     "example": [
-      "346",
-      "120"
+      346,
+      120
     ],
     "event_types": [
       "alert",
@@ -12508,7 +12495,7 @@
       "application",
       "epdlp"
     ],
-    "default_value": "",
+    "default_value": 0,
     "applicable_for": [
       "log_streaming"
     ]
@@ -13186,15 +13173,15 @@
   },
   {
     "parameter_name": "tunnel_id",
-    "type": "String",
+    "type": "Integer64",
     "description": "Shows the Client installation ID. Only available for the Client steering configuration.",
     "example": [
-      "16580888",
-      "538706436",
-      "1992661906",
-      "3762902516",
-      "4244641872",
-      "1235735960"
+      16580888,
+      538706436,
+      1992661906,
+      3762902516,
+      4244641872,
+      1235735960
     ],
     "event_types": [
       "alert_type_c2",
@@ -13203,7 +13190,7 @@
       "alert_type_policy",
       "network"
     ],
-    "default_value": "",
+    "default_value": 0,
     "applicable_for": [
       "data_export",
       "log_streaming"
@@ -13700,7 +13687,7 @@
   },
   {
     "parameter_name": "user_confidence_index",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "UCI (User Confidence Index) is one of the ways that UEBA describes how risky the user\u2019s behavior is. The lower UCI is, the more risky the user behavior is. The UCI starts from an initial value and is deducted an amount when the user\u2019s behavior is detected to be anomaly by UEBA engine. The user\u2019s UCI is daily-based, i.e. UEBA engine will create the new UCI with an initial score for users when an UTC day starts. Each user is supposed to start from 1000, but his/her previous day performance will rollover to current day and therefore impact the initial UCI",
     "example": [
       100,
@@ -14514,18 +14501,18 @@
   },
   {
     "parameter_name": "x-c-browser-version",
-    "type": "Integer32",
+    "type": "String",
     "description": "Client\u2019s browser version.",
     "example": [
-      50,
-      32,
-      731
+      "50",
+      "32",
+      "731"
     ],
     "event_types": [
       "transaction"
     ],
     "position": 39,
-    "default_value": 0,
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -14728,19 +14715,19 @@
   },
   {
     "parameter_name": "x-c-zipcode",
-    "type": "Integer32",
+    "type": "String",
     "description": "Zip code of the client.",
     "example": [
-      84414,
-      124001,
-      94555,
-      94536
+      "84414",
+      "124001",
+      "94555",
+      "94536"
     ],
     "event_types": [
       "transaction"
     ],
     "position": 36,
-    "default_value": 0,
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -16629,18 +16616,18 @@
   },
   {
     "parameter_name": "x-s-zipcode",
-    "type": "Integer32",
+    "type": "String",
     "description": "Destination zip code.",
     "example": [
-      94025,
-      94536,
-      94001
+      "94025",
+      "94536",
+      "94001"
     ],
     "event_types": [
       "transaction"
     ],
     "position": 30,
-    "default_value": 0,
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -17530,14 +17517,14 @@
   },
   {
     "parameter_name": "x-c-authz-groups",
-    "type": "List",
+    "type": "String",
     "description": "List of groups of the User after authentication. Includes all groups referenced in the policies, even if the policies are not matching this request.",
     "example": [],
     "event_types": [
       "transaction"
     ],
     "position": 155,
-    "default_value": [],
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -17787,7 +17774,7 @@
   },
   {
     "parameter_name": "x-cs-pid",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Process ID on the Client. Requires NS Client in active steering mode.",
     "example": [],
     "event_types": [
@@ -17821,7 +17808,7 @@
   },
   {
     "parameter_name": "x-cs-ppid",
-    "type": "Integer32",
+    "type": "Integer64",
     "description": "Parent Process ID on the Client. Requires NS Client in active steering mode.",
     "example": [],
     "event_types": [
@@ -17838,14 +17825,14 @@
   },
   {
     "parameter_name": "x-tp-result",
-    "type": "List",
+    "type": "String",
     "description": "Threat Protection evaluation result.",
     "example": [],
     "event_types": [
       "transaction"
     ],
     "position": 173,
-    "default_value": [],
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -17855,14 +17842,14 @@
   },
   {
     "parameter_name": "x-tp-engine",
-    "type": "List",
+    "type": "String",
     "description": "Threat Protection engine name in case of malware detection.",
     "example": [],
     "event_types": [
       "transaction"
     ],
     "position": 174,
-    "default_value": [],
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -17872,14 +17859,14 @@
   },
   {
     "parameter_name": "x-tp-malware-name",
-    "type": "List",
+    "type": "String",
     "description": "Malware name in case of malware detection.",
     "example": [],
     "event_types": [
       "transaction"
     ],
     "position": 175,
-    "default_value": [],
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -17889,14 +17876,14 @@
   },
   {
     "parameter_name": "x-tp-severity",
-    "type": "List",
+    "type": "String",
     "description": "Malware severity in case of malware detection.",
     "example": [],
     "event_types": [
       "transaction"
     ],
     "position": 176,
-    "default_value": [],
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
@@ -17988,19 +17975,16 @@
   },
   {
     "parameter_name": "x-policy-categories",
-    "type": "List",
+    "type": "String",
     "description": "All custom and predefined categories applicable for the URL in this transaction. Separator between values is ';'.",
     "example": [
-      [
-        "Games",
-        "News & Media"
-      ]
+      "Games;News & Media"
     ],
     "event_types": [
       "transaction"
     ],
     "position": 181,
-    "default_value": [],
+    "default_value": "",
     "applicable_for": [
       "log_streaming"
     ],
