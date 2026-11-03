@@ -3193,14 +3193,14 @@
   },
   {
     "parameter_name": "dinsid",
-    "type": "String",
+    "type": "Integer64",
     "description": "Stands for dlp incident id. Incident ID associated with sub-file in DLP scans. In the case of main file, this is same as the parent incident ID.",
     "example": [
-      "5593408369243076225",
-      "2076451787130699161",
-      "8249162772736324744",
-      "1919502852885809545",
-      "6563048889927593977"
+      5593408369243076225,
+      2076451787130699161,
+      8249162772736324744,
+      1919502852885809545,
+      6563048889927593977
     ],
     "event_types": [
       "alert",
