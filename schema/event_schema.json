@@ -3209,7 +3209,7 @@
       "application",
       "epdlp"
     ],
-    "default_value": "",
+    "default_value": 0,
     "applicable_for": [
       "log_streaming"
     ]
