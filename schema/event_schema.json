@@ -3406,11 +3406,11 @@
   },
   {
     "parameter_name": "dlp_is_unique_count",
-    "type": "String",
+    "type": "Boolean",
     "description": "True or false depending upon if rule is unique counted per rule data.",
     "example": [
-      "true",
-      "false"
+      true,
+      false
     ],
     "event_types": [
       "alert",
@@ -3418,7 +3418,7 @@
       "alert_type_watchlist",
       "application"
     ],
-    "default_value": "",
+    "default_value": false,
     "applicable_for": [
       "data_export",
       "log_streaming"
