@@ -320,7 +320,7 @@
   },
   {
     "parameter_name": "rs-status",
-    "type": "Integer64",
+    "type": "Integer32",
     "description": "The HTTP status code received from the remote server.",
     "example": [
       200,
@@ -497,17 +497,17 @@
   },
   {
     "parameter_name": "x-c-browser-version",
-    "type": "Integer32",
+    "type": "String",
     "description": "Client\u2019s browser version.",
     "example": [
-      50,
-      32,
-      731
+      "50",
+      "32",
+      "731"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": 0,
+          "default_value": "",
           "introduced_in": 202409
         }
       }
@@ -688,18 +688,18 @@
   },
   {
     "parameter_name": "x-c-zipcode",
-    "type": "Integer32",
+    "type": "String",
     "description": "Zip code of the client.",
     "example": [
-      84414,
-      124001,
-      94555,
-      94536
+      "84414",
+      "124001",
+      "94555",
+      "94536"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": 0,
+          "default_value": "",
           "introduced_in": 202409
         }
       }
@@ -1061,11 +1061,10 @@
   },
   {
     "parameter_name": "x-cs-app-tags",
-    "type": "List",
+    "type": "String",
     "description": "Cloud application tags from the CCI database.",
     "example": [
-      "Marketing",
-      "HR"
+      "Marketing,HR"
     ],
     "event_types": [
       {
@@ -1712,12 +1711,10 @@
   },
   {
     "parameter_name": "x-other-category",
-    "type": "List",
+    "type": "String",
     "description": "Secondary categories applicable for the url in this transaction.",
     "example": [
-      "News & Media",
-      "Entertainment",
-      "Gambling"
+      "News & Media, Entertainment, Gambling"
     ],
     "event_types": [
       {
@@ -2465,17 +2462,17 @@
   },
   {
     "parameter_name": "x-s-zipcode",
-    "type": "Integer32",
+    "type": "String",
     "description": "Destination zip code.",
     "example": [
-      94025,
-      94536,
-      94001
+      "94025",
+      "94536",
+      "94001"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": 0,
+          "default_value": "",
           "deprecated": true,
           "introduced_in": 202409,
           "transformation": "x-r-zipcode"
@@ -3213,20 +3210,16 @@
   },
   {
     "parameter_name": "x-c-authz-groups",
-    "type": "List",
+    "type": "String",
     "description": "Authentication user groups",
     "example": [
-      [
-        "test.group1, test.group2"
-      ],
-      [
-        "admin.group1, admin.group2"
-      ]
+      "test.group1;test.group2",
+      "admin.group1;admin.group2"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": [],
+          "default_value": "",
           "introduced_in": 202511
         }
       }
@@ -3745,20 +3738,16 @@
   },
   {
     "parameter_name": "x-policy-categories",
-    "type": "List",
+    "type": "String",
     "description": "Policy categories matched",
     "example": [
-      [
-        "category-1, category-2"
-      ],
-      [
-        "category-3, category-4"
-      ]
+      "category-1;category-2",
+      "category-3;category-4"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": [],
+          "default_value": "",
           "introduced_in": 202511
         }
       }
@@ -3991,20 +3980,16 @@
   },
   {
     "parameter_name": "x-tp-engine",
-    "type": "List",
+    "type": "String",
     "description": "Threat Prevention engines that scanned the transaction.",
     "example": [
-      [
-        "antivirus, antispyware"
-      ],
-      [
-        "antimalware, urlfiltering"
-      ]
+      "antivirus;antispyware",
+      "antimalware;urlfiltering"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": [],
+          "default_value": "",
           "introduced_in": 202511
         }
       }
@@ -4015,22 +4000,16 @@
   },
   {
     "parameter_name": "x-tp-malware-name",
-    "type": "List",
+    "type": "String",
     "description": "Names of malware detected in the transaction.",
     "example": [
-      [
-        "Trojan.GenericKD.32768",
-        "Worm.AutoRun.12345"
-      ],
-      [
-        "Adware.Win32.Agent",
-        "Spyware.Zeus.67890"
-      ]
+      "Trojan.GenericKD.32768;Worm.AutoRun.12345",
+      "Adware.Win32.Agent;Spyware.Zeus.67890"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": [],
+          "default_value": "",
           "introduced_in": 202511
         }
       }
@@ -4041,20 +4020,16 @@
   },
   {
     "parameter_name": "x-tp-result",
-    "type": "List",
+    "type": "String",
     "description": "Threat Prevention results for the transaction.",
     "example": [
-      [
-        "clean, infected"
-      ],
-      [
-        "blocked, cleaned"
-      ]
+      "clean;infected",
+      "blocked;cleaned"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": [],
+          "default_value": "",
           "introduced_in": 202511
         }
       }
@@ -4065,20 +4040,16 @@
   },
   {
     "parameter_name": "x-tp-severity",
-    "type": "List",
+    "type": "String",
     "description": "Threat Prevention severity levels for the transaction.",
     "example": [
-      [
-        "low, high"
-      ],
-      [
-        "medium, critical"
-      ]
+      "low;high",
+      "medium;critical"
     ],
     "event_types": [
       {
         "transaction": {
-          "default_value": [],
+          "default_value": "",
           "introduced_in": 202511
         }
       }
